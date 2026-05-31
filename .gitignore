@@ -6,6 +6,10 @@ build/
 *.egg
 .venv/
 
+# Runtime logs
+scripts/*.log
+scripts/.backfill-failures/
+
 # Personal data — kept locally, not in public repo
 decisions/digests/
 decisions/profile.md

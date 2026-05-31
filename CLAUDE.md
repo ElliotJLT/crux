@@ -14,7 +14,39 @@ This is a practice tool, not a portfolio. The framing is:
 - `/marmite` captures session digests — collaboration patterns, not project changelogs
 - `/trail` produces monthly synthesis grounded in Anthropic's AI Fluency Index (4D framework + 13 unobservable behaviors)
 - `profile` command reads digests + synthesis and renders to markdown + HTML
-- Synthesis section headers: "Fluency baseline", "Beyond the index", "Trajectory", "Gaps"
+- Auto-capture: `scripts/auto-digest.sh` → `scripts/digest-worker.sh` (SessionEnd hook)
+- Backfill: `scripts/backfill-digests.sh` reformats legacy digests into the schema below (idempotent)
+
+## Digest schema (RAG-queryable)
+
+Every digest starts with YAML frontmatter so digests can be filtered/queried by an
+LLM doing retrieval across history. The body is written in second person, leads
+with a one-line embedding-ready punchline, and uses real user quotes where they land.
+
+Frontmatter fields:
+- `date`, `session_id` — keys
+- `project` — kebab-case from {argus, decision-trail, applications, multiverse, boulot, cervo, bungalow-ai, writing, general}
+- `duration` — short | medium | long
+- `shape` — research | shipping | refinement | planning | debugging | writing | mixed
+- `interaction_type` — directive | feedback-loop | task-iteration | validation | learning (Anthropic Economic Index)
+- `collaboration_mode` — automation | augmentation (Anthropic Economic Index)
+- `fluency` — per-dimension {strong | medium | weak | not-observed} for delegation/description/discernment/diligence
+- `patterns` — controlled vocab from `taxonomy/patterns.yml` (1-4 slugs, must match exactly)
+- `concepts` — free-form topical kebab-case tags (3-6)
+- `related` — list of prior session_ids if a trajectory arc exists
+
+Body sections (stable, in order):
+1. Title + TL;DR blockquote
+2. `## The moment` — defining decision, with verbatim user quote if available
+3. `## What you steered` — second person, embed quotes
+4. `## What you let slide` — honest, no padding
+5. `## The pattern` — bold one-liner + expansion
+6. `## Trajectory note` — [[wikilink]] to prior session if there's an arc
+
+## Pattern taxonomy
+
+`taxonomy/patterns.yml` is the controlled vocab. Add new patterns here before
+using them — RAG retrieval depends on stable spelling across sessions.
 
 ## Rules for all output
 
@@ -22,6 +54,8 @@ This is a practice tool, not a portfolio. The framing is:
 - Quality bar for digests: "would a senior engineer reading this learn something about how this person thinks? If not, cut it."
 - Ground every synthesis observation in evidence from digests. Don't infer what isn't there.
 - Watch for multi-session coordination patterns — how the user orchestrates parallel Claude sessions is signal.
+- Never fabricate user quotes. Only italicise text that appears verbatim in the source transcript.
+- Body is second person ("you"). Frontmatter is structured. No prose classification inside the body.
 
 ## Auto Dream integration
 

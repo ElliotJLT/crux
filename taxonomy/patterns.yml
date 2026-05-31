@@ -1,0 +1,110 @@
+# Pattern taxonomy for decision-trail digests.
+#
+# This is the controlled vocabulary for the `patterns:` field in digest frontmatter.
+# When the digest generator tags a session, it must pick from this list (or add a
+# new entry here first). A stable vocab is what makes the digests RAG-queryable —
+# "show me all sessions where I steered-by-vibe" only works if the tag is spelled
+# the same way every time.
+#
+# Each pattern has:
+#   id:          kebab-case slug used in frontmatter
+#   polarity:    positive | negative | neutral — what the pattern signals
+#   fluency:     which 4D dimension(s) it relates to
+#   description: one line, present tense
+
+patterns:
+  # --- Direction-setting ---
+  - id: steers-by-vibe
+    polarity: neutral
+    fluency: [description]
+    description: Sets direction by feel and reaction rather than upfront spec.
+  - id: steers-by-quote
+    polarity: positive
+    fluency: [description]
+    description: Lands direction in one sharp sentence that reshapes the work.
+  - id: gives-up-decision
+    polarity: negative
+    fluency: [description]
+    description: Avoids making a sharpening call ("teach me everything"), passing the choice back.
+
+  # --- Trust calibration ---
+  - id: task-typed-trust
+    polarity: positive
+    fluency: [delegation]
+    description: Calibrates trust by task type — autonomy for mechanical, oversight for judgement.
+  - id: blanket-trust
+    polarity: negative
+    fluency: [delegation, diligence]
+    description: Trusts uniformly regardless of task type.
+  - id: delegates-implementation
+    polarity: neutral
+    fluency: [delegation]
+    description: Owns shape and intent, hands off rendering without reading the details.
+
+  # --- Artifact paradox ---
+  - id: challenges-polish
+    polarity: positive
+    fluency: [discernment]
+    description: Scrutinises the most polished-looking output harder, not less.
+  - id: accepts-polish-uncritically
+    polarity: negative
+    fluency: [discernment, diligence]
+    description: Lets a polished artifact pass without examination.
+
+  # --- Discernment ---
+  - id: diagnoses-before-fixing
+    polarity: positive
+    fluency: [discernment]
+    description: Investigates root cause before touching anything.
+  - id: verifies-via-usage
+    polarity: positive
+    fluency: [diligence]
+    description: Catches regressions by actually using the feature, not by reading diffs.
+  - id: redirects-by-symptom
+    polarity: neutral
+    fluency: [description, discernment]
+    description: Flags a symptom ("it's off"), expects Claude to diagnose the cause.
+
+  # --- Scope & shipping ---
+  - id: kills-scope-creep
+    polarity: positive
+    fluency: [description]
+    description: Cuts proposed features or rituals that won't actually land.
+  - id: holds-fix-as-research
+    polarity: positive
+    fluency: [diligence]
+    description: Refuses to ship under uncertainty; holds work pending validation.
+  - id: ships-without-verification
+    polarity: negative
+    fluency: [diligence]
+    description: Closes the loop without checking the artifact does what it claims.
+
+  # --- Speed vs reflection ---
+  - id: speed-over-reflection
+    polarity: negative
+    fluency: [discernment]
+    description: Moves through decisions too fast for the question to settle.
+  - id: reverses-decisions-quickly
+    polarity: negative
+    fluency: [discernment]
+    description: Flips a position within seconds of taking it — impulse over consideration.
+
+  # --- Meta-cognition ---
+  - id: corrects-process-not-just-output
+    polarity: positive
+    fluency: [discernment, description]
+    description: Fixes the system that produced the output, not just the output.
+  - id: multi-session-coordination
+    polarity: positive
+    fluency: [delegation]
+    description: Orchestrates parallel Claude sessions as a coordination mechanism.
+
+  # --- Honesty about own work ---
+  - id: inflates-for-audience
+    polarity: negative
+    fluency: [diligence]
+    description: Reaches for stronger numbers or framing than the real data supports.
+  - id: lands-on-self-awareness
+    polarity: positive
+    fluency: [discernment]
+    description: Session ends with an honest read of where the work actually stands.
