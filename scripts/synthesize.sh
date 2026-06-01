@@ -160,8 +160,8 @@ if project_counts:
 " 2>/dev/null) || true
 fi
 
-# Truncate digests to fit context
-TRUNCATED=$(echo "$ALL_DIGESTS" | head -c 60000)
+# Truncate digests to fit context (use bash substring — pipe to head SIGPIPEs under pipefail)
+TRUNCATED="${ALL_DIGESTS:0:60000}"
 
 MONTH=$(date +%Y-%m)
 TMPFILE=$(mktemp /tmp/dt-synth-XXXXXX.txt)

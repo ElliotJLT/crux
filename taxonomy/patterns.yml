@@ -108,3 +108,13 @@ patterns:
     polarity: positive
     fluency: [discernment]
     description: Session ends with an honest read of where the work actually stands.
+
+  # --- Cognitive surrender (Wharton-codified term; Mollick "Choosing to Stay Human" May 2026) ---
+  - id: cognitive-surrender
+    polarity: negative
+    fluency: [discernment, diligence]
+    description: Stops thinking when AI is producing plausible-looking output. The umbrella pattern Wharton named.
+  - id: surrender-resistance
+    polarity: positive
+    fluency: [discernment, diligence]
+    description: Actively pushes back against the pull to surrender — examines polish, refuses to coast, names own coasting in the moment.
