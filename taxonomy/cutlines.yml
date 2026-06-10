@@ -1,0 +1,100 @@
+# Cut-lines: the irreversibility taxonomy for the Trail.
+#
+# A cut-line is a command pattern whose execution is hard or impossible to
+# take back — a one-way door. These are the ONLY moments the Trail ever
+# fires on. Everything reversible stays frictionless by design.
+#
+# Tiers:
+#   hard   — genuinely one-way (or one-way against a shared/remote surface).
+#            Candidate set for the future capture hook.
+#   review — destructive-shaped but usually routine in solo work (own-worktree
+#            resets, tmp cleanup). Logged in the dry run to measure the
+#            false-positive boundary; NOT candidates for capture by default.
+#
+# Each rule:
+#   id:      kebab-case slug (stable — analytics depend on it)
+#   tier:    hard | review
+#   pattern: Python regex, applied case-insensitively to Bash tool commands
+#   why:     one line on what makes it irreversible
+#
+# The default hard set is deliberately tiny. Precision beats recall here:
+# a handful of false fires gets the whole hook disabled within a day.
+
+rules:
+  # --- git: rewriting or destroying shared history ---
+  - id: git-force-push
+    tier: hard
+    pattern: 'git\s+push\b(?=.*(?:\s--force\b|\s-f\b|\s\+\S+))(?!.*--force-with-lease)'
+    why: Overwrites remote history; other clones' work is unrecoverable.
+  - id: git-force-push-lease
+    tier: review
+    pattern: 'git\s+push\b.*--force-with-lease'
+    why: Still rewrites remote history, but guarded; usually own-branch routine.
+  - id: git-push-delete-remote
+    tier: hard
+    pattern: 'git\s+push\b.*(?:--delete\s+\S+|\s+:\S+)'
+    why: Deletes a remote branch; anyone tracking it loses the ref.
+  - id: git-branch-force-delete
+    tier: hard
+    pattern: 'git\s+branch\s+(-D|--delete\s+--force)\b'
+    why: Discards unmerged commits; recoverable only via reflog, briefly.
+  - id: git-reset-hard
+    tier: review
+    pattern: 'git\s+reset\s+--hard\b'
+    why: Destroys uncommitted work; routine in own worktree, fatal elsewhere.
+  - id: git-clean-force
+    tier: review
+    pattern: 'git\s+clean\s+-[a-z]*f'
+    why: Deletes untracked files with no undo; often routine cleanup.
+
+  # --- filesystem ---
+  - id: rm-rf
+    tier: hard
+    pattern: 'rm\s+(-[a-z]*r[a-z]*f|-[a-z]*f[a-z]*r|-r\s+-f|-f\s+-r)\b'
+    why: Recursive forced delete; no trash, no undo.
+    # The dry run sub-classifies targets: tmp/cache/build paths are annotated
+    # likely-routine; everything else is the real cut-line.
+
+  # --- database: destructive DDL/DML, any environment ---
+  - id: sql-destructive
+    tier: hard
+    pattern: '\b(DROP\s+(TABLE|DATABASE|SCHEMA|INDEX)|TRUNCATE\s+TABLE|TRUNCATE\s+\w|DELETE\s+FROM)\b'
+    why: Destroys data or structure; rollback only via backup, if one exists.
+  - id: db-reset
+    tier: hard
+    pattern: '\b(db:(drop|reset|schema:load)|pg:reset|pg:push)\b'
+    why: Drops or overwrites an entire database.
+  - id: prod-migration
+    tier: hard
+    pattern: 'heroku\s+run\b.*\bdb:migrate\b'
+    why: Schema change against production; rollback is a second migration, not an undo.
+
+  # --- deploy / publish: the artefact leaves the machine ---
+  - id: deploy
+    tier: hard
+    pattern: '(git\s+push\s+heroku|heroku\s+(releases:rollback|rollback|maintenance:on)\b|fly\s+deploy|vercel\b.*--prod|npm\s+publish|gem\s+push|twine\s+upload)'
+    why: Changes what users are running, or publishes an immutable artefact.
+  - id: gh-release
+    tier: hard
+    pattern: 'gh\s+release\s+(create|delete)\b'
+    why: Public release artefact; deletion breaks downstream consumers.
+  - id: gh-pr-merge
+    tier: hard
+    pattern: 'gh\s+pr\s+merge\b'
+    why: Lands code on the shared default branch; revert is a new commit, not an undo.
+  - id: gh-repo-delete
+    tier: hard
+    pattern: 'gh\s+repo\s+delete\b'
+    why: Deletes a repository.
+
+  # --- secrets / config against live systems ---
+  - id: secret-rotation
+    tier: hard
+    pattern: '(heroku\s+config:(set|unset)\b|gh\s+secret\s+(set|delete)\b)'
+    why: Changes live credentials/config; old value is gone once overwritten.
+
+  # --- scaling / infra state ---
+  - id: infra-scale
+    tier: review
+    pattern: 'heroku\s+ps:scale\b'
+    why: Changes live capacity; reversible but billed and user-visible.
