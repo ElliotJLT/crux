@@ -35,6 +35,13 @@ Findings from my own corpus:
 
 The last bullet is what cognitive surrender looks like in someone who is actively measuring it. I am not the worst case. I am the case who is paying attention. The pattern still compounds.
 
+**Point-of-decision findings — the founding baseline.** In June 2026 I ran a log-only classifier over my full local transcript corpus (192 sessions, 2,668 shell commands, 22 active days), matching against a [tiered taxonomy of irreversible operations](https://github.com/ElliotJLT/judgment-trail/blob/main/taxonomy/cutlines.yml) — force-pushes, production migrations, destructive SQL, merges to the default branch. Two results:
+
+- **Irreversible moments are mechanically separable from routine.** 9 genuine decision events in 22 days — 0.41 per day, 0.45% of all commands. Sparse enough that capture at these moments survives the friction objection.
+- **Of the 8 events with a captured preceding human message, ~6 were rubber stamps or blanket delegations** — "go for it", "you do it all", "solve it for me". Contemporaneous justification at one-way doors does not currently exist, in a user who built the measurement tool.
+
+There is a structural reason for that second finding. Most solo builders disable permission prompts because blanket allow/deny is insufferable — which means **the highest-stakes actions now run with less scrutiny than trivial ones**, sitting in the same auto-approved bucket. The session-level finding ("verifies voice, not substance") and the command-level finding (rubber stamps at one-way doors) are the same erosion measured at two altitudes.
+
 ---
 
 ## Why this is not going away — three trends, not one feature
@@ -47,7 +54,13 @@ Cognitive surrender risk is being amplified by the entire direction the major AI
 
 **Trend 3: AI is becoming more accurate about you specifically.** As context windows grow and memory consolidation works, the model's representation of who you are, what you do, and what you want will get better than your own. Personally-accurate AI is harder to push back on because the model often sounds like what you would say if you'd been smarter for longer.
 
-None of these features are bad. They are the natural direction of progress and many of them produce real gains (Harvey reported a 6× lift in agent task-completion after Auto Dream). The point is that they make cognitive surrender easier, more comfortable, and less visible. They are the surrender amplifier shipping inside the surrender amplifier.
+**Trend 4: AI is becoming less supervised — and the discourse converged on this in a single week.** In June 2026, three of the most-read voices in the field described the same shift within days of each other. Mollick's [patron-era piece](https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with) (Jun 9): "the work has shifted from process to outcome. I no longer steer; I commission" — the human's contact with the work collapses to three seams: the brief, the mid-flight redirect, the sign-off. Osmani's [Loop Engineering](https://addyosmani.com/blog/loop-engineering/) (Jun 8): the job becomes designing systems that prompt the agents. Boris Cherny, head of Claude Code at Anthropic: "I don't prompt Claude anymore… my job is to write loops."
+
+Note what the loop-engineering stack instruments. Maker/checker subagent splits, verifier models grading stop conditions, adversarial review of generated code — observability on every component of the loop **except the human who designs it and signs off on its output**. Osmani closes with: "Two people can build the exact same loop and get completely opposite results. One uses it to move faster on work they understand deeply. The other uses it to avoid understanding the work at all. The loop doesn't know the difference. *You do.*"
+
+My baseline data says you don't. At my own one-way doors — the moments his closing line assumes self-knowledge — roughly 75% of my preceding messages were rubber stamps. The loop doesn't know the difference, and unmeasured, neither does the human. Every prescription in the current discourse ("stay the engineer," "read what the loop made") is willpower — the one intervention class with no historical record of preserving a capacity at scale.
+
+None of these features or shifts are bad. They are the natural direction of progress and many produce real gains (Harvey reported a 6× lift in agent task-completion after Auto Dream). The point is that they make cognitive surrender easier, more comfortable, and less visible — while shrinking the judgment moments to a handful of seams, each carrying more weight, none instrumented. The surrender amplifier is shipping inside the surrender amplifier.
 
 The Anthropic Institute has [explicitly named](https://www.anthropic.com/research/anthropic-institute-agenda) "detecting degradation of human critical thinking" as a research priority. The Institute is publicly worrying about the thing the company's product roadmap is making harder to avoid. The gap between research priority and product reality is the strategic opening.
 
@@ -122,7 +135,9 @@ The infrastructure is the same. The interface varies by what the user came for.
 - **Capture:** SessionEnd hook on Claude Code that auto-generates a structured digest per session. Zero commands, zero friction. Ships as a clone-and-add-to-settings.json install.
 - **Taxonomy:** Controlled vocabulary in [`taxonomy/patterns.yml`](https://github.com/ElliotJLT/judgment-trail/blob/main/taxonomy/patterns.yml). 22 named patterns grouped by fluency dimension. New entries require explicit vocab updates so retrievability stays intact.
 - **Synthesis:** Monthly trajectory analysis grounded in Anthropic's Economic Index framework (interaction types, automation vs. augmentation) and the 4D Fluency Index.
-- **Scope today:** Claude Code only. Covers maybe 20% of a heavy user's actual AI surface. The [roadmap](https://github.com/ElliotJLT/judgment-trail/blob/main/ROADMAP.md) covers staged cross-LLM buildout: Cursor + Claude.ai exports next, then Copilot OTel + ChatGPT exports, then the browser tail.
+- **The Trail:** point-of-decision capture at irreversible moments. A [tiered cut-line taxonomy](https://github.com/ElliotJLT/judgment-trail/blob/main/taxonomy/cutlines.yml) plus a dry-run classifier — the Day-1 results above. Next: an opt-in PreToolUse hook that asks four neutral questions at hard-tier doors (who owns this, why now, how you'll watch it, how to undo it) and folds the answers into an append-only local trail. No score, no gate, off by default. Then the **delegation tier**: accepting the output of a long autonomous run is a one-way door in the same taxonomy sense — the disclosure hook surfaces the N decisions the run made on your behalf that you'd most plausibly contest, and one genuine contest per run beats reviewing everything shallowly.
+- **The metric this unlocks** is the project's first leading indicator: the blank-justification rate at one-way doors (and later, contest rate at sign-offs) tracked over time. Everything else in the field measures surrender *after* output quality degrades. This reads whether the wanting-to-own is fading, before.
+- **Scope today:** Claude Code only. Covers maybe 20% of a heavy user's actual AI surface. The [roadmap](https://github.com/ElliotJLT/judgment-trail/blob/main/ROADMAP.md) sequences depth (Trail Day 2, disclosure hook) ahead of breadth (Cursor + Claude.ai exports, then Copilot OTel + ChatGPT exports, then the browser tail) — because the loop-engineering era is shrinking the judgment moments faster than it is multiplying the surfaces.
 
 The repo is public. The tool runs against my own work today. The findings I quoted above are from 46+ sessions of my own data. This is not theoretical; it is undersized.
 
@@ -148,9 +163,11 @@ The thing it is not is the layer that providers should ship natively. That tool 
 
 This document is the strategic anchor. From here:
 
-- v2 of the tool (Cursor + Claude.ai exports) is the next concrete deliverable. Converts cross-LLM from theory to demonstration.
-- The four render modes get named in the [roadmap](https://github.com/ElliotJLT/judgment-trail/blob/main/ROADMAP.md) but not built until v2 lands.
-- Engagement with researchers and providers happens after this document and v2 exist. Not before.
+- The Trail's Day-2 capture hook is the next concrete deliverable: opt-in, off by default, four neutral questions at hard-tier doors. Then re-measure the rubber-stamp rate against the Day-1 baseline. The kill criteria hold — if the captured fields are theatre, stop.
+- The disclosure hook follows: a contestable-decisions report at the end of long autonomous runs. The most product-shaped piece of the project, and the one the loop-engineering era makes urgent.
+- v2 cross-LLM (Cursor + Claude.ai exports) lands after the depth work.
+- The four render modes get named in the [roadmap](https://github.com/ElliotJLT/judgment-trail/blob/main/ROADMAP.md) but not built until the above exist.
+- Engagement with researchers and providers happens after the Day-2 data exists. Not before.
 
 This is not the final form of the argument. It is the form clear enough to attack and improve. Pushback welcome.
 
@@ -158,7 +175,9 @@ This is not the final form of the argument. It is the form clear enough to attac
 
 ## Sources
 
-**Mollick:** [Choosing to Stay Human](https://www.oneusefulthing.org/p/choosing-to-stay-human) (May 2026).
+**Mollick:** [Choosing to Stay Human](https://www.oneusefulthing.org/p/choosing-to-stay-human) (May 2026); [What it feels like to work with Mythos](https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with) (Jun 2026).
+
+**Osmani:** [Loop Engineering](https://addyosmani.com/blog/loop-engineering/) (Jun 2026).
 
 **Anthropic research:** [AI Fluency Index](https://www.anthropic.com/research/AI-fluency-index), [What 81,000 People Want from AI](https://anthropic.com/features/81k-interviews), [Economic Index](https://www.anthropic.com/research/the-anthropic-economic-index), [Institute Research Agenda](https://www.anthropic.com/research/anthropic-institute-agenda).
 
