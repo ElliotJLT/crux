@@ -92,7 +92,7 @@ I built the smallest instrument that could answer the question on real data, and
 **Two altitudes, two corpora.** Erosion shows up differently depending on how closely you look, so I measured at two:
 
 - *Session level* — the per-session digests above, classified and synthesised over four months. This answers "what do I habitually do with finished work."
-- *Command level* — a separate, log-only pass over my full local transcript corpus (192 session transcripts, 2,668 shell commands, 22 active days), matching against a tiered list of irreversible operations: force-pushes, production migrations, destructive SQL, merges to the default branch. This answers "what do I do at the moments I can't take back."
+- *Command level* — a separate, log-only pass over my full local transcript corpus (192 session transcripts, 2,668 shell commands, 22 active days), flagging the rare moments that are hard or impossible to undo. This answers "what do I do at the moments I can't take back."
 
 Nothing in either corpus is reconstructed after the fact for this document; the digests were written contemporaneously and the command pass was run log-only, with the full match detail held locally and never published.
 
@@ -106,11 +106,11 @@ The shape is specific and unflattering: I am good at steering the surface (fixin
 
 **Session level confirms it.** Across the classified corpus, diligence — the fluency dimension that covers verification and follow-through — is weak in roughly 65% of sessions, while every other dimension is strong or medium in most. Diligence is the structural outlier. The pattern "accepts polish uncritically" is among my top three by frequency and shows *no improving trend* across the four months. It is not a phase. And the lesson never stuck at the system level: I caught the AI's voice-tells in one month, escalated to a process fix, and the same fix slipped the next. Awareness without infrastructure produced no behaviour change.
 
-**Command level is worse, where it matters most.** At the irreversible moments, the 0.45% of commands where a half-second of deliberation is obviously warranted, the dry run found 9 genuine decision events in 22 days (0.41 per day; sparse enough that capturing them would not be insufferable). Of the 8 events that had a preceding human message, **roughly six were rubber stamps or blanket delegations**: "go for it", "you do it all", "solve it for me". One had no human utterance at all. Contemporaneous justification at one-way doors essentially did not exist, in the person who *built the measurement tool*.
+**Command level is worse, where it matters most.** These hard-to-undo moments are rare, well under half a percent of all commands, a handful in a month, sparse enough that pausing on them would not be insufferable. They were also the moments I deliberated over *least*. More often than not the work went through on a nod rather than a considered call, with little or no reasoning recorded at the point of commitment, in the person who *built the measurement tool*.
 
-So the highest-stakes actions ran with *less* scrutiny than trivial ones, because, like most solo builders, I had turned off permission prompts, dropping force-pushes and destructive migrations into the same auto-approved bucket as everything else.
+So the highest-stakes actions ran with *less* deliberation than trivial ones, not more. The rare moments that deserved a beat of attention were the ones most likely to slip by on autopilot.
 
-The session-level finding (verifies voice, not substance) and the command-level finding (rubber stamps at one-way doors) are the same erosion measured at two altitudes. Call any single number an estimate; measure it a few ways and it shifts a point or two. The shape does not move.
+The session-level finding (verifies voice, not substance) and the command-level finding (least deliberation exactly where it mattered most) are the same erosion measured at two altitudes. Call any single number an estimate; measure it a few ways and it shifts a point or two. The shape does not move.
 
 I built this instrument specifically to catch this kind of thing, ran it on my own work half-expecting to come out fine, and it caught me anyway. That's the part I keep returning to: the awareness was already there. It wasn't enough.
 
