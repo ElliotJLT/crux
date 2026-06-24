@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crux — are you getting sharper, or just getting carried?</title>
-  <meta name="description" content="A field note on AI and human judgment, 2026. Crux captures the judgment layer of AI-assisted work — what you reject, redirect, and refuse to ship — so you can see whether your thinking is sharpening or quietly eroding. Local-first. No score." />
+  <meta name="description" content="A field note on staying human while the machine types, 2026. Crux captures the judgment layer of AI-assisted work — what you reject, redirect, and refuse to ship — so you can see whether your thinking is sharpening or quietly eroding. Local-first. No score." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://elliotjlt.github.io/crux/" />
   <meta property="og:title" content="Crux — the judgment layer for AI-assisted work" />
-  <meta property="og:description" content="Your commits show what got built. Crux shows what you rejected, redirected, and killed — and whether your judgment is sharpening or eroding while the AI does the typing." />
+  <meta property="og:description" content="Your commits show what got built. Crux shows what you rejected, redirected, and killed — and whether your judgment is sharpening or eroding while the AI does the typing. Made by hand, in layers." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Crux — are you getting sharper, or just getting carried?" />
   <meta name="twitter:description" content="The human-side reflection layer for AI collaboration. Local-first, no score, no surveillance." />
@@ -18,15 +18,32 @@
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
+  <!-- reusable croissant -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="croissant" viewBox="0 0 64 64">
+      <path d="M8 44 C 11 22 28 15 32 15 C 36 15 53 22 56 44 C 49 34 41 32 32 33 C 23 32 15 34 8 44 Z" class="cr-body"/>
+      <g class="cr-ridge">
+        <path d="M13 41 C 15 35 18 30 22 26"/>
+        <path d="M19 39 C 20 32 23 25 27 21"/>
+        <path d="M32 37 C 32 28 32 22 32 17"/>
+        <path d="M45 39 C 44 32 41 25 37 21"/>
+        <path d="M51 41 C 49 35 46 30 42 26"/>
+      </g>
+    </symbol>
+  </svg>
+
   <header class="topbar">
-    <a class="wordmark" href="#hero">crux<span class="mark">&times;</span></a>
+    <a class="wordmark" href="#hero">
+      <svg class="wm-cr" viewBox="0 0 64 64" aria-hidden="true"><use href="#croissant"/></svg>
+      crux
+    </a>
     <a class="pill" href="#contact">Get in touch <span>&#9656;</span></a>
   </header>
 
@@ -43,62 +60,34 @@
   <main>
     <!-- HERO -->
     <section id="hero" class="hero panel">
-      <div class="hero-meta tl reveal">
-        <span>A FIELD NOTE ON AI &amp; JUDGMENT</span>
-        <span>EST. 2026 · LONDON</span>
+      <div class="hero-grid">
+        <div class="hero-left">
+          <p class="eyebrow mono reveal">A field note on staying human while the machine types &middot; 2026</p>
+          <h1 class="reveal">You're shipping faster than ever. Are you getting <span class="up">sharper</span>, or just getting <span class="down">carried</span>?</h1>
+          <p class="hero-lede reveal">
+            Your commits record what got built. They never record what you rejected, redirected,
+            or refused to ship — the part of the work that's still yours. That's the crux.
+          </p>
+          <div class="hero-cta reveal">
+            <a class="btn" href="#problem">Read the field note</a>
+            <a class="btn ghost" href="#crux">What is Crux?</a>
+          </div>
+        </div>
+        <div class="hero-right reveal">
+          <div class="cr-stage">
+            <svg class="cr-big" viewBox="0 0 64 64" aria-hidden="true"><use href="#croissant"/></svg>
+          </div>
+          <p class="cr-cap mono">Judgment is laminated.<br/>Made by hand, in layers.</p>
+        </div>
       </div>
-      <div class="hero-meta ml reveal">
-        <span>51.5074&deg; N</span>
-        <span>STATUS / ALPHA</span>
-        <span>LOCAL-FIRST / NO SCORE</span>
-      </div>
-
-      <div class="motif" aria-hidden="true">
-        <svg viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet">
-          <g class="lines-in" fill="none" stroke-linecap="round">
-            <path d="M40,300 C260,300 360,300 500,300" />
-            <path d="M40,300 C260,290 360,280 500,300" />
-            <path d="M40,300 C260,312 360,322 500,300" />
-            <path d="M40,300 C240,298 380,302 500,300" />
-          </g>
-          <g class="lines-up" fill="none" stroke-linecap="round">
-            <path d="M500,300 C640,300 760,210 960,120" />
-            <path d="M500,300 C660,298 780,250 960,180" />
-          </g>
-          <g class="lines-down" fill="none" stroke-linecap="round">
-            <path d="M500,300 C640,300 760,400 960,500" />
-            <path d="M500,300 C660,304 780,360 960,440" />
-            <path d="M500,300 C680,316 800,420 960,540" />
-          </g>
-          <g class="lines-flat" fill="none" stroke-linecap="round">
-            <path d="M500,300 C700,300 820,302 960,300" />
-          </g>
-          <circle class="node-glow" cx="500" cy="300" r="34" />
-          <circle class="node" cx="500" cy="300" r="6" />
-          <text class="node-tag" x="500" y="356">THE CRUX</text>
-        </svg>
-      </div>
-
-      <div class="hero-headline reveal">
-        <h1>You're shipping faster than ever.<br />Are you getting <span class="up">sharper</span>, or just getting <span class="down">carried</span>?</h1>
-      </div>
-      <p class="hero-lede mono reveal">
-        Your commits record what got built. They never record what you rejected,
-        redirected, or refused to ship — the part of the work that's still yours.
-        That's the crux. Crux captures it.
-      </p>
-
-      <a class="scrollcue" href="#problem" aria-label="Scroll">
-        <span class="mono">SCROLL TO READ</span>
-        <span class="cue-line"></span>
-      </a>
+      <a class="scrollcue mono" href="#problem" aria-label="Scroll"><span>SCROLL TO READ</span><span class="cue-line"></span></a>
     </section>
 
     <!-- 01 PROBLEM -->
     <section id="problem" class="panel split">
-      <span class="ghost" aria-hidden="true">OUTPUT&nbsp;&ne;&nbsp;JUDGMENT</span>
+      <span class="ghost" aria-hidden="true">output&nbsp;&ne;&nbsp;judgment</span>
       <div class="col-left">
-        <span class="sec-no mono reveal">01</span>
+        <span class="sec-no reveal">01</span>
         <span class="sec-label mono reveal">THE PROBLEM</span>
       </div>
       <div class="col-right">
@@ -120,26 +109,26 @@
     <!-- 02 DATA -->
     <section id="data" class="panel">
       <div class="sec-head reveal">
-        <span class="sec-no mono">02</span>
+        <span class="sec-no inline">02</span>
         <span class="sec-label mono">THE EVIDENCE</span>
         <h2>And people can already feel it.</h2>
       </div>
       <div class="stat-grid">
         <div class="stat-cell reveal">
           <span class="figure" data-count="81000" data-suffix="+">0</span>
-          <span class="cap mono">Claude users interviewed by Anthropic</span>
+          <span class="cap">Claude users interviewed by Anthropic</span>
         </div>
         <div class="stat-cell reveal">
           <span class="figure">#<span data-count="4">0</span></span>
-          <span class="cap mono">where cognitive atrophy ranked among their concerns</span>
+          <span class="cap">where cognitive atrophy ranked among their concerns</span>
         </div>
         <div class="stat-cell reveal">
           <span class="figure" data-count="13000">0</span>
-          <span class="cap mono">named losing their edge, directly and unprompted</span>
+          <span class="cap">named losing their edge, directly and unprompted</span>
         </div>
         <div class="stat-cell reveal">
           <span class="figure">~<span data-count="50">0</span>%</span>
-          <span class="cap mono">said they already feel it happening</span>
+          <span class="cap">said they already feel it happening</span>
         </div>
       </div>
       <blockquote class="pull reveal">
@@ -151,7 +140,7 @@
     <!-- 03 TRAJECTORY -->
     <section id="trajectory" class="panel split">
       <div class="col-left">
-        <span class="sec-no mono reveal">03</span>
+        <span class="sec-no reveal">03</span>
         <span class="sec-label mono reveal">THE TRAJECTORY</span>
         <div class="mini-motif reveal" aria-hidden="true">
           <svg viewBox="0 0 360 260" preserveAspectRatio="xMidYMid meet">
@@ -170,12 +159,10 @@
           have turned permission prompts off, so today the highest-stakes actions (force-push, prod migration,
           <code>DROP</code>, merge to main) run with <em>less</em> scrutiny than trivial ones.
         </p>
-        <p class="body reveal">
-          A dry run over real sessions made it measurable:
-        </p>
+        <p class="body reveal">A dry run over real sessions made it measurable:</p>
         <div class="inline-stats reveal">
           <div><b data-count="192">0</b><span class="mono">real sessions analysed</span></div>
-          <div><b data-count="0.41" data-decimals="2">0</b><span class="mono">one-way doors / day · 0.45% of commands</span></div>
+          <div><b data-count="0.41" data-decimals="2">0</b><span class="mono">one-way doors / day &middot; 0.45% of commands</span></div>
           <div><b>~6<small>/8</small></b><span class="mono">were rubber stamps: &ldquo;go for it&rdquo;, &ldquo;ship it&rdquo;</span></div>
         </div>
         <p class="body dim reveal">
@@ -189,7 +176,7 @@
     <section id="year" class="panel">
       <span class="ghost big" aria-hidden="true">2026</span>
       <div class="sec-head reveal">
-        <span class="sec-no mono">04</span>
+        <span class="sec-no inline">04</span>
         <span class="sec-label mono">WHERE WE ARE &middot; 2026</span>
         <h2>The work has shifted from process to outcome.</h2>
         <p class="body wide">
@@ -201,15 +188,15 @@
       <div class="quote-grid">
         <figure class="qcard reveal">
           <blockquote>&ldquo;I no longer steer. I commission.&rdquo;</blockquote>
-          <figcaption>Ethan Mollick · <span class="mono">Wharton</span></figcaption>
+          <figcaption>Ethan Mollick <span class="mono">Wharton</span></figcaption>
         </figure>
         <figure class="qcard reveal">
           <blockquote>&ldquo;I don't prompt Claude anymore&hellip; my job is to write loops.&rdquo;</blockquote>
-          <figcaption>Boris Cherny · <span class="mono">Head of Claude Code</span></figcaption>
+          <figcaption>Boris Cherny <span class="mono">Head of Claude Code</span></figcaption>
         </figure>
         <figure class="qcard reveal">
           <blockquote>Every component gets a maker and a checker &mdash; except the human designing the loop.</blockquote>
-          <figcaption>Addy Osmani · <span class="mono">Loop Engineering</span></figcaption>
+          <figcaption>Addy Osmani <span class="mono">Loop Engineering</span></figcaption>
         </figure>
       </div>
     </section>
@@ -217,7 +204,7 @@
     <!-- 05 CRUX -->
     <section id="crux" class="panel">
       <div class="sec-head reveal">
-        <span class="sec-no mono">05</span>
+        <span class="sec-no inline">05</span>
         <span class="sec-label mono">THE INSTRUMENT</span>
         <h2>Crux makes the judgment layer visible.</h2>
         <p class="body wide">
@@ -275,9 +262,9 @@ investigated before fixing.
 
     <!-- 06 CONTACT -->
     <section id="contact" class="panel contact">
-      <span class="ghost" aria-hidden="true">LET'S TALK</span>
+      <svg class="cr-foot" viewBox="0 0 64 64" aria-hidden="true"><use href="#croissant"/></svg>
       <div class="sec-head reveal">
-        <span class="sec-no mono">06</span>
+        <span class="sec-no inline">06</span>
         <span class="sec-label mono">GET IN TOUCH</span>
         <h2>Building this in the open.</h2>
         <p class="body">
