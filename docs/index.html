@@ -3,35 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crux — everyone measures the AI. Nobody measures the human.</title>
-  <meta name="description" content="An open inquiry into the human side of AI collaboration: the clear problem, the research, and a potential approach. $200M+ has gone into measuring the model; almost nothing into measuring whether the human is still thinking." />
+  <title>Crux — measure the human, not just the model.</title>
+  <meta name="description" content="An open inquiry into the human side of AI collaboration. $200M+ has gone into measuring the model; almost nothing into measuring whether the human is still thinking. The problem, the research, and a potential approach." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://elliotjlt.github.io/crux/" />
-  <meta property="og:title" content="Crux — everyone measures the AI. Nobody measures the human." />
-  <meta property="og:description" content="The problem, the research, and a potential approach to measuring whether human judgment is sharpening or eroding as AI does more of the work." />
+  <meta property="og:title" content="Crux — measure the human, not just the model." />
+  <meta property="og:description" content="An open inquiry into the human side of AI collaboration: the problem, the research, and a potential approach to measuring whether human judgment is sharpening or eroding." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Crux — everyone measures the AI. Nobody measures the human." />
-  <meta name="twitter:description" content="An open inquiry into the human side of AI collaboration. The problem, the research, a potential approach." />
+  <meta name="twitter:title" content="Crux — measure the human, not just the model." />
+  <meta name="twitter:description" content="An open inquiry into the human side of AI collaboration." />
 
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#f6a93b"/><stop offset="0.55" stop-color="#ff6f5b"/><stop offset="1" stop-color="#e85d8a"/>
-      </linearGradient>
-    </defs>
     <symbol id="logomark" viewBox="0 0 24 24">
-      <rect width="24" height="24" rx="6" fill="url(#warm)"/>
-      <g stroke="#1a1108" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.9"><path d="M7 12 L16.5 7"/><path d="M7 12 L16.5 17"/></g>
-      <circle cx="7" cy="12" r="2" fill="#1a1108"/>
+      <rect width="24" height="24" rx="6" fill="#0f0f0e"/>
+      <g stroke="#faf9f6" stroke-width="2" stroke-linecap="round" fill="none"><path d="M7 12 L16.5 7"/><path d="M7 12 L16.5 17"/></g>
+      <circle cx="7" cy="12" r="2" fill="#faf9f6"/>
     </symbol>
   </svg>
 
@@ -43,25 +38,26 @@
       <a href="#approach">Approach</a>
       <a href="#contact">Swap notes</a>
     </nav>
-    <a class="btn btn-secondary nav-cta" href="https://github.com/ElliotJLT/crux">GitHub</a>
+    <a class="btn btn-primary nav-cta" href="https://github.com/ElliotJLT/crux">GitHub</a>
   </header>
 
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <div class="aurora" aria-hidden="true"></div>
-      <span class="badge reveal"><span class="badge-dot"></span> An open inquiry &middot; 2026</span>
-      <h1 class="reveal"><span class="h1-pre">Everyone measures whether the AI is good.</span><br />Nobody measures whether the <span class="grad">human</span> still is.</h1>
-      <p class="hero-sub reveal">
-        As the machine does more of the work, what happens to the judgment of the person directing it —
-        and can you even see it changing? This is a working inquiry: the clear problem, the research, and
-        a potential approach. Early, public, and open to attack.
-      </p>
-      <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="#problem">Read the inquiry</a>
-        <a class="btn btn-secondary" href="https://github.com/ElliotJLT/crux/blob/main/docs/auto-reflection.md">The full argument &rsaquo;</a>
+      <span class="kicker reveal">An open inquiry &middot; 2026</span>
+      <div class="hero-grid">
+        <h1 class="reveal">Measure the human, not just the model.</h1>
+        <div class="hero-aside reveal">
+          <p class="hero-sub">
+            As AI does more of the work, what happens to the judgment of the person directing it — and can
+            you even see it changing? An open inquiry: the problem, the research, and a potential approach.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#problem">Read the inquiry</a>
+            <a class="btn btn-ghost" href="https://github.com/ElliotJLT/crux/blob/main/docs/auto-reflection.md">The full argument</a>
+          </div>
+        </div>
       </div>
-      <p class="hero-foot reveal mono">A question we think is under-measured — not a product launch.</p>
     </section>
 
     <!-- THE PROBLEM -->
@@ -76,7 +72,7 @@
       <div class="gap-figure reveal">
         <div class="gf-side"><span class="gf-num">$200M+</span><span class="gf-lbl">invested in measuring the model</span></div>
         <div class="gf-div" aria-hidden="true"></div>
-        <div class="gf-side"><span class="gf-num grad">$0</span><span class="gf-lbl">measuring whether the human is still engaged</span></div>
+        <div class="gf-side"><span class="gf-num accent">$0</span><span class="gf-lbl">measuring whether the human is still engaged</span></div>
       </div>
       <div class="fund reveal">
         <span class="fund-lbl mono">Every funded player measures the model:</span>
@@ -117,22 +113,21 @@
         <article class="ev-card reveal"><span class="ev-stat">−5.2pp</span><p class="ev-claim">The artifact paradox: the more polished the output, the less the user checks context (−5.2pp) or questions reasoning (−3.1pp).</p><span class="ev-src mono">Anthropic · AI Fluency Index</span></article>
       </div>
 
-      <!-- our contribution -->
       <div class="finding two-col">
         <div class="tc-text">
-          <p class="eyebrow sub reveal">Our own instrumentation</p>
-          <h3 class="reveal">So we instrumented real engineering sessions, and watched the gap compound.</h3>
+          <p class="eyebrow sub reveal">My own instrumentation</p>
+          <h3 class="reveal">So I instrumented my own sessions, and watched the gap compound.</h3>
           <p class="lead reveal">
-            A v0 that captures real Claude Code sessions and classifies them against a fixed taxonomy of
-            decisions and irreversible moments. The early read on working engineers' sessions:
+            A v0 that captures my real Claude Code sessions and classifies them against a fixed taxonomy of
+            decisions and irreversible moments. 50 sessions, four months, one person — the one paying attention to this.
           </p>
           <div class="mini-stats reveal">
-            <div><b data-count="75" data-suffix="%">0</b><span>of decisions at irreversible one-way doors were rubber stamps — &ldquo;go for it&rdquo;, &ldquo;ship it&rdquo;</span></div>
+            <div><b data-count="75" data-suffix="%">0</b><span>of my decisions at irreversible one-way doors were rubber stamps — &ldquo;go for it&rdquo;, &ldquo;ship it&rdquo;</span></div>
             <div><b>weak</b><span>on verifying what the AI <em>says</em> — the lone outlier across the fluency dimensions</span></div>
-            <div><b>0</b><span>improvement trend over months. Awareness alone changed nothing.</span></div>
+            <div><b>0</b><span>improvement trend over four months. Awareness alone changed nothing.</span></div>
           </div>
           <p class="lead dim reveal">
-            The point isn't the sample size. It's that even engineers <em>watching</em> for the pattern couldn't stop it.
+            n = 1, and the person measuring it — which is the point. Even watching for the pattern, I couldn't stop it.
           </p>
         </div>
         <div class="tc-vis reveal">
@@ -168,7 +163,7 @@
       <h2 class="reveal">What a fix could look like — quiet, private, and pointed at you.</h2>
       <p class="lead reveal">
         Not a dashboard that nags. Not a score. A thin instrument that records the decisions behind your
-        work and shows you the trend — the way a training log works for a runner. Here's the shape we're testing.
+        work and shows you the trend — the way a training log works for a runner. Here's the shape I'm testing.
       </p>
       <div class="steps">
         <div class="step reveal"><span class="step-n mono">01</span><h3>Capture, locally</h3><p>A Claude Code hook reads each session on your machine when it ends. Nothing identifiable leaves your device.</p></div>
@@ -202,19 +197,18 @@ what the AI claims is true.</span></code></pre></div>
 
       <p class="lead dim center reveal">
         This is a v0. History says a personal tool helps the person who runs it but won't save the population —
-        that takes curriculum, provider infrastructure, or professional standards. We're testing whether the
+        that takes curriculum, provider infrastructure, or professional standards. I'm testing whether the
         thing is even measurable. If the captured signal turns out to be theatre, the plan is to say so and stop.
       </p>
     </section>
 
     <!-- CTA -->
     <section id="contact" class="cta">
-      <div class="aurora cta-aurora" aria-hidden="true"></div>
-      <h2 class="reveal">Interested in building<br />in this space?</h2>
+      <h2 class="reveal">Interested in building in this space?</h2>
       <p class="cta-sub reveal">Researchers, people working on AI adoption, builders poking at the same problem — if this is your question too, I'd like to swap notes. The full argument, taxonomy, and raw data are public.</p>
       <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="https://www.linkedin.com/in/REPLACE-ME" data-needs-confirm="linkedin">Let's swap notes</a>
-        <a class="btn btn-secondary" href="https://github.com/ElliotJLT/crux/blob/main/docs/auto-reflection.md">Read the full argument</a>
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/hireelliot/">Let's swap notes</a>
+        <a class="btn btn-ghost" href="https://github.com/ElliotJLT/crux/blob/main/docs/auto-reflection.md">Read the full argument</a>
       </div>
     </section>
   </main>
@@ -233,8 +227,8 @@ what the AI claims is true.</span></code></pre></div>
       </div>
       <div class="foot-col">
         <span class="foot-h mono">Connect</span>
-        <a href="https://www.linkedin.com/in/REPLACE-ME" data-needs-confirm="linkedin">LinkedIn</a>
-        <a href="mailto:elliot@zerogravity.co.uk" data-needs-confirm="email">Email</a>
+        <a href="https://www.linkedin.com/in/hireelliot/">LinkedIn</a>
+        <a href="mailto:elliotjlittle@gmail.com">Email</a>
       </div>
     </div>
     <div class="foot-base mono">CRUX · 2026 · MIT · An open, openly-documented experiment</div>
