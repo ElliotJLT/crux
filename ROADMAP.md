@@ -1,8 +1,8 @@
-# judgment-trail roadmap
+# crux roadmap
 
 > The bigger argument for why this layer needs to exist: [`docs/auto-reflection.md`](./docs/auto-reflection.md).
 
-judgment-trail today captures Claude Code sessions and synthesises collaboration patterns across time. The strategic position it occupies is broader: the **human-side reflection layer for AI collaboration** — the counterpart to what providers are building on the model side (persistent memory, agent monitoring, automated eval).
+crux today captures Claude Code sessions and synthesises collaboration patterns across time. The strategic position it occupies is broader: the **human-side reflection layer for AI collaboration** — the counterpart to what providers are building on the model side (persistent memory, agent monitoring, automated eval).
 
 The roadmap runs on two axes. **Depth** — when in the decision lifecycle capture happens. **Breadth** — how many AI surfaces it covers. Depth currently outranks breadth, for a reason given below.
 

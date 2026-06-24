@@ -15,7 +15,7 @@ Anthropic's AI Fluency Index measures 11 observable behaviors in conversations, 
 **Discernment** — questioning AI reasoning, checking facts, evaluating output quality
 **Diligence** — considering consequences of AI-generated output, verifying before sharing
 
-The fluency index also identifies **13 behaviors it cannot measure** because they happen outside the conversation. These are where decision-trail adds signal that aggregate measurement misses. Look for evidence of:
+The fluency index also identifies **13 behaviors it cannot measure** because they happen outside the conversation. These are where crux adds signal that aggregate measurement misses. Look for evidence of:
 
 - Honest assessment of AI's role in the work (not overclaiming, not hiding it)
 - Considering downstream consequences of AI-generated output before sharing
@@ -30,7 +30,7 @@ The fluency index also identifies **13 behaviors it cannot measure** because the
 Note which behaviors are consistently present across sessions. Don't list all four every time — only flag what's notable. Strong discernment across 5 sessions is worth noting. Baseline delegation in every session is not.
 
 ### What the fluency index can't see
-This is the unique value of decision-trail. Surface evidence of:
+This is the unique value of crux. Surface evidence of:
 
 - **Trust calibration** — are they calibrating trust by task type? (e.g. autonomous on execution, checking on narrative). Is this consistent or evolving?
 - **Artifact paradox resistance** — are they actively challenging polished output? Or is there evidence of coasting? The fluency index found that polished output makes people less critical — look for whether this is happening or being resisted.

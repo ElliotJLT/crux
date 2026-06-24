@@ -35,7 +35,7 @@ Findings from my own corpus:
 
 The last bullet is what cognitive surrender looks like in someone who is actively measuring it. I am not the worst case. I am the case who is paying attention. The pattern still compounds.
 
-**Point-of-decision findings — the founding baseline.** In June 2026 I ran a log-only classifier over my full local transcript corpus (192 sessions, 2,668 shell commands, 22 active days), matching against a [tiered taxonomy of irreversible operations](https://github.com/ElliotJLT/judgment-trail/blob/main/taxonomy/cutlines.yml) — force-pushes, production migrations, destructive SQL, merges to the default branch. Two results:
+**Point-of-decision findings — the founding baseline.** In June 2026 I ran a log-only classifier over my full local transcript corpus (192 sessions, 2,668 shell commands, 22 active days), matching against a [tiered taxonomy of irreversible operations](https://github.com/ElliotJLT/crux/blob/main/taxonomy/cutlines.yml) — force-pushes, production migrations, destructive SQL, merges to the default branch. Two results:
 
 - **Irreversible moments are mechanically separable from routine.** 9 genuine decision events in 22 days — 0.41 per day, 0.45% of all commands. Sparse enough that capture at these moments survives the friction objection.
 - **Of the 8 events with a captured preceding human message, ~6 were rubber stamps or blanket delegations** — "go for it", "you do it all", "solve it for me". Contemporaneous justification at one-way doors does not currently exist, in a user who built the measurement tool.
@@ -82,7 +82,7 @@ I commissioned a synthesis of seven historical cases of automating tools and hum
 - **Speed.** Aviation had 30 years to build UPRT after the first glass-cockpit incidents. AI capability is doubling in months. The institutional response window is closing before institutions notice.
 - **Invisibility.** Loss-of-control-in-flight produces craters and NTSB reports. Cognitive surrender produces nothing visible. No insurance claim, no congressional hearing, no measurable population-level alarm bell.
 
-**The implication for judgment-trail (and anything like it) is hard.** Voluntary individual self-tracking has never preserved a capacity at population scale historically. The closest analogs (spelling, sustained attention) all eroded with no defender. A user-facing practice tool can be useful for the individuals who run it. It will not solve the problem at scale.
+**The implication for crux (and anything like it) is hard.** Voluntary individual self-tracking has never preserved a capacity at population scale historically. The closest analogs (spelling, sustained attention) all eroded with no defender. A user-facing practice tool can be useful for the individuals who run it. It will not solve the problem at scale.
 
 Three routes have worked:
 
@@ -130,18 +130,18 @@ The infrastructure is the same. The interface varies by what the user came for.
 
 ## What I'm building
 
-[judgment-trail](https://github.com/ElliotJLT/judgment-trail) is the v0 of Auto Reflection. Current state:
+[crux](https://github.com/ElliotJLT/crux) is the v0 of Auto Reflection. Current state:
 
 - **Capture:** SessionEnd hook on Claude Code that auto-generates a structured digest per session. Zero commands, zero friction. Ships as a clone-and-add-to-settings.json install.
-- **Taxonomy:** Controlled vocabulary in [`taxonomy/patterns.yml`](https://github.com/ElliotJLT/judgment-trail/blob/main/taxonomy/patterns.yml). 22 named patterns grouped by fluency dimension. New entries require explicit vocab updates so retrievability stays intact.
+- **Taxonomy:** Controlled vocabulary in [`taxonomy/patterns.yml`](https://github.com/ElliotJLT/crux/blob/main/taxonomy/patterns.yml). 22 named patterns grouped by fluency dimension. New entries require explicit vocab updates so retrievability stays intact.
 - **Synthesis:** Monthly trajectory analysis grounded in Anthropic's Economic Index framework (interaction types, automation vs. augmentation) and the 4D Fluency Index.
-- **The Trail:** point-of-decision capture at irreversible moments. A [tiered cut-line taxonomy](https://github.com/ElliotJLT/judgment-trail/blob/main/taxonomy/cutlines.yml) plus a dry-run classifier — the Day-1 results above. Next: an opt-in PreToolUse hook that asks four neutral questions at hard-tier doors (who owns this, why now, how you'll watch it, how to undo it) and folds the answers into an append-only local trail. No score, no gate, off by default. Then the **delegation tier**: accepting the output of a long autonomous run is a one-way door in the same taxonomy sense — the disclosure hook surfaces the N decisions the run made on your behalf that you'd most plausibly contest, and one genuine contest per run beats reviewing everything shallowly.
+- **The Trail:** point-of-decision capture at irreversible moments. A [tiered cut-line taxonomy](https://github.com/ElliotJLT/crux/blob/main/taxonomy/cutlines.yml) plus a dry-run classifier — the Day-1 results above. Next: an opt-in PreToolUse hook that asks four neutral questions at hard-tier doors (who owns this, why now, how you'll watch it, how to undo it) and folds the answers into an append-only local trail. No score, no gate, off by default. Then the **delegation tier**: accepting the output of a long autonomous run is a one-way door in the same taxonomy sense — the disclosure hook surfaces the N decisions the run made on your behalf that you'd most plausibly contest, and one genuine contest per run beats reviewing everything shallowly.
 - **The metric this unlocks** is the project's first leading indicator: the blank-justification rate at one-way doors (and later, contest rate at sign-offs) tracked over time. Everything else in the field measures surrender *after* output quality degrades. This reads whether the wanting-to-own is fading, before.
-- **Scope today:** Claude Code only. Covers maybe 20% of a heavy user's actual AI surface. The [roadmap](https://github.com/ElliotJLT/judgment-trail/blob/main/ROADMAP.md) sequences depth (Trail Day 2, disclosure hook) ahead of breadth (Cursor + Claude.ai exports, then Copilot OTel + ChatGPT exports, then the browser tail) — because the loop-engineering era is shrinking the judgment moments faster than it is multiplying the surfaces.
+- **Scope today:** Claude Code only. Covers maybe 20% of a heavy user's actual AI surface. The [roadmap](https://github.com/ElliotJLT/crux/blob/main/ROADMAP.md) sequences depth (Trail Day 2, disclosure hook) ahead of breadth (Cursor + Claude.ai exports, then Copilot OTel + ChatGPT exports, then the browser tail) — because the loop-engineering era is shrinking the judgment moments faster than it is multiplying the surfaces.
 
 The repo is public. The tool runs against my own work today. The findings I quoted above are from 46+ sessions of my own data. This is not theoretical; it is undersized.
 
-The thing it is not is the layer that providers should ship natively. That tool — Auto Reflection as default infrastructure for everyone using AI at significant volume — is what the gap actually demands. judgment-trail demonstrates the shape; providers ship the scale.
+The thing it is not is the layer that providers should ship natively. That tool — Auto Reflection as default infrastructure for everyone using AI at significant volume — is what the gap actually demands. crux demonstrates the shape; providers ship the scale.
 
 ---
 
@@ -166,7 +166,7 @@ This document is the strategic anchor. From here:
 - The Trail's Day-2 capture hook is the next concrete deliverable: opt-in, off by default, four neutral questions at hard-tier doors. Then re-measure the rubber-stamp rate against the Day-1 baseline. The kill criteria hold — if the captured fields are theatre, stop.
 - The disclosure hook follows: a contestable-decisions report at the end of long autonomous runs. The most product-shaped piece of the project, and the one the loop-engineering era makes urgent.
 - v2 cross-LLM (Cursor + Claude.ai exports) lands after the depth work.
-- The four render modes get named in the [roadmap](https://github.com/ElliotJLT/judgment-trail/blob/main/ROADMAP.md) but not built until the above exist.
+- The four render modes get named in the [roadmap](https://github.com/ElliotJLT/crux/blob/main/ROADMAP.md) but not built until the above exist.
 - Engagement with researchers and providers happens after the Day-2 data exists. Not before.
 
 This is not the final form of the argument. It is the form clear enough to attack and improve. Pushback welcome.
@@ -187,4 +187,4 @@ This is not the final form of the argument. It is the form clear enough to attac
 
 **Acquisitions:** [Anthropic acqui-hires Humanloop](https://techcrunch.com/2025/08/13/anthropic-nabs-humanloop-team-as-competition-for-enterprise-ai-talent-heats-up/).
 
-**Tool:** [github.com/ElliotJLT/judgment-trail](https://github.com/ElliotJLT/judgment-trail). [Roadmap](https://github.com/ElliotJLT/judgment-trail/blob/main/ROADMAP.md).
+**Tool:** [github.com/ElliotJLT/crux](https://github.com/ElliotJLT/crux). [Roadmap](https://github.com/ElliotJLT/crux/blob/main/ROADMAP.md).

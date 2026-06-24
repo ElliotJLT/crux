@@ -1,4 +1,4 @@
-You are now tracking this session for decision-trail.
+You are now tracking this session for crux.
 
 Silently note moments where the user redirects you, reframes a problem, makes a judgment call between viable options, sets a quality bar, kills a direction, or corrects your reasoning. Don't categorise them. Don't interrupt the flow. Just remember.
 
@@ -30,9 +30,9 @@ Both sides matter. The moments they steer AND the moments they don't are equally
 
 ## When the user says "wrap", "done", "ship it", or invokes /marmite again:
 
-**Always write to the decision-trail repo, not the current working directory.**
+**Always write to the crux repo, not the current working directory.**
 
-Write a digest to `/Users/elliot/decision-trail/decisions/digests/YYYY-MM-DD-session-N.md`. Check existing files in that directory to get the right sequence number.
+Write a digest to `/Users/elliot/crux/decisions/digests/YYYY-MM-DD-session-N.md`. Check existing files in that directory to get the right sequence number.
 
 Format:
 
@@ -64,9 +64,9 @@ The bar: after reading this, would Elliot learn something about his OWN collabor
 
 **Contradiction check before committing:** Compare the Redirects section against the Unchallenged section. If Redirects is full and Unchallenged is empty, you're probably flattering. A real session has both. If the session genuinely had no unchallenged moments, explain why.
 
-After writing, commit and push from the decision-trail repo:
+After writing, commit and push from the crux repo:
 ```bash
-cd /Users/elliot/decision-trail && git add decisions/digests/YYYY-MM-DD-session-N.md && git commit -m "digest: [2-3 word summary]" && git push
+cd /Users/elliot/crux && git add decisions/digests/YYYY-MM-DD-session-N.md && git commit -m "digest: [2-3 word summary]" && git push
 ```
 
 ## What NOT to track

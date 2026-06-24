@@ -1,11 +1,11 @@
 #!/bin/bash
-# decision-trail digest worker — generates a digest from session metadata
+# crux digest worker — generates a digest from session metadata
 # Called by auto-digest.sh with the work file path as $1
 
-DECISION_TRAIL_DIR="${DECISION_TRAIL_DIR:-$HOME/decision-trail}"
+CRUX_DIR="${CRUX_DIR:-$HOME/crux}"
 CLAUDE_BIN="$(command -v claude)"
-DIGEST_DIR="$DECISION_TRAIL_DIR/decisions/digests"
-LOG="$DECISION_TRAIL_DIR/scripts/auto-digest.log"
+DIGEST_DIR="$CRUX_DIR/decisions/digests"
+LOG="$CRUX_DIR/scripts/auto-digest.log"
 
 log() { echo "$(date '+%H:%M:%S') $1" >> "$LOG"; }
 
@@ -24,15 +24,15 @@ CWD=$(echo "$INPUT" | jq -r '.cwd // empty')
 
 log "=== session: reason=$REASON cwd=$CWD ==="
 
-# Opt-out: skip if .dt-skip exists in the session's working directory
-if [[ -f "$CWD/.dt-skip" ]]; then
-  log "SKIP: .dt-skip found in $CWD"
+# Opt-out: skip if .crux-skip exists in the session's working directory
+if [[ -f "$CWD/.crux-skip" ]]; then
+  log "SKIP: .crux-skip found in $CWD"
   exit 0
 fi
 
 # Opt-out: skip via environment variable
-if [[ "$DT_SKIP" == "1" ]]; then
-  log "SKIP: DT_SKIP=1"
+if [[ "$CRUX_SKIP" == "1" ]]; then
+  log "SKIP: CRUX_SKIP=1"
   exit 0
 fi
 
@@ -44,7 +44,7 @@ fi
 
 # Extract condensed transcript using Python
 export DT_TRANSCRIPT="$TRANSCRIPT"
-CONDENSED=$(python3 "$DECISION_TRAIL_DIR/scripts/extract-transcript.py")
+CONDENSED=$(python3 "$CRUX_DIR/scripts/extract-transcript.py")
 
 # Skip short sessions
 USER_COUNT=$(echo "$CONDENSED" | grep -c "^USER:" || true)
@@ -62,7 +62,7 @@ NEXT=$((EXISTING + 1))
 DIGEST_FILE="$DIGEST_DIR/${TODAY}-session-${NEXT}.md"
 
 # Load the controlled vocab for patterns (RAG-stable tags)
-PATTERNS_FILE="$DECISION_TRAIL_DIR/taxonomy/patterns.yml"
+PATTERNS_FILE="$CRUX_DIR/taxonomy/patterns.yml"
 if [[ -f "$PATTERNS_FILE" ]]; then
   PATTERNS_VOCAB=$(cat "$PATTERNS_FILE")
 else
@@ -87,7 +87,7 @@ TRUNCATED=$(echo "$CONDENSED" | head -c 40000)
 # Build the full prompt in a temp file
 TMPFILE=$(mktemp /tmp/dt-prompt-XXXXXX.txt)
 cat > "$TMPFILE" << ENDPROMPT
-You are generating a decision-trail digest from a Claude Code session transcript.
+You are generating a crux digest from a Claude Code session transcript.
 
 The digest has two audiences:
 1. Elliot, reading it next month to spot how his judgement is trending.
@@ -106,7 +106,7 @@ OUTPUT FORMAT — emit exactly this, nothing else:
 ---
 date: ${TODAY}
 session_id: ${TODAY}-session-${NEXT}
-project: [short kebab-case project name e.g. argus, decision-trail, applications, or "general"]
+project: [short kebab-case project name e.g. argus, crux, applications, or "general"]
 duration: [short | medium | long]
 shape: [research | shipping | refinement | planning | debugging | writing | mixed]
 interaction_type: [directive | feedback-loop | task-iteration | validation | learning]
@@ -148,7 +148,7 @@ HARD RULES:
 - No file paths, env vars, API keys, architecture details, internal service names, or company-confidential info anywhere.
 - Real quotes only — never fabricate user words. If you can't find a quote that lands, paraphrase and skip the italics.
 - YAML must be valid. Use [] for empty lists. Lowercase enum values.
-- Project name: pick from {argus, decision-trail, applications, multiverse, boulot, cervo, bungalow-ai, writing, general} — or invent a kebab-case one if none fit.
+- Project name: pick from {argus, crux, applications, multiverse, boulot, cervo, bungalow-ai, writing, general} — or invent a kebab-case one if none fit.
 - Concepts are flexible topical tags (e.g. autonomous-agents, claude-skills, mcp, hooks, cv, linkedin-post). Avoid hyper-specific feature names.
 - Patterns MUST be from the vocab above. Empty list is fine if nothing matches.
 - "Trajectory note" only links a prior session if the pattern or project genuinely overlaps.
@@ -190,7 +190,7 @@ echo "$DIGEST" > "$DIGEST_FILE"
 log "wrote $DIGEST_FILE"
 
 # Commit and push
-cd "$DECISION_TRAIL_DIR"
+cd "$CRUX_DIR"
 git add "$DIGEST_FILE" 2>> "$LOG"
 TOPIC=$(head -1 "$DIGEST_FILE" | sed 's/^# [0-9-]* — //' | head -c 50)
 git commit -m "digest: ${TOPIC}" >> "$LOG" 2>&1

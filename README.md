@@ -1,8 +1,13 @@
-# decision-trail
+# Crux
 
-[![Decision Profile](https://img.shields.io/badge/profile-live-blue)](https://elliotjlt.github.io/decision-trail/)
+[![site](https://img.shields.io/badge/site-live-2563eb)](https://elliotjlt.github.io/crux/)
+[![status](https://img.shields.io/badge/status-alpha-e8590c)](https://github.com/ElliotJLT/crux)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-SessionEnd%20hook-6b46c1)](https://code.claude.com/docs/en/hooks.md)
+[![license](https://img.shields.io/badge/license-MIT-444)](./LICENSE)
 
-**You're shipping faster than ever. Are you also getting sharper — or just getting carried?**
+**You're shipping faster than ever. Are you getting sharper, or just getting carried?**
+
+> The crux is the part of the work that's still yours: what you reject, redirect, and refuse to ship. Crux captures it, so you can see whether your judgment is sharpening or quietly eroding while the AI does the typing.
 
 ---
 
@@ -18,7 +23,7 @@ When they [interviewed 80,508 Claude users](https://anthropic.com/features/81k-i
 
 > "I don't think as much as I used to. I struggle to put the ideas I do have into words." — Heavy AI user, United States
 
-Wharton has now codified the umbrella term: **cognitive surrender**. Ethan Mollick's [*Choosing to Stay Human*](https://www.oneusefulthing.org/p/choosing-to-stay-human) (May 2026) makes the case that the answer isn't user-level willpower but system-level constraints. This is the gap judgment-trail exists to surface.
+Wharton has now codified the umbrella term: **cognitive surrender**. Ethan Mollick's [*Choosing to Stay Human*](https://www.oneusefulthing.org/p/choosing-to-stay-human) (May 2026) makes the case that the answer isn't user-level willpower but system-level constraints. This is the gap crux exists to surface.
 
 This isn't about using AI less. It's about knowing whether you're still thinking while you use it.
 
@@ -36,7 +41,7 @@ What separates people who get better with AI from people who get carried by it i
 
 These are dispositions, not skills. You develop them through practice — but only if you can see them. Your GitHub shows what got committed. It doesn't show what you rejected, redirected, or killed.
 
-## decision-trail
+## crux
 
 A practice for developing AI judgment. Like a training log for a runner — the primary value is to you.
 
@@ -105,7 +110,7 @@ The synthesis surfaces whether your collaboration instincts are sharpening, plat
 
 ## Where this is heading
 
-judgment-trail today is a Claude Code-only practice tool. The position it occupies is the **human-side reflection layer** for AI collaboration — a parallel to what providers are building on the AI side (Anthropic's [Auto Dream](https://platform.claude.com/docs/en/managed-agents/dreams), persistent memory; OpenAI's chat memory; etc).
+crux today is a Claude Code-only practice tool. The position it occupies is the **human-side reflection layer** for AI collaboration — a parallel to what providers are building on the AI side (Anthropic's [Auto Dream](https://platform.claude.com/docs/en/managed-agents/dreams), persistent memory; OpenAI's chat memory; etc).
 
 The roadmap (see [`ROADMAP.md`](./ROADMAP.md)) covers cross-LLM capture (Cursor, Claude.ai exports, Copilot OTel, ChatGPT exports), persona-specific render modes, and the strategic position doc [`docs/auto-reflection.md`](./docs/auto-reflection.md) — the longer argument for why this layer needs to exist.
 
@@ -116,8 +121,8 @@ The roadmap (see [`ROADMAP.md`](./ROADMAP.md)) covers cross-LLM capture (Cursor,
 Clone the repo and hook it into Claude Code:
 
 ```bash
-git clone https://github.com/ElliotJLT/decision-trail.git ~/decision-trail
-chmod +x ~/decision-trail/scripts/auto-digest.sh ~/decision-trail/scripts/digest-worker.sh
+git clone https://github.com/ElliotJLT/crux.git ~/crux
+chmod +x ~/crux/scripts/auto-digest.sh ~/crux/scripts/digest-worker.sh
 ```
 
 Then add the SessionEnd hook to your global Claude Code settings (`~/.claude/settings.json`):
@@ -131,7 +136,7 @@ Then add the SessionEnd hook to your global Claude Code settings (`~/.claude/set
         "hooks": [
           {
             "type": "command",
-            "command": "~/decision-trail/scripts/auto-digest.sh"
+            "command": "~/crux/scripts/auto-digest.sh"
           }
         ]
       }
@@ -146,24 +151,24 @@ Each digest is automatically classified using Anthropic's [Economic Index](https
 
 **Requires:** `jq`, `python3`, and `claude` CLI in your PATH. The install script checks for these.
 
-**Custom install path:** Set `DECISION_TRAIL_DIR` to override the default `~/decision-trail` location.
+**Custom install path:** Set `CRUX_DIR` to override the default `~/crux` location.
 
 **Opt out** of auto-capture for a specific project by dropping an empty file in its root:
 
 ```bash
-touch /path/to/project/.dt-skip
+touch /path/to/project/.crux-skip
 ```
 
-Or skip globally for a session with `DT_SKIP=1`.
+Or skip globally for a session with `CRUX_SKIP=1`.
 
 ### Manual commands (optional)
 
 ```bash
 mkdir -p ~/.claude/commands
 curl -o ~/.claude/commands/marmite.md \
-  https://raw.githubusercontent.com/ElliotJLT/decision-trail/main/.claude/commands/marmite.md
+  https://raw.githubusercontent.com/ElliotJLT/crux/main/.claude/commands/marmite.md
 curl -o ~/.claude/commands/trail.md \
-  https://raw.githubusercontent.com/ElliotJLT/decision-trail/main/.claude/commands/trail.md
+  https://raw.githubusercontent.com/ElliotJLT/crux/main/.claude/commands/trail.md
 ```
 
 `/marmite` gives richer in-session tracking (it observes as you work, not post-hoc from the transcript). `/trail` generates monthly synthesis. Both work in every project.
@@ -173,7 +178,7 @@ curl -o ~/.claude/commands/trail.md \
 Once you have 5+ digests, generate a trajectory synthesis:
 
 ```bash
-~/decision-trail/scripts/synthesize.sh
+~/crux/scripts/synthesize.sh
 ```
 
 This produces a synthesis in `decisions/synthesis/YYYY-MM.md` that shows:
@@ -186,37 +191,39 @@ Run it weekly via cron, or just run `/trail` which covers the same ground.
 
 ### CLI (optional)
 
+Installed from the cloned repo (not yet published to PyPI):
+
 ```bash
-pip install decision-trail
+cd ~/crux && pip install .
 
 # Cognitive engagement dashboard
-decision-trail metrics
+crux metrics
 
 # Generate your shareable profile
-decision-trail profile --format both
+crux profile --format both
 
 # Preview locally
-decision-trail serve
+crux serve
 ```
 
 ## The Thesis
 
-Everyone will be fluent. [Anthropic can measure it](https://www.anthropic.com/research/AI-fluency-index), courses can teach it, and the floor is rising fast enough that it stops being a differentiator. But population-level measurement (how do people use AI on average?) is different from individual measurement (how do *you* use AI, and is it changing?). decision-trail bridges that gap.
+Everyone will be fluent. [Anthropic can measure it](https://www.anthropic.com/research/AI-fluency-index), courses can teach it, and the floor is rising fast enough that it stops being a differentiator. But population-level measurement (how do people use AI on average?) is different from individual measurement (how do *you* use AI, and is it changing?). crux bridges that gap.
 
 Anthropic is already teaching people to write [AI diligence statements](https://www.anthropic.com/tutorials/writing-an-ai-diligence-statement) — transparent disclosures of what AI did, what you did, and how you verified the result. It takes 10 minutes per deliverable when you do it manually.
 
 What can't be taught is the layer above fluency: the instinct to challenge, the discipline to kill, the judgment to know when the AI is confidently wrong. [Ferrier calls it Learning Power](https://victoriaferrier.substack.com/p/ai-is-the-wrong-unit-of-analysis). [Shumer calls it the thing that makes you irreplaceable](https://shumer.dev/something-big-is-happening). [Osmani calls it taste](https://addyosmani.com/blog/next-two-years/).
 
-decision-trail captures that layer automatically — by making it visible to the person who needs to see it most: you.
+crux captures that layer automatically — by making it visible to the person who needs to see it most: you.
 
 ## Reading
 
 - [Ethan Mollick: Choosing to Stay Human](https://www.oneusefulthing.org/p/choosing-to-stay-human) (May 2026) — Codifies Wharton's "cognitive surrender" as the umbrella term. Argues the answer is system-level constraints, not user-level willpower. The intellectual anchor for what this tool is for.
-- [Anthropic: Auto Dream — Managed Agent Memory Consolidation](https://platform.claude.com/docs/en/managed-agents/dreams) (May 2026) — Anthropic's own memory layer for AI. judgment-trail is the parallel for the human side.
+- [Anthropic: Auto Dream — Managed Agent Memory Consolidation](https://platform.claude.com/docs/en/managed-agents/dreams) (May 2026) — Anthropic's own memory layer for AI. crux is the parallel for the human side.
 - [Anthropic: What 81,000 People Want from AI](https://anthropic.com/features/81k-interviews) — Cognitive atrophy is the #4 concern. 13,000 users worried about it. Half already feel it.
-- [Anthropic: Writing an AI Diligence Statement](https://www.anthropic.com/tutorials/writing-an-ai-diligence-statement) — The manual version of what decision-trail automates
+- [Anthropic: Writing an AI Diligence Statement](https://www.anthropic.com/tutorials/writing-an-ai-diligence-statement) — The manual version of what crux automates
 - [Anthropic: The AI Fluency Index](https://www.anthropic.com/research/AI-fluency-index) — Why polished output makes people less critical
-- [Anthropic: The Anthropic Economic Index](https://www.anthropic.com/research/the-anthropic-economic-index) — How AI is used in the economy: automation vs augmentation, 5 interaction types, and the benchmark data decision-trail classifies against
+- [Anthropic: The Anthropic Economic Index](https://www.anthropic.com/research/the-anthropic-economic-index) — How AI is used in the economy: automation vs augmentation, 5 interaction types, and the benchmark data crux classifies against
 - [Anthropic: The Impact of AI on Computer Science Education](https://www.anthropic.com/research/impact-of-ai-on-computer-science-education) — How AI changes skill acquisition and the case for deliberate practice
 - [Victoria Ferrier: AI Is The Wrong Unit of Analysis](https://victoriaferrier.substack.com/p/ai-is-the-wrong-unit-of-analysis) — Human capacity, not AI capability, determines success
 - [Matt Shumer: Something Big Is Happening](https://shumer.dev/something-big-is-happening) — The inflection point and why differentiation matters now

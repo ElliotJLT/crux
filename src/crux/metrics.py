@@ -1,4 +1,4 @@
-"""Measurement layer for decision-trail.
+"""Measurement layer for crux.
 
 Parses digest files (and optionally raw JSONL session logs) to extract
 quantified metrics from qualitative session data. Tracks trends across

@@ -1,5 +1,5 @@
 #!/bin/bash
-# decision-trail backfill — reformat legacy digests into the new RAG-friendly schema.
+# crux backfill — reformat legacy digests into the new RAG-friendly schema.
 #
 # Reads every digest in decisions/digests/. If it doesn't already start with
 # YAML frontmatter (--- on the first line), passes it through Claude to re-render
@@ -12,21 +12,21 @@
 
 set -euo pipefail
 
-DECISION_TRAIL_DIR="${DECISION_TRAIL_DIR:-$HOME/decision-trail}"
+CRUX_DIR="${CRUX_DIR:-$HOME/crux}"
 CLAUDE_BIN="$(command -v claude)"
-DIGEST_DIR="$DECISION_TRAIL_DIR/decisions/digests"
-PATTERNS_FILE="$DECISION_TRAIL_DIR/taxonomy/patterns.yml"
-LOG="$DECISION_TRAIL_DIR/scripts/backfill.log"
+DIGEST_DIR="$CRUX_DIR/decisions/digests"
+PATTERNS_FILE="$CRUX_DIR/taxonomy/patterns.yml"
+LOG="$CRUX_DIR/scripts/backfill.log"
 
 log() { echo "$(date '+%H:%M:%S') $1" | tee -a "$LOG"; }
 
 if [[ -z "$CLAUDE_BIN" ]]; then
-  echo "decision-trail: claude CLI not found in PATH" >&2
+  echo "crux: claude CLI not found in PATH" >&2
   exit 1
 fi
 
 if [[ ! -f "$PATTERNS_FILE" ]]; then
-  echo "decision-trail: patterns taxonomy missing at $PATTERNS_FILE" >&2
+  echo "crux: patterns taxonomy missing at $PATTERNS_FILE" >&2
   exit 1
 fi
 PATTERNS_VOCAB=$(cat "$PATTERNS_FILE")
@@ -65,7 +65,7 @@ reformat_one() {
   local tmpfile
   tmpfile=$(mktemp /tmp/dt-backfill-XXXXXX.txt)
   cat > "$tmpfile" << ENDPROMPT
-You are reformatting a legacy decision-trail digest into the new RAG-friendly schema.
+You are reformatting a legacy crux digest into the new RAG-friendly schema.
 
 CRITICAL: do NOT invent facts or fabricate user quotes. Preserve the substance of
 the original digest. If the original doesn't contain a real verbatim quote, do
@@ -87,7 +87,7 @@ OUTPUT FORMAT — emit exactly this, nothing else:
 ---
 date: ${digest_date}
 session_id: ${digest_name}
-project: [short kebab-case from the original content e.g. argus, decision-trail, applications, multiverse, boulot, cervo, bungalow-ai, writing, general]
+project: [short kebab-case from the original content e.g. argus, crux, applications, multiverse, boulot, cervo, bungalow-ai, writing, general]
 duration: [short | medium | long — infer from original]
 shape: [research | shipping | refinement | planning | debugging | writing | mixed]
 interaction_type: [extract from original Classification section if present]
@@ -155,14 +155,14 @@ ENDPROMPT
 
   if [[ -z "$new_content" ]]; then
     log "FAIL: $digest_name (no frontmatter delimiter found in output)"
-    mkdir -p "$DECISION_TRAIL_DIR/scripts/.backfill-failures"
-    echo "$raw_content" > "$DECISION_TRAIL_DIR/scripts/.backfill-failures/${digest_name}.raw"
+    mkdir -p "$CRUX_DIR/scripts/.backfill-failures"
+    echo "$raw_content" > "$CRUX_DIR/scripts/.backfill-failures/${digest_name}.raw"
     return 1
   fi
   if ! echo "$new_content" | grep -q '## The moment'; then
     log "FAIL: $digest_name (missing 'The moment' section)"
-    mkdir -p "$DECISION_TRAIL_DIR/scripts/.backfill-failures"
-    echo "$raw_content" > "$DECISION_TRAIL_DIR/scripts/.backfill-failures/${digest_name}.raw"
+    mkdir -p "$CRUX_DIR/scripts/.backfill-failures"
+    echo "$raw_content" > "$CRUX_DIR/scripts/.backfill-failures/${digest_name}.raw"
     return 1
   fi
 

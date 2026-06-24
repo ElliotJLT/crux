@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crux — are you getting sharper, or just getting carried?</title>
+  <meta name="description" content="Crux captures the judgment layer of AI-assisted work — what you reject, redirect, and refuse to ship — so you can see whether your thinking is sharpening or quietly eroding. Local-first. No score." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Open Graph / unfurl -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elliotjlt.github.io/crux/" />
+  <meta property="og:title" content="Crux — the judgment layer for AI-assisted work" />
+  <meta property="og:description" content="Your commits show what got built. Crux shows what you rejected, redirected, and killed — and whether your judgment is sharpening or eroding while the AI does the typing." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Crux — are you getting sharper, or just getting carried?" />
+  <meta name="twitter:description" content="The human-side reflection layer for AI collaboration. Local-first, no score, no surveillance." />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="wordmark" href="#top">crux<span class="mark">×</span></a>
+    <nav>
+      <a href="#problem">Problem</a>
+      <a href="#how">How</a>
+      <a href="#roadmap">Roadmap</a>
+      <a class="btn-ghost" href="https://github.com/ElliotJLT/crux">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow">The human-side reflection layer for AI collaboration</p>
+      <h1>You're shipping faster than ever.<br />Are you getting <span class="sharp">sharper</span>, or just getting <span class="dull">carried</span>?</h1>
+      <p class="lede">
+        Your commits show what got built. They never show what you <em>rejected</em>, <em>redirected</em>, or
+        <em>refused to ship</em> — the part of the work that's still yours. That's the crux.
+        Crux captures it automatically, so you can see whether your judgment is sharpening or
+        quietly eroding while the AI does the typing.
+      </p>
+      <div class="cta-row">
+        <a class="btn-primary" href="https://github.com/ElliotJLT/crux">Get it on GitHub</a>
+        <a class="btn-ghost" href="#how">See a real digest</a>
+      </div>
+      <p class="meta-line">Local-first · Zero commands · No score · Built on a Claude Code hook</p>
+    </section>
+
+    <!-- PROBLEM -->
+    <section id="problem" class="band">
+      <h2>The problem nothing measures</h2>
+      <p class="section-lede">
+        Output isn't judgment. As the AI gets better, the easy path is to stop questioning it — and
+        no feedback loop tells you it's happening until the skill is already gone.
+      </p>
+      <div class="cards">
+        <article class="card">
+          <div class="stat">#4</div>
+          <h3>Cognitive atrophy</h3>
+          <p>Out of 81,000+ Claude users interviewed, losing their edge was the fourth-biggest concern. ~13,000 named it directly.</p>
+          <a href="https://anthropic.com/features/81k-interviews">Anthropic, 81k interviews →</a>
+        </article>
+        <article class="card">
+          <div class="stat">↓</div>
+          <h3>The artifact paradox</h3>
+          <p>When AI output looks polished, people examine it less — they stop fact-checking and stop pushing back. The better it gets, the easier it is to coast.</p>
+          <a href="https://www.anthropic.com/research/AI-fluency-index">Anthropic, AI Fluency Index →</a>
+        </article>
+        <article class="card">
+          <div class="stat">⚑</div>
+          <h3>Cognitive surrender</h3>
+          <p>Wharton's umbrella term for it. Mollick argues the fix is system-level constraints, not willpower. This is the gap Crux exists to surface.</p>
+          <a href="https://www.oneusefulthing.org/p/choosing-to-stay-human">Mollick, Choosing to Stay Human →</a>
+        </article>
+      </div>
+      <blockquote class="pull">
+        "I don't think as much as I used to. I struggle to put the ideas I do have into words."
+        <cite>— heavy AI user, United States</cite>
+      </blockquote>
+    </section>
+
+    <!-- THE LAYER -->
+    <section class="band alt">
+      <h2>Fluency is table stakes. This is the layer above it.</h2>
+      <p class="section-lede">
+        Everyone will be fluent — courses teach it, the floor rises, it stops being a differentiator.
+        What separates people who get <strong>better</strong> with AI from people who get <strong>carried</strong>
+        is a set of dispositions you can only develop if you can see them.
+      </p>
+      <ul class="layer-grid">
+        <li><strong>Trust calibration</strong><span>Knowing when to let it run vs. when to check. Task by task, not blanket.</span></li>
+        <li><strong>Artifact-paradox resistance</strong><span>The more polished the output, the harder you examine it.</span></li>
+        <li><strong>Meta-cognition</strong><span>Correcting the AI's process, not just its output.</span></li>
+        <li><strong>Strategic killing</strong><span>Deciding what <em>not</em> to build, even when the AI builds it well.</span></li>
+        <li><strong>Pattern recognition</strong><span>Seeing your own habits across sessions, not just within them.</span></li>
+        <li><strong>Owning the one-way doors</strong><span>Justifying the irreversible calls in the moment, not rubber-stamping them.</span></li>
+      </ul>
+    </section>
+
+    <!-- HOW IT WORKS / DIGEST -->
+    <section id="how" class="band">
+      <h2>Zero commands. Zero friction.</h2>
+      <p class="section-lede">
+        A Claude Code hook fires when a session ends, reads the transcript, and writes a digest.
+        You don't invoke anything. You just work. Here's what one looks like — skimmable in 15 seconds,
+        no scores, no self-assessment.
+      </p>
+      <div class="code-card">
+        <div class="code-head"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="file">decisions/digests/2026-02-23-eval-scoring.md</span></div>
+        <pre><code><span class="h"># 2026-02-23 — eval scoring diagnosis</span>
+
+~4h research session. Suspected a generation problem, investigated before fixing.
+
+<span class="b">-</span> Instinct to diagnose before treating — scores looked bad but the question
+  was whether the answers were wrong or the measurement was wrong. Chose to
+  investigate the scorer first.
+<span class="b">-</span> Conservative fix philosophy: built targeted matchers with guards that would
+  rather miss a match than fabricate one. Precision over recall.
+<span class="b">-</span> Refused to chase a low score when the test conditions were unreliable.
+  Flagged it as bad data instead of reacting to the number.
+<span class="b">-</span> Held the fix as research rather than shipping immediately. Won't merge
+  until re-validated under correct conditions.
+<span class="b">-</span> <span class="hl">Pattern: diagnose root cause before touching anything, don't ship under
+  uncertainty, resist the urge to fix what isn't broken.</span></code></pre>
+      </div>
+
+      <h3 class="sub">The signal is in the trajectory, not the session</h3>
+      <p class="section-lede">Run <code>/trail</code> periodically. It surfaces whether your instincts are sharpening, plateauing, or eroding.</p>
+      <div class="code-card">
+        <div class="code-head"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="file">decisions/synthesis/2026-02.md</span></div>
+        <pre><code><span class="h"># Synthesis — February 2026 (3 sessions)</span>
+
+<span class="h2">## Recurring patterns</span>
+<span class="b">-</span> Consistently diagnoses root cause before fixing. Two sessions where the
+  obvious fix was wrong and investigation saved significant rework.
+<span class="b">-</span> Delegates mechanical execution freely but always verifies judgement calls.
+  Trust is calibrated by task type, not blanket.
+
+<span class="h2">## Evolution</span>
+<span class="b">-</span> First session: accepted AI-generated digests at face value. By third
+  session: caught the digest leaking architecture and rewrote the skill.
+  Meta-awareness of AI output quality is increasing.
+
+<span class="h2">## Beyond fluency</span>
+<span class="b">-</span> <span class="hl">Artifact-paradox resistance: actively challenges polished output in 2/3
+  sessions. This is the behaviour Anthropic's research shows most users stop doing.</span></code></pre>
+      </div>
+    </section>
+
+    <!-- THE TRAIL / EVIDENCE -->
+    <section class="band alt">
+      <h2>And it's instrumented at the moments that count</h2>
+      <p class="section-lede">
+        Most builders have turned permission prompts off — so the highest-stakes actions run with
+        <em>less</em> scrutiny than trivial ones. The Trail fires only at irreversible, one-way doors
+        (force-push, prod migration, <code>DROP</code>, merge to default) and folds your own words
+        into the record. A dry run over real sessions proved the method.
+      </p>
+      <div class="evidence">
+        <div class="ev"><span class="num">192</span><span class="lbl">real sessions analysed</span></div>
+        <div class="ev"><span class="num">0.41<small>/day</small></span><span class="lbl">irreversible moments — 0.45% of all commands</span></div>
+        <div class="ev"><span class="num">~6<small>of 8</small></span><span class="lbl">one-way doors were rubber stamps ("go for it", "ship it")</span></div>
+      </div>
+      <p class="section-lede small">
+        That last number is the founding baseline. The rate at which justification is left blank at one-way
+        doors becomes the first leading indicator — a descriptive read on whether the wanting-to-own is
+        fading, before output quality ever shows it. Not a score. A signal.
+      </p>
+    </section>
+
+    <!-- ROADMAP -->
+    <section id="roadmap" class="band">
+      <h2>Where it's going</h2>
+      <div class="roadmap">
+        <div class="rm-col shipped">
+          <h3>Shipped</h3>
+          <ul>
+            <li>SessionEnd digest hook — running on 50+ real digests</li>
+            <li>The Trail: cut-line taxonomy + dry-run classifier</li>
+            <li>Trajectory synthesis (<code>/trail</code>) grounded in Anthropic's Fluency Index</li>
+            <li>Engagement metrics + profile CLI</li>
+          </ul>
+        </div>
+        <div class="rm-col next">
+          <h3>Next</h3>
+          <ul>
+            <li>Trail capture hook at one-way doors (opt-in, off by default)</li>
+            <li>Delegation sign-off — contest the decisions an autonomous run made for you</li>
+            <li>Cross-surface capture: Cursor, ChatGPT &amp; Claude.ai exports, Copilot</li>
+            <li>Render modes per persona: mirror, calibration, attribution</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLES -->
+    <section class="band alt">
+      <h2>What Crux is not</h2>
+      <div class="chips">
+        <span class="chip">Not a score — descriptive, never an "AI Judgment Score"</span>
+        <span class="chip">Not a SaaS — local-first, nothing leaves your machine</span>
+        <span class="chip">Not surveillance — no cross-user comparison, no ranking</span>
+        <span class="chip">Not a certificate for someone else — a mirror for you</span>
+      </div>
+      <p class="section-lede center">
+        It captures the same raw material a provenance tool would — but points it inward.
+        The job isn't proving you did the work. It's staying the kind of person who still could.
+      </p>
+    </section>
+
+    <section class="final">
+      <h2>See it whole</h2>
+      <p>The code, the research, and the full thesis are open.</p>
+      <div class="cta-row center">
+        <a class="btn-primary" href="https://github.com/ElliotJLT/crux">View on GitHub</a>
+        <a class="btn-ghost" href="https://github.com/ElliotJLT/crux/blob/main/docs/auto-reflection.md">Read the argument</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Crux · the judgment layer for AI-assisted work</span>
+    <span>MIT · built by <a href="https://github.com/ElliotJLT">Elliot Little</a> · alpha</span>
+  </footer>
+</body>
+</html>

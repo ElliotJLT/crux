@@ -1,4 +1,4 @@
-"""Git operations for decision-trail."""
+"""Git operations for crux."""
 
 from __future__ import annotations
 

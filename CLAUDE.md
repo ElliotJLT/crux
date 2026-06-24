@@ -1,11 +1,11 @@
-# decision-trail
+# crux
 
 ## Framing
 
 This is a practice tool, not a portfolio. The framing is:
 
-- **"AI fluency is measurable. AI judgment isn't."** — Anthropic's fluency index covers the floor. Decision-trail captures what sits above it.
-- The artifact paradox is the hook: polished AI output makes people less critical. There's no feedback loop for collaboration quality. Decision-trail is that feedback loop.
+- **"AI fluency is measurable. AI judgment isn't."** — Anthropic's fluency index covers the floor. Crux captures what sits above it.
+- The artifact paradox is the hook: polished AI output makes people less critical. There's no feedback loop for collaboration quality. Crux is that feedback loop.
 - Practice, not performance. This is a training log (like a runner's log), not a CV or showcase. Primary audience is yourself. Legibility to others is a side effect.
 - Never use "This is how I think" or similar personal branding language. The profile is called "Collaboration Log", not "Decision Profile".
 
@@ -25,7 +25,7 @@ with a one-line embedding-ready punchline, and uses real user quotes where they 
 
 Frontmatter fields:
 - `date`, `session_id` — keys
-- `project` — kebab-case from {argus, decision-trail, applications, multiverse, boulot, cervo, bungalow-ai, writing, general}
+- `project` — kebab-case from {argus, crux, applications, multiverse, boulot, cervo, bungalow-ai, writing, general}
 - `duration` — short | medium | long
 - `shape` — research | shipping | refinement | planning | debugging | writing | mixed
 - `interaction_type` — directive | feedback-loop | task-iteration | validation | learning (Anthropic Economic Index)
@@ -59,7 +59,7 @@ using them — RAG retrieval depends on stable spelling across sessions.
 
 ## Auto Dream integration
 
-Decision-trail and Auto Dream form a feedback loop:
+Crux and Auto Dream form a feedback loop:
 
 1. `/marmite` captures session digests including memory persistence signals (corrections that stuck vs. had to be re-taught)
 2. `/trail` synthesizes patterns and writes `memory-bridge.md` — the 3-7 most durable collaboration preferences, phrased as actionable instructions

@@ -1,7 +1,7 @@
 ## The Trail — point-of-decision capture at the irreversible moment
 
 ### Problem
-judgment-trail captures sessions after they end. By the time the SessionEnd digest reconstructs a session, the reasoning behind the consequential calls is already gone — and in the transcript a knowing decision is indistinguishable from passive acceptance. The current tool can describe what you let slide; it was never present at the moment you committed.
+crux captures sessions after they end. By the time the SessionEnd digest reconstructs a session, the reasoning behind the consequential calls is already gone — and in the transcript a knowing decision is indistinguishable from passive acceptance. The current tool can describe what you let slide; it was never present at the moment you committed.
 
 There is a second gap. Most solo builders have turned off permission prompts because blanket allow/deny is insufferable. So today the highest-stakes actions — force-push, prod migration, DROP, secret rotation — run with *less* scrutiny than trivial ones, because they sit in the same auto-approved bucket.
 
@@ -13,7 +13,7 @@ The trigger is a property of the operation, not your mood: a user-owned `cutline
 ### The wedge
 Let the agent run free on everything reversible; pause for half a second only on what you cannot take back. That benefit is felt on the first near-miss, before any reflection value accrues — which is why a builder installs it for themselves, not out of virtue.
 
-Smallest first build (two days): Day 1, run the cut-line classifier log-only against existing local transcripts and publish the match rate and false-positive list — proving "irreversible is mechanically separable from routine" before any prompt fires. Day 2, add the opt-in PreToolUse hook that has Claude surface the four questions, capture the answer from the transcript, and append it to `~/.judgment-trail/attestations/` plus a new `## At the threshold` digest section. Ships off; enabled via `settings.json` like the SessionEnd install; honours `.dt-skip`.
+Smallest first build (two days): Day 1, run the cut-line classifier log-only against existing local transcripts and publish the match rate and false-positive list — proving "irreversible is mechanically separable from routine" before any prompt fires. Day 2, add the opt-in PreToolUse hook that has Claude surface the four questions, capture the answer from the transcript, and append it to `~/.crux/attestations/` plus a new `## At the threshold` digest section. Ships off; enabled via `settings.json` like the SessionEnd install; honours `.crux-skip`.
 
 ### The analytic payoff
 Over time, the rate at which you leave the justification blank or type "ship it" at one-way doors is itself the signal — declining willingness to own the high-stakes calls, surfaced descriptively. Same observable that approval-fatigue research already tracks, read for the opposite purpose: not "are you a compliant reviewer" but "has the wanting-to-own started to fade." That read is the freshest move here; build it and publish it as the differentiator.

@@ -1,5 +1,5 @@
 #!/bin/bash
-# decision-trail synthesize — generates trajectory synthesis from accumulated digests
+# crux synthesize — generates trajectory synthesis from accumulated digests
 # Can be run manually, via cron, or called by /trail.
 #
 # Usage: ./synthesize.sh [--force]
@@ -7,24 +7,24 @@
 
 set -euo pipefail
 
-DECISION_TRAIL_DIR="${DECISION_TRAIL_DIR:-$HOME/decision-trail}"
+CRUX_DIR="${CRUX_DIR:-$HOME/crux}"
 CLAUDE_BIN="$(command -v claude)"
-DIGEST_DIR="$DECISION_TRAIL_DIR/decisions/digests"
-SYNTH_DIR="$DECISION_TRAIL_DIR/decisions/synthesis"
-LOG="$DECISION_TRAIL_DIR/scripts/auto-digest.log"
+DIGEST_DIR="$CRUX_DIR/decisions/digests"
+SYNTH_DIR="$CRUX_DIR/decisions/synthesis"
+LOG="$CRUX_DIR/scripts/auto-digest.log"
 
 log() { echo "$(date '+%H:%M:%S') [synthesize] $1" >> "$LOG"; }
 
 # Dependency check
 for dep in jq python3; do
   if ! command -v "$dep" &>/dev/null; then
-    echo "decision-trail: missing dependency: $dep" >&2
+    echo "crux: missing dependency: $dep" >&2
     exit 1
   fi
 done
 
 if [[ -z "$CLAUDE_BIN" ]]; then
-  echo "decision-trail: claude CLI not found in PATH" >&2
+  echo "crux: claude CLI not found in PATH" >&2
   exit 1
 fi
 
@@ -72,12 +72,12 @@ done
 
 # Run metrics to get quantitative data
 METRICS_OUTPUT=""
-if python3 -c "from decision_trail.metrics import collect_from_digests, build_summary; from pathlib import Path" 2>/dev/null; then
+if python3 -c "from crux.metrics import collect_from_digests, build_summary; from pathlib import Path" 2>/dev/null; then
   METRICS_OUTPUT=$(python3 -c "
 from pathlib import Path
-from decision_trail.metrics import collect_from_digests, build_summary
+from crux.metrics import collect_from_digests, build_summary
 
-root = Path('$DECISION_TRAIL_DIR')
+root = Path('$CRUX_DIR')
 sessions = collect_from_digests(root)
 summary = build_summary(sessions)
 
@@ -166,7 +166,7 @@ TRUNCATED="${ALL_DIGESTS:0:60000}"
 MONTH=$(date +%Y-%m)
 TMPFILE=$(mktemp /tmp/dt-synth-XXXXXX.txt)
 cat > "$TMPFILE" << ENDPROMPT
-You are generating a decision-trail trajectory synthesis from accumulated session digests.
+You are generating a crux trajectory synthesis from accumulated session digests.
 
 QUANTITATIVE METRICS:
 ${METRICS_OUTPUT:-No metrics available — classify from digests directly.}
@@ -255,7 +255,7 @@ log "wrote $SYNTH_FILE"
 echo "Synthesis written to $SYNTH_FILE"
 
 # Commit and push
-cd "$DECISION_TRAIL_DIR"
+cd "$CRUX_DIR"
 git add "$SYNTH_FILE" 2>> "$LOG"
 git commit -m "synthesis: ${MONTH}" >> "$LOG" 2>&1
 git push >> "$LOG" 2>&1

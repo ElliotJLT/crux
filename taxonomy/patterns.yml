@@ -1,4 +1,4 @@
-# Pattern taxonomy for decision-trail digests.
+# Pattern taxonomy for crux digests.
 #
 # This is the controlled vocabulary for the `patterns:` field in digest frontmatter.
 # When the digest generator tags a session, it must pick from this list (or add a

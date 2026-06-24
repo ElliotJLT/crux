@@ -1,4 +1,4 @@
-"""CLI commands for decision-trail."""
+"""CLI commands for crux."""
 
 from __future__ import annotations
 
@@ -16,11 +16,11 @@ DECISIONS_DIR = "decisions"
 
 
 @click.group()
-@click.version_option(version=__version__, prog_name="decision-trail")
+@click.version_option(version=__version__, prog_name="crux")
 def cli():
     """AI fluency is measurable. AI judgment isn't. Capture the difference.
 
-    The primary way to use decision-trail is /marmite in Claude Code.
+    The primary way to use crux is /marmite in Claude Code.
     This CLI exists for parsing session logs after the fact.
     """
     pass

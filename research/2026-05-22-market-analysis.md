@@ -1,4 +1,4 @@
-# Decision-Trail — Market & Research Analysis
+# Crux — Market & Research Analysis
 
 > Compiled: 2026-05-22
 > Purpose: Understand the gap, the market, and the path to making this something Anthropic needs.
@@ -69,7 +69,7 @@ Anthropic is publicly researching cognitive degradation while shipping features 
 
 These are not isolated features. Together they signal a trajectory: AI that is relational, persistent, and increasingly accurate in its model of the user. This is the exact direction Mollick warns makes surrender more compelling — and it's the direction Anthropic's roadmap is pointing.
 
-The Institute's stated research priority — *detecting degradation of human critical thinking* — and their product roadmap point in opposite directions. The infrastructure to close that gap is currently nowhere on their published roadmap. That gap is the strategic position decision-trail occupies.
+The Institute's stated research priority — *detecting degradation of human critical thinking* — and their product roadmap point in opposite directions. The infrastructure to close that gap is currently nowhere on their published roadmap. That gap is the strategic position crux occupies.
 
 (Note: Auto Dream specifically is one signal among several — the broader trend includes OpenAI's chat memory rollout, Cursor's persistent context, and ChatGPT's Custom Instructions. The argument doesn't depend on Dream succeeding as a feature; it depends on the trajectory.)
 
@@ -89,7 +89,7 @@ Synthesis from research across 7 historical cases of automating tools and human 
 - **Speed:** Aviation had 30 years to build UPRT. AI capability is doubling in months.
 - **Invisibility:** Loss-of-control-in-flight produces craters. Cognitive surrender produces none. No insurance claim, no NTSB report, no congressional hearing.
 
-**Strategic implication:** voluntary individual self-tracking — what judgment-trail does today as a personal practice tool — has never preserved a capacity at population scale historically. The closest analogs (spelling, attention) all eroded with no defender. Only three routes have worked:
+**Strategic implication:** voluntary individual self-tracking — what crux does today as a personal practice tool — has never preserved a capacity at population scale historically. The closest analogs (spelling, attention) all eroded with no defender. Only three routes have worked:
 
 1. **Curriculum** — taught, certified, mandatory. The UPRT/NCTM route.
 2. **Infrastructure** — shipped natively by providers. The regulated-platform route.
@@ -115,7 +115,7 @@ Sources:
 
 **Pattern:** Small teams (5-15), building something Claude needs or depends on. Products almost always die. They want the humans and the capability.
 
-**The Humanloop parallel is strongest:** They built enterprise eval Anthropic needed but hadn't built. Decision-trail builds human-side measurement Anthropic needs but hasn't built. Same gap, different side of the coin.
+**The Humanloop parallel is strongest:** They built enterprise eval Anthropic needed but hadn't built. Crux builds human-side measurement Anthropic needs but hasn't built. Same gap, different side of the coin.
 
 ---
 
@@ -126,7 +126,7 @@ Sources:
 - `additionalContext` on hook responses gets injected as system reminders Claude treats as override-priority
 - `UserPromptSubmit` hook can track coasting signals (prompt length, questions asked, time since last rejection)
 - `PostToolUse` hook on Edit/Write tracks accepts vs modifications
-- State maintained in `~/.decision-trail/state.json`
+- State maintained in `~/.crux/state.json`
 - Graduated friction levels (0-4) from nudge to gate
 - `Stop` hook can block turn completion for high-friction moments
 
@@ -134,7 +134,7 @@ No theoretical barriers. Buildable with a Python script.
 
 ---
 
-## What Decision-Trail Is
+## What Crux Is
 
 **The human observability layer for AI collaboration.**
 
