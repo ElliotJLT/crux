@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crux — Git logs your code. Crux logs your judgment.</title>
-  <meta name="description" content="Crux captures the decisions behind your AI-assisted work — what you rejected, redirected, and refused to ship — so you can see whether you're getting sharper or just getting carried. Local-first. No score." />
+  <title>Crux — everyone measures the AI. Nobody measures the human.</title>
+  <meta name="description" content="An open inquiry into the human side of AI collaboration. $200M+ has gone into measuring the model; almost nothing into measuring whether the human is still thinking. The research, and what we found when we instrumented one person's real work." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://elliotjlt.github.io/crux/" />
-  <meta property="og:title" content="Crux — Git logs your code. Crux logs your judgment." />
-  <meta property="og:description" content="The decisions behind your AI-assisted work — what you rejected, redirected, and killed — captured automatically. So you can see whether your judgment is sharpening or eroding." />
+  <meta property="og:title" content="Crux — everyone measures the AI. Nobody measures the human." />
+  <meta property="og:description" content="An open, undersized experiment in measuring whether human judgment is sharpening or eroding as AI does more of the work. Backed by the research, and by one person's own data." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Crux — Git logs your code. Crux logs your judgment." />
-  <meta name="twitter:description" content="The human-side reflection layer for AI collaboration. Local-first, no score." />
+  <meta name="twitter:title" content="Crux — everyone measures the AI. Nobody measures the human." />
+  <meta name="twitter:description" content="An open inquiry into the human side of AI collaboration. The research, and what we found." />
 
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,191 +25,192 @@
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#f6a93b"/>
-        <stop offset="0.55" stop-color="#ff6f5b"/>
-        <stop offset="1" stop-color="#e85d8a"/>
+        <stop offset="0" stop-color="#f6a93b"/><stop offset="0.55" stop-color="#ff6f5b"/><stop offset="1" stop-color="#e85d8a"/>
       </linearGradient>
     </defs>
     <symbol id="logomark" viewBox="0 0 24 24">
       <rect width="24" height="24" rx="6" fill="url(#warm)"/>
       <g stroke="#1a1108" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.9">
-        <path d="M7 12 L16.5 7"/>
-        <path d="M7 12 L16.5 17"/>
+        <path d="M7 12 L16.5 7"/><path d="M7 12 L16.5 17"/>
       </g>
       <circle cx="7" cy="12" r="2" fill="#1a1108"/>
     </symbol>
   </svg>
 
   <header class="nav" id="nav">
-    <a class="brand" href="#top">
-      <svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><use href="#logomark"/></svg>
-      Crux
-    </a>
+    <a class="brand" href="#top"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><use href="#logomark"/></svg> Crux</a>
     <nav class="nav-links">
-      <a href="#problem">Why</a>
-      <a href="#shows">How it works</a>
-      <a href="#year">2026</a>
+      <a href="#gap">The gap</a>
+      <a href="#evidence">The evidence</a>
+      <a href="#experiment">The experiment</a>
+      <a href="#inquiry">The inquiry</a>
     </nav>
-    <a class="btn btn-primary nav-cta" href="https://github.com/ElliotJLT/crux">GitHub</a>
+    <a class="btn btn-secondary nav-cta" href="https://github.com/ElliotJLT/crux">GitHub</a>
   </header>
 
   <main id="top">
     <!-- HERO -->
     <section class="hero">
       <div class="aurora" aria-hidden="true"></div>
-      <a class="badge reveal" href="#year">
-        <span class="badge-dot"></span> A field note on AI &amp; judgment, 2026
-      </a>
-      <h1 class="reveal">Git logs your code.<br />Crux logs your <span class="grad">judgment</span>.</h1>
+      <span class="badge reveal"><span class="badge-dot"></span> An open, undersized experiment &middot; 2026</span>
+      <h1 class="reveal"><span class="h1-pre">Everyone measures whether the AI is good.</span><br />Nobody measures whether the <span class="grad">human</span> still is.</h1>
       <p class="hero-sub reveal">
-        Your commits show what got built. Crux captures the decisions behind them — what you
-        rejected, redirected, and refused to ship — so you can see whether you're getting
-        <span class="up">sharper</span> or just getting <span class="down">carried</span>.
+        A working inquiry into the human side of AI collaboration — what happens to judgment as the
+        machine does more of the work, and whether you can even see it happening to you. Grounded in the
+        research, and in what we found when we instrumented one person's real sessions. Early, public, and open to attack.
       </p>
       <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="https://github.com/ElliotJLT/crux">Get it on GitHub</a>
-        <a class="btn btn-secondary" href="#problem">See why it matters &rsaquo;</a>
+        <a class="btn btn-primary" href="#gap">Read the inquiry</a>
+        <a class="btn btn-secondary" href="https://github.com/ElliotJLT/crux/blob/main/docs/auto-reflection.md">The full argument &rsaquo;</a>
       </div>
-
-      <div class="shot reveal">
-        <div class="shot-glow" aria-hidden="true"></div>
-        <div class="window">
-          <div class="window-bar">
-            <span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
-            <span class="window-title mono">crux &middot; session digest</span>
-          </div>
-          <div class="window-body">
-            <p class="commit-line mono"><span class="dim">&#8627; for commit</span> <span class="hash">a3f9c2</span> <span class="dim">feat: eval scoring</span></p>
-            <pre><code><span class="c-h"># eval scoring diagnosis · ~4h research</span>
-
-<span class="c-b">-</span> Diagnosed before treating — was the answer wrong,
-  or the measurement? Checked the scorer first.
-<span class="c-b">-</span> Conservative fix: built guards that would rather
-  miss a match than fabricate one. Precision over recall.
-<span class="c-b">-</span> Refused to chase a low score on flaky tests;
-  flagged bad data instead of reacting to the number.
-<span class="c-b">-</span> Held the fix as research, not a merge, until
-  re-validated under correct conditions.
-
-<span class="c-hl">Pattern: diagnose root cause before touching anything;
-don't ship under uncertainty.</span></code></pre>
-          </div>
-        </div>
-      </div>
-
-      <div class="trust reveal">
-        <span>Local-first</span><i></i><span>No score</span><i></i><span>Open source · MIT</span><i></i><span>Built on a Claude Code hook</span>
-      </div>
+      <p class="hero-foot reveal mono">Not a product launch. A question we think is under-measured.</p>
     </section>
 
-    <!-- PROBLEM + DATA -->
-    <section id="problem" class="section">
-      <p class="eyebrow reveal">The problem</p>
-      <h2 class="reveal">Output isn't judgment — and nothing measures the difference.</h2>
+    <!-- THE GAP -->
+    <section id="gap" class="section">
+      <p class="eyebrow reveal">The gap</p>
+      <h2 class="reveal">We measure the machine obsessively. We don't measure what it's doing to us.</h2>
       <p class="lead reveal">
-        You commit code, close tickets, ship features. Output has never been higher. But the more
-        polished the AI's output looks, the less you examine it. You stop questioning, stop checking,
-        stop pushing back. People can already feel it.
+        The last 18 months poured capital into knowing whether the <em>model</em> is good — evals,
+        observability, agent memory. The human sitting next to it has nothing equivalent. You can audit an
+        agent's every decision. You cannot audit your own.
       </p>
-      <div class="stats reveal">
-        <div class="stat"><span class="num" data-count="81000" data-suffix="K" data-divide="1000">0</span><span class="lbl">Claude users Anthropic interviewed</span></div>
-        <div class="stat"><span class="num">#<span data-count="4">0</span></span><span class="lbl">where cognitive atrophy ranked among concerns</span></div>
-        <div class="stat"><span class="num" data-count="13000" data-suffix="K" data-divide="1000">0</span><span class="lbl">named losing their edge, unprompted</span></div>
-        <div class="stat"><span class="num">~<span data-count="50">0</span>%</span><span class="lbl">said they already feel it happening</span></div>
+      <div class="gap-figure reveal">
+        <div class="gf-side"><span class="gf-num">$200M+</span><span class="gf-lbl">invested in measuring the model</span></div>
+        <div class="gf-div" aria-hidden="true"></div>
+        <div class="gf-side"><span class="gf-num grad">$0</span><span class="gf-lbl">measuring whether the human is still engaged</span></div>
       </div>
-      <blockquote class="quote reveal">
-        &ldquo;I don't think as much as I used to. I struggle to put the ideas I do have into words.&rdquo;
-        <cite>heavy AI user, US — Anthropic, <a href="https://anthropic.com/features/81k-interviews">What 81,000 People Want from AI</a></cite>
-      </blockquote>
+      <div class="fund reveal">
+        <span class="fund-lbl mono">Every funded player measures the model:</span>
+        <span class="fchip">Braintrust · $80M</span><span class="fchip">Galileo · $68M</span><span class="fchip">Patronus · $40M</span><span class="fchip">Judgment Labs · $32M</span><span class="fchip">Mem0 · $24.5M</span><span class="fchip">Humanloop · acq. Anthropic</span>
+      </div>
     </section>
 
-    <!-- TRAJECTORY -->
-    <section id="trajectory" class="section two-col">
+    <!-- THE EVIDENCE -->
+    <section id="evidence" class="section">
+      <p class="eyebrow reveal">The evidence</p>
+      <h2 class="reveal">The problem isn't speculative. It's measured, repeatedly, and accelerating.</h2>
+      <p class="lead reveal">
+        Across independent studies the same shape keeps appearing: AI makes the work easier and the human
+        less critical, and the loss persists after the AI is gone.
+      </p>
+      <div class="ev-grid">
+        <article class="ev-card reveal">
+          <span class="ev-stat">N=758</span>
+          <p class="ev-claim">Consultants beat controls where the AI was right — and <em>underperformed</em> where it was confidently wrong. They didn't lose competence. They lost the instinct to challenge.</p>
+          <span class="ev-src mono">BCG / Dell'Acqua et al.</span>
+        </article>
+        <article class="ev-card reveal">
+          <span class="ev-stat">55%</span>
+          <p class="ev-claim">Less mental effort from LLM users than search-engine users completing the same task.</p>
+          <span class="ev-src mono">MIT Media Lab</span>
+        </article>
+        <article class="ev-card reveal">
+          <span class="ev-stat">N=539</span>
+          <p class="ev-claim">Passive AI use erodes self-efficacy, ownership, and meaning — and the erosion <em>persists after AI use stops.</em></p>
+          <span class="ev-src mono">Nature · Lee et al. 2026</span>
+        </article>
+        <article class="ev-card reveal">
+          <span class="ev-stat">#4</span>
+          <p class="ev-claim">Cognitive atrophy ranked the 4th-biggest concern among 81,000 Claude users. 13,000 named it; nearly half already feel it.</p>
+          <span class="ev-src mono">Anthropic · 81k interviews</span>
+        </article>
+        <article class="ev-card reveal">
+          <span class="ev-stat">50<small> vs 67%</small></span>
+          <p class="ev-claim">Delegation kills learning: hand it to the AI and comprehension drops. Ask it to explain, and the skill is retained.</p>
+          <span class="ev-src mono">Anthropic · coding RCT</span>
+        </article>
+        <article class="ev-card reveal">
+          <span class="ev-stat">−5.2pp</span>
+          <p class="ev-claim">The artifact paradox: the more polished the output, the less the user checks context (−5.2pp) or questions reasoning (−3.1pp).</p>
+          <span class="ev-src mono">Anthropic · AI Fluency Index</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- THE EXPERIMENT -->
+    <section id="experiment" class="section two-col">
       <div class="tc-text">
-        <p class="eyebrow reveal">The trajectory</p>
-        <h2 class="reveal">Atrophy shows up first at the moments that count.</h2>
+        <p class="eyebrow reveal">The experiment</p>
+        <h2 class="reveal">So we instrumented one person, and watched the gap compound.</h2>
         <p class="lead reveal">
-          Most builders turned permission prompts off, so the highest-stakes actions — force-push,
-          prod migration, <code>DROP</code>, merge to main — now run with <em>less</em> scrutiny than trivial ones.
-          A dry run over real sessions made it measurable.
+          We built a v0 that captures real Claude Code sessions and classifies them against a fixed taxonomy.
+          50 sessions, four months, one person — the one actively paying attention to this.
         </p>
         <div class="mini-stats reveal">
-          <div><b data-count="192">0</b><span>sessions analysed</span></div>
-          <div><b data-count="0.41" data-decimals="2">0</b><span>one-way doors / day</span></div>
-          <div><b>~6<small>/8</small></b><span>were rubber stamps</span></div>
+          <div><b data-count="65" data-suffix="%">0</b><span>of sessions: weak on verifying what the AI <em>says</em> — the lone fluency outlier</span></div>
+          <div><b data-count="75" data-suffix="%">0</b><span>of decisions at irreversible one-way doors were rubber stamps</span></div>
+          <div><b>0</b><span>improvement trend over four months. Awareness alone changed nothing.</span></div>
         </div>
-        <p class="lead dim reveal">The rate you leave the justification blank is the first signal — the wanting-to-own fading, before output quality ever dips. Not a score. A read.</p>
+        <p class="lead dim reveal">
+          The headline from the corpus: <em>&ldquo;I catch what's wrong with how the AI writes, but coast on
+          whether what it says is true.&rdquo;</em>
+        </p>
       </div>
       <div class="tc-vis reveal">
         <div class="vis-card">
-          <svg class="motif" viewBox="0 0 360 240" preserveAspectRatio="xMidYMid meet">
-            <line class="axis" x1="30" y1="120" x2="340" y2="120"/>
-            <path class="t-up" d="M40,120 C150,120 230,58 330,34" fill="none"/>
-            <path class="t-down" d="M40,120 C150,120 230,182 330,210" fill="none"/>
-            <circle class="t-node" cx="40" cy="120" r="5"/>
-            <text class="t-lbl up" x="335" y="32">sharper</text>
-            <text class="t-lbl down" x="335" y="214">carried</text>
-            <text class="t-axis mono" x="40" y="138">the crux</text>
+          <span class="vis-title mono">output vs. ownership · over time</span>
+          <svg class="motif" viewBox="0 0 360 230" preserveAspectRatio="xMidYMid meet">
+            <path class="gap-fill" d="M40,150 C150,150 235,80 330,40 L330,150 C235,148 150,150 40,150 Z" />
+            <line class="axis" x1="34" y1="150" x2="340" y2="150"/>
+            <path class="t-up" d="M40,150 C150,150 235,80 330,40" fill="none"/>
+            <path class="t-flat" d="M40,150 C150,150 235,148 330,143" fill="none"/>
+            <circle class="t-node" cx="40" cy="150" r="5"/>
+            <text class="t-lbl up" x="335" y="40">what you ship</text>
+            <text class="t-lbl flat" x="335" y="150">what you examine</text>
+            <text class="t-gap mono" x="250" y="112">the blind spot</text>
           </svg>
         </div>
+        <p class="vis-cap reveal">n = 1. Undersized on purpose — the point isn't the number, it's that the person measuring it still couldn't stop the pattern.</p>
       </div>
     </section>
 
     <!-- 2026 -->
     <section id="year" class="section">
       <p class="eyebrow reveal">Where we are · 2026</p>
-      <h2 class="reveal">The work has shifted from process to outcome.</h2>
+      <h2 class="reveal">And the platforms are shipping the surrender amplifier inside the surrender amplifier.</h2>
       <p class="lead reveal">
-        With this year's frontier models, the human's contact with the work collapses to three seams:
-        the brief, the mid-flight redirect, the sign-off. Fewer judgment moments, each heavier, none
-        instrumented. The people closest to it are saying it out loud.
+        AI is becoming more relational, more persistent, and more accurate about you specifically — each one
+        harder to push back on. Meanwhile the work itself has shifted from process to outcome. The people
+        closest to it described the same week in June 2026:
       </p>
       <div class="quote-grid">
         <figure class="qcard reveal">
           <blockquote>&ldquo;I no longer steer. I commission.&rdquo;</blockquote>
-          <figcaption>Ethan Mollick<span>Wharton</span></figcaption>
+          <figcaption>Ethan Mollick<span>Wharton · the patron era</span></figcaption>
         </figure>
         <figure class="qcard reveal">
           <blockquote>&ldquo;I don't prompt Claude anymore… my job is to write loops.&rdquo;</blockquote>
           <figcaption>Boris Cherny<span>Head of Claude Code</span></figcaption>
         </figure>
         <figure class="qcard reveal">
-          <blockquote>Every component gets a maker and a checker — except the human designing the loop.</blockquote>
+          <blockquote>&ldquo;The loop doesn't know if you understand the work or are avoiding it. You do.&rdquo;</blockquote>
           <figcaption>Addy Osmani<span>Loop Engineering</span></figcaption>
         </figure>
       </div>
+      <p class="lead dim reveal">Every component of the loop gets a maker and a checker — except the human who designs it and signs off. The one moment of judgment left is the one nobody instruments.</p>
     </section>
 
-    <!-- WHAT IT SHOWS -->
-    <section id="shows" class="section">
-      <p class="eyebrow reveal">The instrument</p>
-      <h2 class="reveal">A Claude Code hook reads each session and writes it down.</h2>
-      <p class="lead reveal">
-        Zero commands. No score. It captures what you steered and what you let slide, then surfaces the
-        pattern over time — a mirror for you, not a certificate for someone else.
-      </p>
-      <div class="cards-2">
-        <div class="window reveal">
-          <div class="window-bar"><span class="wdot"></span><span class="wdot"></span><span class="wdot"></span><span class="window-title mono">digests/2026-02-23.md</span></div>
-          <div class="window-body"><pre><code><span class="c-h"># eval scoring diagnosis</span>
-
-<span class="c-b">-</span> Diagnosed before treating; checked the
-  scorer before trusting the number.
-<span class="c-b">-</span> Precision over recall — guards that miss
-  before they fabricate.
-<span class="c-hl">Pattern: root cause first; don't ship
-under uncertainty.</span></code></pre></div>
+    <!-- THE INQUIRY -->
+    <section id="inquiry" class="section">
+      <p class="eyebrow reveal">The inquiry</p>
+      <h2 class="reveal">What we're actually testing — and what we're not claiming.</h2>
+      <div class="inq-grid">
+        <div class="inq reveal">
+          <span class="inq-h">The question</span>
+          <p>Can you see the wanting-to-own fade <em>before</em> output quality ever dips? The candidate signal is the rate you leave a decision unjustified at irreversible doors. Everything else in the field measures surrender after the work already got worse.</p>
         </div>
-        <div class="window reveal">
-          <div class="window-bar"><span class="wdot"></span><span class="wdot"></span><span class="wdot"></span><span class="window-title mono">synthesis/2026-02.md</span></div>
-          <div class="window-body"><pre><code><span class="c-h"># Synthesis — Feb 2026 (3 sessions)</span>
-
-<span class="c-h2">## Evolution</span>
-<span class="c-b">-</span> By session 3, caught a digest leaking
-  architecture and rewrote the skill.
-<span class="c-h2">## Beyond fluency</span>
-<span class="c-hl">- Challenges polished output in 2/3 —
-  what most users stop doing.</span></code></pre></div>
+        <div class="inq reveal">
+          <span class="inq-h">The honest caveat</span>
+          <p>History is blunt: capacities defended only by individual willpower erode — spelling, spatial memory after GPS, attention (2.5 min in 2004 to 47 seconds in 2023). What survived was saved by curriculum, infrastructure, or professional standards. A personal tool helps the person who runs it. It won't save the population.</p>
+        </div>
+        <div class="inq reveal">
+          <span class="inq-h">What Crux is</span>
+          <p>A v0 instrument — a Claude Code hook that writes a structured digest per session, plus a dry-run detector for the irreversible moments. It exists to find out whether this is measurable at all. It is not the thing that solves it at scale; that's probably infrastructure or curriculum.</p>
+        </div>
+        <div class="inq reveal">
+          <span class="inq-h">Where it goes next</span>
+          <p>Capture the four-question justification at one-way doors, then re-measure the rubber-stamp rate against the baseline. If the captured fields turn out to be theatre, the plan is to say so and stop. The kill criteria are real.</p>
         </div>
       </div>
     </section>
@@ -217,10 +218,11 @@ under uncertainty.</span></code></pre></div>
     <!-- CTA -->
     <section class="cta">
       <div class="aurora cta-aurora" aria-hidden="true"></div>
-      <h2 class="reveal">See whether you're sharpening,<br />or just getting carried.</h2>
+      <h2 class="reveal">This is a question, not a pitch.<br />Argue with it.</h2>
+      <p class="cta-sub reveal">The full argument, the taxonomy, and the raw data are public. If you're working on the human side of AI — research, adoption, or building — I'd like to compare notes.</p>
       <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="https://github.com/ElliotJLT/crux">Get it on GitHub</a>
-        <a class="btn btn-secondary" href="https://github.com/ElliotJLT/crux/blob/main/docs/auto-reflection.md">Read the argument</a>
+        <a class="btn btn-primary" href="https://github.com/ElliotJLT/crux/blob/main/docs/auto-reflection.md">Read the full argument</a>
+        <a class="btn btn-secondary" href="https://github.com/ElliotJLT/crux">See it on GitHub</a>
       </div>
     </section>
   </main>
@@ -228,14 +230,14 @@ under uncertainty.</span></code></pre></div>
   <footer class="footer">
     <div class="foot-brand">
       <a class="brand" href="#top"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><use href="#logomark"/></svg> Crux</a>
-      <p>The judgment layer for AI-assisted work. Built in the open by Elliot Little.</p>
+      <p>An open inquiry into the human side of AI collaboration. Built and run in the open by Elliot Little.</p>
     </div>
     <div class="foot-cols">
       <div class="foot-col">
-        <span class="foot-h mono">Project</span>
-        <a href="https://github.com/ElliotJLT/crux">GitHub</a>
-        <a href="https://github.com/ElliotJLT/crux#readme">Readme</a>
+        <span class="foot-h mono">Read</span>
         <a href="https://github.com/ElliotJLT/crux/blob/main/docs/auto-reflection.md">The argument</a>
+        <a href="https://github.com/ElliotJLT/crux">GitHub</a>
+        <a href="https://github.com/ElliotJLT/crux/blob/main/ROADMAP.md">Roadmap</a>
       </div>
       <div class="foot-col">
         <span class="foot-h mono">Connect</span>
@@ -243,7 +245,7 @@ under uncertainty.</span></code></pre></div>
         <a href="mailto:elliot@zerogravity.co.uk" data-needs-confirm="email">Email</a>
       </div>
     </div>
-    <div class="foot-base mono">CRUX · 2026 · MIT</div>
+    <div class="foot-base mono">CRUX · 2026 · MIT · An undersized experiment, openly documented</div>
   </footer>
 
   <script src="app.js"></script>
