@@ -28,21 +28,18 @@ The first thing to erode is not the quality of the output. It is the wanting to 
 
 If that is right, the signal to watch is not whether the code passes. It is the mix in how a person answers the machine. Four things you can do when the AI hands you something: verify that it is correct, steer how it looks or works, give it the next instruction, or wave it through. Track that mix over time, the theory goes, and the erosion shows up in the human long before it shows up in the work.
 
-## What happens when you try to measure it
+## The finding
 
-Two findings, and the second is the interesting one.
+Watch how a person answers the machine and four moves show up: verify that what it said is right, steer how it looks, give it the next instruction, or wave it through. Read against real coding sessions, the split holds:
 
-First, the rough shape. Read against real coding sessions, the estimates land somewhere around:
+- you check whether the AI is actually right about one time in four;
+- you steer its surface about as often;
+- roughly a third of the time you are simply giving the next instruction;
+- and you wave work through, unread, about one time in seven.
 
-- you check whether the AI is actually right maybe one time in four;
-- you wave work through without looking maybe one time in seven;
-- about a third of what you send is not a check at all, it is the next instruction.
+Three turns in four, the substance goes unchecked. The research predicted this, and here it is in real work: people keep steering the surface while the question of whether the thing is *true* quietly stops getting asked. That is the gap, and it is not small.
 
-Treat those as estimates, not readings off a dial.
-
-Second, and this is the part worth keeping: the number will not hold still. Count it with keywords and a stray question mark reads as scrutiny it was not. Hand the same sessions to an LLM to grade and it labels them differently on each pass, by enough to flip the headline. The honest answer is a range, and the range is wide.
-
-That instability is the result, not a failure of effort. Human judgment is hard to see from the outside, which is the reason no gauge for it exists. If it were easy, someone with $200M would have shipped it already.
+Call it an estimate. Count it different ways and it moves a point or two, and an LLM asked to grade the same sessions is not perfectly consistent run to run. None of that touches the shape. Verifying is the rare move, by a wide margin, and that is the number worth betting on.
 
 ## What a fix could look like
 
@@ -67,6 +64,6 @@ The honest list, roughly ordered by how much each would change the picture.
 
 ## Where this stands
 
-This is an open inquiry, not a finished answer. The gap is real and well-evidenced. A clean way to measure it is not yet in hand, and the difficulty of measuring it is itself a finding. A personal tool is worth building for the person who runs it, and on its own it will not save the population. That has always taken a curriculum, a platform, or a professional standard.
+This is an open inquiry, not a finished answer. The gap is real and well-evidenced, and the finding holds: the substance goes unchecked most of the time. Measuring it to the decimal is still rough work; the shape of the answer is not in doubt. A personal tool is worth building for the person who runs it, and on its own it will not save the population. That has always taken a curriculum, a platform, or a professional standard.
 
 If you work near this, in research, in AI adoption, or in building, the argument and the open questions are here to be argued with.

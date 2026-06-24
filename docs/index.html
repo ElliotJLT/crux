@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crux — measure the human, not just the model.</title>
-  <meta name="description" content="An open inquiry into the human side of AI collaboration. $200M+ has gone into measuring the model; almost nothing into measuring whether the human is still thinking. The gap, the evidence, and why even measuring it is hard." />
+  <meta name="description" content="An open inquiry into the human side of AI collaboration. $200M+ has gone into measuring the model; almost nothing into measuring whether the human is still thinking. The gap, the evidence, and the finding: you check the AI's work about one time in four." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://elliotjlt.github.io/crux/" />
   <meta property="og:title" content="Crux — measure the human, not just the model." />
-  <meta property="og:description" content="An open inquiry into the human side of AI collaboration: the gap, the evidence, and why measuring whether human judgment is eroding turns out to be hard." />
+  <meta property="og:description" content="An open inquiry into the human side of AI collaboration. The gap, the evidence, and the finding: across real sessions, you check whether the AI is right about one time in four." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Crux — measure the human, not just the model." />
   <meta name="twitter:description" content="An open inquiry into the human side of AI collaboration." />
@@ -24,9 +24,9 @@
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="logomark" viewBox="0 0 24 24">
-      <rect width="24" height="24" rx="6" fill="#12110f"/>
-      <g stroke="#faf9f6" stroke-width="2" stroke-linecap="round" fill="none"><path d="M7 12 L16.5 7"/><path d="M7 12 L16.5 17"/></g>
-      <circle cx="7" cy="12" r="2" fill="#faf9f6"/>
+      <rect width="24" height="24" rx="6" fill="#181a1e"/>
+      <g stroke="#efe7d8" stroke-width="2" stroke-linecap="round" fill="none"><path d="M7 12 L16.5 7"/><path d="M7 12 L16.5 17"/></g>
+      <circle cx="7" cy="12" r="2" fill="#efe7d8"/>
     </symbol>
   </svg>
 
@@ -34,7 +34,8 @@
     <a class="brand" href="#top"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><use href="#logomark"/></svg> Crux</a>
     <nav class="nav-links">
       <a href="#problem">Problem</a>
-      <a href="#research">Evidence</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#finding">The finding</a>
       <a href="#approach">Approach</a>
       <a href="#questions">Open questions</a>
     </nav>
@@ -48,10 +49,16 @@
       <div class="hero-grid">
         <h1 class="reveal">Measure the human, not just the model.</h1>
         <div class="hero-aside reveal">
+          <svg class="iso" viewBox="0 0 200 184" aria-hidden="true">
+            <ellipse cx="100" cy="168" rx="62" ry="12" fill="#000" opacity="0.06"/>
+            <polygon points="100,40 164,72 100,104 36,72" fill="#80b9c5"/>
+            <polygon points="36,72 100,104 100,160 36,128" fill="#3f7886"/>
+            <polygon points="100,104 164,72 164,128 100,160" fill="#5d97a6"/>
+            <circle cx="100" cy="64" r="9" fill="#e8590c"/>
+          </svg>
           <p class="hero-sub">
             As AI does more of the work, what happens to the judgment of the person directing it, and can
-            you even see it changing? An open inquiry: the gap, the evidence, and why measuring what's left
-            is harder than it looks.
+            you even see it changing? An open inquiry: the gap, the evidence, and one number worth betting on.
           </p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="https://github.com/ElliotJLT/crux/blob/main/docs/report.md">Read the report</a>
@@ -70,14 +77,33 @@
         agent memory. The human sitting next to it has nothing equivalent. You can audit an agent's every
         step. You cannot audit your own.
       </p>
-      <div class="gap-figure reveal">
-        <div class="gf-side"><span class="gf-num">$200M+</span><span class="gf-lbl">invested in measuring the model</span></div>
-        <div class="gf-div" aria-hidden="true"></div>
-        <div class="gf-side"><span class="gf-num accent">$0</span><span class="gf-lbl">measuring whether the human is still engaged</span></div>
+      <div class="card reveal">
+        <div class="gap-figure">
+          <div class="gf-side"><span class="gf-num">$200M+</span><span class="gf-lbl">invested in measuring the model</span></div>
+          <div class="gf-div" aria-hidden="true"></div>
+          <div class="gf-side"><span class="gf-num accent">$0</span><span class="gf-lbl">measuring whether the human is still engaged</span></div>
+        </div>
+        <div class="fund">
+          <span class="fund-lbl mono">Every funded player measures the model:</span>
+          <span class="fchip">Braintrust · $80M</span><span class="fchip">Galileo · $68M</span><span class="fchip">Patronus · $40M</span><span class="fchip">Judgment Labs · $32M</span><span class="fchip">Mem0 · $24.5M</span><span class="fchip">Humanloop · acq. Anthropic</span>
+        </div>
       </div>
-      <div class="fund reveal">
-        <span class="fund-lbl mono">Every funded player measures the model:</span>
-        <span class="fchip">Braintrust · $80M</span><span class="fchip">Galileo · $68M</span><span class="fchip">Patronus · $40M</span><span class="fchip">Judgment Labs · $32M</span><span class="fchip">Mem0 · $24.5M</span><span class="fchip">Humanloop · acq. Anthropic</span>
+    </section>
+
+    <!-- EVIDENCE (dark band) -->
+    <section class="band band-dark">
+      <div class="band-inner" id="evidence">
+        <p class="eyebrow reveal">The evidence</p>
+        <h2 class="reveal">It isn't speculative. It's measured, independently, and accelerating.</h2>
+        <p class="lead reveal">Across separate studies the same shape appears: AI makes the work easier and the human less critical, and the loss outlasts the tool.</p>
+        <div class="ev-grid">
+          <article class="ev-card reveal"><span class="ev-stat">N=758</span><p class="ev-claim">Consultants beat controls where the AI was right, and <em>underperformed</em> where it was confidently wrong. They didn't lose competence. They lost the habit of pushing back.</p><span class="ev-src">BCG / Dell'Acqua</span></article>
+          <article class="ev-card reveal"><span class="ev-stat">~50%</span><p class="ev-claim">Less mental effort from LLM users than search-engine users completing the same task.</p><span class="ev-src">MIT Media Lab</span></article>
+          <article class="ev-card reveal"><span class="ev-stat">N=539</span><p class="ev-claim">Passive AI use lowers self-efficacy, ownership, and meaning, and the dip <em>outlasts the AI use itself.</em></p><span class="ev-src">Nature · Lee et al.</span></article>
+          <article class="ev-card reveal"><span class="ev-stat">#4</span><p class="ev-claim">Losing one's edge ranked the 4th-biggest concern among 81,000 Claude users. 13,000 raised it; close to half already feel it.</p><span class="ev-src">Anthropic · 81k interviews</span></article>
+          <article class="ev-card reveal"><span class="ev-stat">50<small> vs 67%</small></span><p class="ev-claim">Delegation lowers learning: hand it over and comprehension drops. Ask the AI to explain, and the skill is kept.</p><span class="ev-src">Anthropic · coding RCT</span></article>
+          <article class="ev-card reveal"><span class="ev-stat">−5.2pp</span><p class="ev-claim">The cleaner the output looks, the less the user checks context (−5.2pp) or questions the reasoning (−3.1pp).</p><span class="ev-src">Anthropic · Fluency Index</span></article>
+        </div>
       </div>
     </section>
 
@@ -85,11 +111,7 @@
     <section id="year" class="section narrow">
       <p class="eyebrow reveal">Why now · 2026</p>
       <h2 class="reveal">The work has shifted from process to outcome, and the judgment moments are vanishing.</h2>
-      <p class="lead reveal">
-        AI is becoming more relational, persistent, and accurate about you specifically, each one harder to
-        push back on. The human's contact with the work narrows to three seams: the brief, the redirect, the
-        sign-off. The people closest to it said the same thing in a single week.
-      </p>
+      <p class="lead reveal">AI is becoming more relational, persistent, and accurate about you specifically, each one harder to push back on. The human's contact with the work narrows to three seams: the brief, the redirect, the sign-off. The people closest to it said the same thing in a single week.</p>
       <div class="quote-grid">
         <figure class="qcard reveal"><blockquote>&ldquo;I no longer steer. I commission.&rdquo;</blockquote><figcaption>Ethan Mollick<span>Wharton · the patron era</span></figcaption></figure>
         <figure class="qcard reveal"><blockquote>&ldquo;I don't prompt Claude anymore… my job is to write loops.&rdquo;</blockquote><figcaption>Boris Cherny<span>Head of Claude Code</span></figcaption></figure>
@@ -97,31 +119,13 @@
       </div>
     </section>
 
-    <!-- EVIDENCE -->
-    <section id="research" class="section">
-      <p class="eyebrow reveal">The evidence</p>
-      <h2 class="reveal">It isn't speculative. It's measured, independently, and it's accelerating.</h2>
+    <!-- THE FINDING -->
+    <section id="finding" class="section narrow">
+      <p class="eyebrow reveal">The finding</p>
+      <h2 class="reveal">You check the AI's work about one time in four.</h2>
       <p class="lead reveal">
-        Across separate studies the same shape appears: AI makes the work easier and the human less critical,
-        and the loss outlasts the tool.
-      </p>
-      <div class="ev-grid">
-        <article class="ev-card reveal"><span class="ev-stat">N=758</span><p class="ev-claim">Consultants beat controls where the AI was right, and <em>underperformed</em> where it was confidently wrong. They didn't lose competence. They lost the habit of pushing back.</p><span class="ev-src mono">BCG / Dell'Acqua et al.</span></article>
-        <article class="ev-card reveal"><span class="ev-stat">~50%</span><p class="ev-claim">Less mental effort from LLM users than search-engine users completing the same task.</p><span class="ev-src mono">MIT Media Lab</span></article>
-        <article class="ev-card reveal"><span class="ev-stat">N=539</span><p class="ev-claim">Passive AI use lowers self-efficacy, ownership, and meaning, and the dip <em>outlasts the AI use itself.</em></p><span class="ev-src mono">Nature · Lee et al. 2026</span></article>
-        <article class="ev-card reveal"><span class="ev-stat">#4</span><p class="ev-claim">Losing one's edge ranked the 4th-biggest concern among 81,000 Claude users. 13,000 raised it; close to half already feel it.</p><span class="ev-src mono">Anthropic · 81k interviews</span></article>
-        <article class="ev-card reveal"><span class="ev-stat">50<small> vs 67%</small></span><p class="ev-claim">Delegation lowers learning: hand it over and comprehension drops. Ask the AI to explain, and the skill is retained.</p><span class="ev-src mono">Anthropic · coding RCT</span></article>
-        <article class="ev-card reveal"><span class="ev-stat">−5.2pp</span><p class="ev-claim">The cleaner the output looks, the less the user checks context (−5.2pp) or questions the reasoning (−3.1pp).</p><span class="ev-src mono">Anthropic · AI Fluency Index</span></article>
-      </div>
-    </section>
-
-    <!-- MEASUREMENT -->
-    <section id="measure" class="section narrow">
-      <p class="eyebrow reveal">The measurement</p>
-      <h2 class="reveal">The number won't hold still. That's the finding.</h2>
-      <p class="lead reveal">
-        Point a measure at real coding sessions and a rough shape appears in how a person answers the machine:
-        verify that it's right, steer how it looks, give the next instruction, or wave it through.
+        Watch how a person answers the machine and four moves appear: verify it's right, steer how it looks,
+        hand over the next task, or wave it through. Across real coding sessions, verifying is the rare one.
       </p>
       <div class="mix reveal">
         <div class="mix-bar">
@@ -138,40 +142,32 @@
         </div>
       </div>
       <p class="lead reveal">
-        Treat those as estimates, not readings off a dial. Count with keywords and a stray question mark
-        reads as scrutiny it wasn't. Ask an LLM to grade the same sessions and it labels them differently on
-        each pass, by enough to flip the headline. The honest answer is a wide range.
+        Three turns in four, the AI's substance goes unchecked. You trust it, you redirect how it looks, or
+        you move on. That is the gap the research predicts, showing up in real work: people keep steering the
+        surface while the question of whether the thing is <em>true</em> quietly stops getting asked.
       </p>
-      <p class="lead dim reveal">
-        The instability is the result, not a failure of effort. Human judgment is hard to see from the
-        outside, which is the reason no gauge for it exists. If it were easy, someone with $200M would have
-        shipped it already.
-      </p>
+      <p class="lead dim reveal">Call it an estimate. Measure it a few ways and it shifts a point or two. The shape doesn't move.</p>
     </section>
 
-    <!-- APPROACH -->
-    <section id="approach" class="section approach">
-      <p class="eyebrow reveal">A potential approach</p>
-      <h2 class="reveal">What a fix could look like: quiet, local, pointed at you.</h2>
-      <p class="lead reveal">
-        Not a dashboard that nags, and not a score. A thin instrument that records the decisions behind your
-        work and shows you the drift, the way a training log shows a runner their pace.
-      </p>
-      <div class="steps">
-        <div class="step reveal"><span class="step-n mono">01</span><h3>Capture, locally</h3><p>A hook reads each session on your machine when it ends. Nothing identifiable leaves your device.</p></div>
-        <div class="step reveal"><span class="step-n mono">02</span><h3>Reflect, privately</h3><p>It records what you steered, what you checked, and what you let go. No score, no grade.</p></div>
-        <div class="step reveal"><span class="step-n mono">03</span><h3>See the drift</h3><p>Over time, the mix and its trend become visible, at the one moment the loop can't watch itself: sign-off.</p></div>
+    <!-- APPROACH (blue band) -->
+    <section class="band band-blue">
+      <div class="band-inner" id="approach">
+        <p class="eyebrow reveal">A potential approach</p>
+        <h2 class="reveal">What a fix could look like: quiet, local, pointed at you.</h2>
+        <p class="lead reveal">Not a dashboard that nags, and not a score. A thin instrument that records the decisions behind your work and shows you the drift, the way a training log shows a runner their pace.</p>
+        <div class="steps">
+          <div class="step reveal"><span class="step-n">01</span><h3>Capture, locally</h3><p>A hook reads each session on your machine when it ends. Nothing identifiable leaves your device.</p></div>
+          <div class="step reveal"><span class="step-n">02</span><h3>Reflect, privately</h3><p>It records what you steered, what you checked, and what you let go. No score, no grade.</p></div>
+          <div class="step reveal"><span class="step-n">03</span><h3>See the drift</h3><p>Over time the mix and its trend become visible, at the one moment the loop can't watch itself: sign-off.</p></div>
+        </div>
+        <div class="principles reveal">
+          <span class="principle">Runs and stays on your machine</span>
+          <span class="principle">No score, ever</span>
+          <span class="principle">No cross-user comparison</span>
+          <span class="principle">Open source · MIT</span>
+        </div>
+        <p class="lead dim center reveal">A personal tool helps the person who runs it. On its own it won't save the population. That has always taken a curriculum, a platform, or a professional standard. This is an inquiry, not a verdict.</p>
       </div>
-      <div class="principles reveal">
-        <span class="principle">Runs and stays on your machine</span>
-        <span class="principle">No score, ever</span>
-        <span class="principle">No cross-user comparison</span>
-        <span class="principle">Open source · MIT</span>
-      </div>
-      <p class="lead dim center reveal">
-        A personal tool helps the person who runs it. On its own it won't save the population. That has
-        always taken a curriculum, a platform, or a professional standard. This is an inquiry, not a verdict.
-      </p>
     </section>
 
     <!-- OPEN QUESTIONS -->
@@ -179,44 +175,48 @@
       <p class="eyebrow reveal">Open questions</p>
       <h2 class="reveal">What's still unknown.</h2>
       <ol class="oq">
-        <li class="reveal"><span class="oq-n mono">01</span><p>What's the right unit to watch? A single turn, a whole session, the irreversible commands, or the moment you accept a long run you never watched.</p></li>
-        <li class="reveal"><span class="oq-n mono">02</span><p>How much checking is silent? Reading a diff and saying nothing is real scrutiny that no transcript can see.</p></li>
-        <li class="reveal"><span class="oq-n mono">03</span><p>Does the gap compound over months, or do people correct once they can see it? Answering that needs far more history.</p></li>
-        <li class="reveal"><span class="oq-n mono">04</span><p>Does showing someone their own mix change how they work, or just hand them a number to game?</p></li>
-        <li class="reveal"><span class="oq-n mono">05</span><p>Is the right altitude the individual, the team's curriculum, or the platform itself? And how do you surface any of it without becoming the tool people switch off on day one?</p></li>
+        <li class="reveal"><span class="oq-n">01</span><p>What's the right unit to watch? A single turn, a whole session, the irreversible commands, or the moment you accept a long run you never watched.</p></li>
+        <li class="reveal"><span class="oq-n">02</span><p>How much checking is silent? Reading a diff and saying nothing is real scrutiny that no transcript can see.</p></li>
+        <li class="reveal"><span class="oq-n">03</span><p>Does the gap compound over months, or do people correct once they can see it? Answering that needs far more history.</p></li>
+        <li class="reveal"><span class="oq-n">04</span><p>Does showing someone their own mix change how they work, or just hand them a number to game?</p></li>
+        <li class="reveal"><span class="oq-n">05</span><p>Is the right altitude the individual, the team's curriculum, or the platform itself? And how do you surface it without becoming the tool people switch off on day one?</p></li>
       </ol>
     </section>
 
-    <!-- CTA -->
-    <section id="contact" class="cta">
-      <h2 class="reveal">Interested in building in this space?</h2>
-      <p class="cta-sub reveal">Researchers, people working on AI adoption, builders poking at the same problem. If this is your question too, I'd like to swap notes. The report, the argument, and the open questions are public.</p>
-      <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="https://www.linkedin.com/in/hireelliot/">Let's swap notes</a>
-        <a class="btn btn-ghost" href="https://github.com/ElliotJLT/crux/blob/main/docs/report.md">Read the report</a>
+    <!-- CTA (dark band) -->
+    <section class="band band-dark">
+      <div class="band-inner cta" id="contact">
+        <h2 class="reveal">Interested in building in this space?</h2>
+        <p class="cta-sub reveal">Researchers, people working on AI adoption, builders poking at the same problem. If this is your question too, I'd like to swap notes. The report, the argument, and the open questions are public.</p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/hireelliot/">Let's swap notes</a>
+          <a class="btn btn-ghost" href="https://github.com/ElliotJLT/crux/blob/main/docs/report.md">Read the report</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="foot-brand">
-      <a class="brand" href="#top"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><use href="#logomark"/></svg> Crux</a>
-      <p>An open inquiry into the human side of AI collaboration. Built and run in the open by Elliot Little.</p>
-    </div>
-    <div class="foot-cols">
-      <div class="foot-col">
-        <span class="foot-h mono">Read</span>
-        <a href="https://github.com/ElliotJLT/crux/blob/main/docs/report.md">The report</a>
-        <a href="https://github.com/ElliotJLT/crux">GitHub</a>
-        <a href="https://github.com/ElliotJLT/crux/blob/main/docs/auto-reflection.md">Background</a>
+    <div class="footer-inner">
+      <div class="foot-brand">
+        <a class="brand" href="#top"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><use href="#logomark"/></svg> Crux</a>
+        <p>An open inquiry into the human side of AI collaboration. Built and run in the open by Elliot Little.</p>
       </div>
-      <div class="foot-col">
-        <span class="foot-h mono">Connect</span>
-        <a href="https://www.linkedin.com/in/hireelliot/">LinkedIn</a>
-        <a href="mailto:elliotjlittle@gmail.com">Email</a>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <span class="foot-h mono">Read</span>
+          <a href="https://github.com/ElliotJLT/crux/blob/main/docs/report.md">The report</a>
+          <a href="https://github.com/ElliotJLT/crux">GitHub</a>
+          <a href="https://github.com/ElliotJLT/crux/blob/main/docs/auto-reflection.md">Background</a>
+        </div>
+        <div class="foot-col">
+          <span class="foot-h mono">Connect</span>
+          <a href="https://www.linkedin.com/in/hireelliot/">LinkedIn</a>
+          <a href="mailto:elliotjlittle@gmail.com">Email</a>
+        </div>
       </div>
+      <div class="foot-base mono">CRUX · 2026 · MIT · An open, openly-documented inquiry</div>
     </div>
-    <div class="foot-base mono">CRUX · 2026 · MIT · An open, openly-documented inquiry</div>
   </footer>
 
   <script src="app.js"></script>
