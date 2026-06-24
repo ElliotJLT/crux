@@ -4,7 +4,7 @@
 
 **Elliot Little · A living research document · last updated June 2026 · v1**
 
-> A living research document, revised as the data grows. What happened when I built an instrument to measure my own judgment under AI and pointed it at four months of my own work. The headline is uncomfortable and specific: across more than two hundred real coding sessions, I checked whether the AI was actually right about **one time in four**. I'm the person paying attention. I suspect most people's number is lower.
+> A living research document, revised as the data grows. What happened when I built an instrument to measure my own judgment under AI and ran it across four months of my own work. The number that started it: across two hundred-plus sessions, I verified the AI was actually right about **one time in four**. But the number isn't the interesting part. I check the AI's *voice* far more than its *facts* — I'll fix a clumsy sentence and wave through a claim I never checked. The riskier the action, the *less* I scrutinised it, because I'd quietly switched the guardrails off. And the one habit I set out to fix came back a month later: awareness, on its own, changed nothing.
 
 ---
 
@@ -112,7 +112,7 @@ So the highest-stakes actions ran with *less* scrutiny than trivial ones, becaus
 
 The session-level finding (verifies voice, not substance) and the command-level finding (rubber stamps at one-way doors) are the same erosion measured at two altitudes. Call any single number an estimate; measure it a few ways and it shifts a point or two. The shape does not move.
 
-And this is the optimistic reading of the population, not the pessimistic one. I am not the worst case. I am the case who is actively paying attention, who built an instrument specifically to catch this, on his own work. If my verify rate is one in four, I would bet most people's is lower.
+I built this instrument specifically to catch this kind of thing, ran it on my own work half-expecting to come out fine, and it caught me anyway. That's the part I keep returning to: the awareness was already there. It wasn't enough.
 
 ## 7. The leading indicator
 
