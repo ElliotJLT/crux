@@ -22,16 +22,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="logomark" viewBox="0 0 24 24">
-      <rect width="24" height="24" rx="6" fill="#181a1e"/>
-      <g stroke="#efe7d8" stroke-width="2" stroke-linecap="round" fill="none"><path d="M7 12 L16.5 7"/><path d="M7 12 L16.5 17"/></g>
-      <circle cx="7" cy="12" r="2" fill="#efe7d8"/>
-    </symbol>
-  </svg>
-
   <header class="nav" id="nav">
-    <a class="brand" href="#top"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><use href="#logomark"/></svg> Crux</a>
+    <a class="brand" href="#top">cru<svg class="cx" viewBox="0 0 28 28" aria-hidden="true"><path class="x-up" d="M5 22 L23 7"/><path class="x-down" d="M5 7 L23 22"/></svg></a>
     <nav class="nav-links">
       <a href="#problem">Problem</a>
       <a href="#evidence">Evidence</a>
@@ -77,16 +69,14 @@
         agent memory. The human sitting next to it has nothing equivalent. You can audit an agent's every
         step. You cannot audit your own.
       </p>
-      <div class="card reveal">
-        <div class="gap-figure">
-          <div class="gf-side"><span class="gf-num">$200M+</span><span class="gf-lbl">invested in measuring the model</span></div>
-          <div class="gf-div" aria-hidden="true"></div>
-          <div class="gf-side"><span class="gf-num accent">$0</span><span class="gf-lbl">measuring whether the human is still engaged</span></div>
-        </div>
-        <div class="fund">
-          <span class="fund-lbl mono">Every funded player measures the model:</span>
-          <span class="fchip">Braintrust · $80M</span><span class="fchip">Galileo · $68M</span><span class="fchip">Patronus · $40M</span><span class="fchip">Judgment Labs · $32M</span><span class="fchip">Mem0 · $24.5M</span><span class="fchip">Humanloop · acq. Anthropic</span>
-        </div>
+      <div class="gap-figure reveal">
+        <div class="gf-side"><span class="gf-num">$200M+</span><span class="gf-lbl">invested in measuring the model</span></div>
+        <div class="gf-div" aria-hidden="true"></div>
+        <div class="gf-side"><span class="gf-num accent">$0</span><span class="gf-lbl">measuring whether the human is still engaged</span></div>
+      </div>
+      <div class="fund reveal">
+        <span class="fund-lbl mono">Every funded player measures the model:</span>
+        <span class="fchip">Braintrust · $80M</span><span class="fchip">Galileo · $68M</span><span class="fchip">Patronus · $40M</span><span class="fchip">Judgment Labs · $32M</span><span class="fchip">Mem0 · $24.5M</span><span class="fchip">Humanloop · acq. Anthropic</span>
       </div>
     </section>
 
@@ -107,8 +97,9 @@
       </div>
     </section>
 
-    <!-- WHY NOW -->
-    <section id="year" class="section narrow">
+    <!-- WHY NOW (blue band) -->
+    <section class="band band-blue">
+      <div class="band-inner narrow" id="year">
       <p class="eyebrow reveal">Why now · 2026</p>
       <h2 class="reveal">The work has shifted from process to outcome, and the judgment moments are vanishing.</h2>
       <p class="lead reveal">AI is becoming more relational, persistent, and accurate about you specifically, each one harder to push back on. The human's contact with the work narrows to three seams: the brief, the redirect, the sign-off. The people closest to it said the same thing in a single week.</p>
@@ -116,6 +107,7 @@
         <figure class="qcard reveal"><blockquote>&ldquo;I no longer steer. I commission.&rdquo;</blockquote><figcaption>Ethan Mollick<span>Wharton · the patron era</span></figcaption></figure>
         <figure class="qcard reveal"><blockquote>&ldquo;I don't prompt Claude anymore… my job is to write loops.&rdquo;</blockquote><figcaption>Boris Cherny<span>Head of Claude Code</span></figcaption></figure>
         <figure class="qcard reveal"><blockquote>&ldquo;The loop doesn't know if you understand the work or are avoiding it. You do.&rdquo;</blockquote><figcaption>Addy Osmani<span>Loop Engineering</span></figcaption></figure>
+      </div>
       </div>
     </section>
 
@@ -199,7 +191,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="foot-brand">
-        <a class="brand" href="#top"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><use href="#logomark"/></svg> Crux</a>
+        <a class="brand" href="#top">cru<svg class="cx" viewBox="0 0 28 28" aria-hidden="true"><path class="x-up" d="M5 22 L23 7"/><path class="x-down" d="M5 7 L23 22"/></svg></a>
         <p>An open inquiry into the human side of AI collaboration. Built and run in the open by Elliot Little.</p>
       </div>
       <div class="foot-cols">
