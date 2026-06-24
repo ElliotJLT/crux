@@ -1,12 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#F4EAD9"/>
-  <g transform="translate(0,4)">
-    <path d="M8 44 C 11 22 28 15 32 15 C 36 15 53 22 56 44 C 49 34 41 32 32 33 C 23 32 15 34 8 44 Z"
-          fill="#E0A23D" stroke="#A85F22" stroke-width="1.6" stroke-linejoin="round"/>
-    <g fill="none" stroke="#9A5520" stroke-width="1.7" stroke-linecap="round" opacity="0.8">
-      <path d="M19 39 C 20 32 23 25 27 21"/>
-      <path d="M32 37 C 32 28 32 22 32 17"/>
-      <path d="M45 39 C 44 32 41 25 37 21"/>
-    </g>
+  <defs>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6a93b"/>
+      <stop offset="0.55" stop-color="#ff6f5b"/>
+      <stop offset="1" stop-color="#e85d8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#warm)"/>
+  <g stroke="#1a1108" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.9">
+    <path d="M20 32 L44 18"/>
+    <path d="M20 32 L44 46"/>
   </g>
+  <circle cx="20" cy="32" r="5.5" fill="#1a1108"/>
 </svg>
