@@ -13,10 +13,10 @@ The original tool had one temporal layer: after the session ends. The [Trail](./
 | Layer | Moment | What it captures | Status |
 |---|---|---|---|
 | **Digest** | After the session | What you steered, what you let slide, patterns over time | Shipped (SessionEnd hook, 50+ digests) |
-| **The Trail** | At the irreversible command | Contemporaneous justification at one-way doors (force-push, prod migration, `DROP`, merge to default) | Day 1 shipped — dry-run classifier + [`taxonomy/cutlines.yml`](./taxonomy/cutlines.yml). Day 2 next: opt-in PreToolUse capture hook, off by default |
+| **The Trail** | At the irreversible command | Contemporaneous justification at the rare, hard-to-undo moments | Day 1 shipped — dry-run classifier + [`taxonomy/cutlines.yml`](./taxonomy/cutlines.yml). Day 2 next: opt-in PreToolUse capture hook, off by default |
 | **Delegation sign-off** | At acceptance of an autonomous run | The moment a run's invisible micro-decisions become yours. Disclosure ("the N decisions you'd most plausibly contest") → one real contest → trail | Designed, not built. `delegation` tier in cutlines.yml, then a disclosure hook at Stop |
 
-**Day-1 evidence for why this axis leads.** The dry run over 192 real transcripts (2,668 commands, 22 active days) found irreversible moments are mechanically separable from routine — 0.41 fires/day, 0.45% selectivity. And the founding baseline: of 8 one-way doors with a captured preceding human message, **~6 were rubber stamps or blanket delegations**. Contemporaneous justification at the moments of highest consequence currently does not exist. The instrument captures net-new information.
+**Day-1 evidence for why this axis leads.** The dry run over 192 real transcripts (2,668 commands, 22 active days) found the hard-to-undo moments are rare and mechanically separable from routine — 0.41 fires/day, 0.45% selectivity. And at those moments, contemporaneous justification essentially does not exist today. The instrument captures net-new information.
 
 **The metric this unlocks** is the project's first leading indicator: the rate at which justification is left blank (or contests are skipped) at one-way doors, tracked over time. Not a score — a descriptive read on whether the wanting-to-own is fading, before output quality ever shows it.
 

@@ -3,12 +3,12 @@
 ### Problem
 crux captures sessions after they end. By the time the SessionEnd digest reconstructs a session, the reasoning behind the consequential calls is already gone — and in the transcript a knowing decision is indistinguishable from passive acceptance. The current tool can describe what you let slide; it was never present at the moment you committed.
 
-There is a second gap. Most solo builders have turned off permission prompts because blanket allow/deny is insufferable. So today the highest-stakes actions — force-push, prod migration, DROP, secret rotation — run with *less* scrutiny than trivial ones, because they sit in the same auto-approved bucket.
+There is a second gap. The highest-stakes, least-reversible actions can end up running with *less* scrutiny than trivial ones — the rare moments that most deserve a beat of attention are the ones most likely to slip by.
 
 ### The concept
 A thin, opt-in capture that fires only at irreversible, consequence-bearing moments. At a one-way door, it asks four neutral questions — who owns this, why now, how you'll watch it, how to undo it — and folds your own words into the trail. No score. No pass/fail. Just a record, written where it matters.
 
-The trigger is a property of the operation, not your mood: a user-owned `cutlines.yml` of regexes over the tool input (force-push, `DROP|DELETE|TRUNCATE`, `rm -rf` outside scratch, deploy verbs, secret rotation). Reversible work runs free; the pause appears at roughly the 0.1% of moments where a half-second of deliberation is obviously warranted.
+The trigger is a property of the operation, not your mood: a user-owned `cutlines.yml` of patterns over the tool input that match irreversible, hard-to-undo operations. Reversible work runs free; the pause appears at roughly the 0.1% of moments where a half-second of deliberation is obviously warranted.
 
 ### The wedge
 Let the agent run free on everything reversible; pause for half a second only on what you cannot take back. That benefit is felt on the first near-miss, before any reflection value accrues — which is why a builder installs it for themselves, not out of virtue.
@@ -22,7 +22,7 @@ Over time, the rate at which you leave the justification blank or type "ship it"
 The irreversible action is the rare moment a builder would already hesitate — a natural, self-justifying pause that survives the "blanket friction is insufferable" objection. It is also the project's first component with a forcing function that is not willpower.
 
 ### Risks
-- Rubber-stamp collapse: if the modal answer at a force-push is "ship it," the field is noise and the appetite read flatlines. Sample real fields early; if a clear majority are rubber-stamps, the artefact is theatre — stop.
+- Rubber-stamp collapse: if the modal answer at a one-way door is "ship it," the field is noise and the appetite read flatlines. Sample real fields early; if a clear majority are rubber-stamps, the artefact is theatre — stop.
 - Calibration: a ruleset that over-fires gets switched off within a day. Dry-run first; keep the default set tiny and hard-irreversible only.
 - Unfalsifiability trap: "read the noise as the finding" is honest but can mask failure. Hold the kill criteria.
 
@@ -41,11 +41,9 @@ Log-only classifier (`scripts/cutline-dryrun.py` + `taxonomy/cutlines.yml`) over
 - **Corpus:** 192 session transcripts, 2,668 Bash tool commands, 22 active days (May–June 2026).
 - **Detector precision:** after two iteration passes (heredoc stripping; scratch-reclone and test-env annotations), 12 real hard-tier matches → **9 decision events** once retries are grouped.
 - **Fire rate: 0.41/day. Selectivity: 0.45%** of all commands. The hook would interrupt roughly once every other working day — well inside the don't-get-disabled budget. Gate 1 (irreversible is mechanically separable from routine) **passes**.
-- **Dominant one-way door:** `gh pr merge` to the default branch (4/9 events), then dev-DB resets (consequential here because worktrees share one dev Postgres) and force branch-deletes.
-- **The founding baseline:** of 8 events with a captured preceding human message, **~6 were rubber stamps or blanket delegations** ("go for it", "you do it all", "solve it for me"), 1 had no human utterance at all, 1 was self-initiated. The contemporaneous JUSTIFY at one-way doors currently **does not exist** — the instrument would be capturing net-new information, and the appetite metric must be read as *change from this baseline*, not against zero.
-- **Delegation split:** 0/12 one-way doors ran on a subagent sidechain — but several main-loop events were agent-initiated under a blanket prior "go ahead", which is the cedes-responsibility pattern in the wild.
+- **The founding baseline:** at these moments, contemporaneous justification essentially **does not exist** — the instrument would be capturing net-new information, and the appetite metric must be read as *change from this baseline*, not against zero.
 
-Next: Day-2 capture hook (PreToolUse on the hard set, off by default), then re-measure the rubber-stamp rate against this baseline.
+Next: Day-2 capture hook (PreToolUse on the hard set, off by default), then re-measure against this baseline.
 
 ---
 
@@ -57,7 +55,7 @@ This reframes, but does not break, the cut-line concept:
 
 - Bash-level cut-lines instrument the *legible* one-way doors. The dry run proved the method: point-of-commitment capture is sparse, mechanically detectable, and baseline-measurable. But command-level capture alone instruments the visible fraction of a phenomenon that increasingly lives in delegation itself.
 - **Accepting the output of a multi-hour autonomous run is a one-way door in the same taxonomy sense**: the hundred invisible micro-decisions become yours the moment you ship them, and you cannot retroactively have judged them. The detector generalises — fire on the *delegation event* (long-run completion, large agent fan-outs), not only the destructive command. The substrate already exposes this (run duration, agent count, tokens burned unattended).
-- The same dry run captured the patron era in the wild: the day this note was written, a one-way door fired directly after the user message "solve it for me."
+- The same dry run surfaced the patron-era pattern in the wild: acceptance of delegated work behaves as its own kind of one-way door.
 
 The staying-sharp loop this implies, each step instrumentable on the existing substrate:
 

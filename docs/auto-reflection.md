@@ -35,12 +35,12 @@ Findings from my own corpus:
 
 The last bullet is what cognitive surrender looks like in someone who built the tool to catch it and ran it on his own work. The awareness was already there. The pattern still compounds anyway.
 
-**Point-of-decision findings — the founding baseline.** In June 2026 I ran a log-only classifier over my full local transcript corpus (192 sessions, 2,668 shell commands, 22 active days), matching against a [tiered taxonomy of irreversible operations](https://github.com/ElliotJLT/crux/blob/main/taxonomy/cutlines.yml) — force-pushes, production migrations, destructive SQL, merges to the default branch. Two results:
+**Point-of-decision findings — the founding baseline.** In June 2026 I ran a log-only classifier over my full local transcript corpus (192 sessions, 2,668 shell commands, 22 active days), matching against a [tiered taxonomy of irreversible, hard-to-undo operations](https://github.com/ElliotJLT/crux/blob/main/taxonomy/cutlines.yml). Two results:
 
 - **Irreversible moments are mechanically separable from routine.** 9 genuine decision events in 22 days — 0.41 per day, 0.45% of all commands. Sparse enough that capture at these moments survives the friction objection.
-- **Of the 8 events with a captured preceding human message, ~6 were rubber stamps or blanket delegations** — "go for it", "you do it all", "solve it for me". Contemporaneous justification at one-way doors does not currently exist, in a user who built the measurement tool.
+- **At those moments, contemporaneous justification essentially did not exist** — even in the user who built the measurement tool. They were the moments deliberated over least.
 
-There is a structural reason for that second finding. Most solo builders disable permission prompts because blanket allow/deny is insufferable — which means **the highest-stakes actions now run with less scrutiny than trivial ones**, sitting in the same auto-approved bucket. The session-level finding ("verifies voice, not substance") and the command-level finding (rubber stamps at one-way doors) are the same erosion measured at two altitudes.
+There is a structural reason for that second finding. The highest-stakes, least-reversible actions tend to run with **less deliberation than trivial ones, not more**. The session-level finding ("verifies voice, not substance") and the command-level finding are the same erosion measured at two altitudes.
 
 ---
 
@@ -58,7 +58,7 @@ Cognitive surrender risk is being amplified by the entire direction the major AI
 
 Note what the loop-engineering stack instruments. Maker/checker subagent splits, verifier models grading stop conditions, adversarial review of generated code — observability on every component of the loop **except the human who designs it and signs off on its output**. Osmani closes with: "Two people can build the exact same loop and get completely opposite results. One uses it to move faster on work they understand deeply. The other uses it to avoid understanding the work at all. The loop doesn't know the difference. *You do.*"
 
-My baseline data says you don't. At my own one-way doors — the moments his closing line assumes self-knowledge — roughly 75% of my preceding messages were rubber stamps. The loop doesn't know the difference, and unmeasured, neither does the human. Every prescription in the current discourse ("stay the engineer," "read what the loop made") is willpower — the one intervention class with no historical record of preserving a capacity at scale.
+My baseline data says you don't. At my own most consequential, least-reversible moments — the ones his closing line assumes self-knowledge about — the deliberation mostly wasn't there. The loop doesn't know the difference, and unmeasured, neither does the human. Every prescription in the current discourse ("stay the engineer," "read what the loop made") is willpower — the one intervention class with no historical record of preserving a capacity at scale.
 
 None of these features or shifts are bad. They are the natural direction of progress and many produce real gains (Harvey reported a 6× lift in agent task-completion after Auto Dream). The point is that they make cognitive surrender easier, more comfortable, and less visible — while shrinking the judgment moments to a handful of seams, each carrying more weight, none instrumented. The surrender amplifier is shipping inside the surrender amplifier.
 
@@ -163,7 +163,7 @@ The thing it is not is the layer that providers should ship natively. That tool 
 
 This document is the strategic anchor. From here:
 
-- The Trail's Day-2 capture hook is the next concrete deliverable: opt-in, off by default, four neutral questions at hard-tier doors. Then re-measure the rubber-stamp rate against the Day-1 baseline. The kill criteria hold — if the captured fields are theatre, stop.
+- The Trail's Day-2 capture hook is the next concrete deliverable: opt-in, off by default, four neutral questions at hard-tier doors. Then re-measure against the Day-1 baseline. The kill criteria hold — if the captured fields are theatre, stop.
 - The disclosure hook follows: a contestable-decisions report at the end of long autonomous runs. The most product-shaped piece of the project, and the one the loop-engineering era makes urgent.
 - v2 cross-LLM (Cursor + Claude.ai exports) lands after the depth work.
 - The four render modes get named in the [roadmap](https://github.com/ElliotJLT/crux/blob/main/ROADMAP.md) but not built until the above exist.
