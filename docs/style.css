@@ -106,8 +106,8 @@ h2 { font-size: clamp(28px,4vw,46px); line-height: 1.08; letter-spacing: -0.03em
 .qcard figcaption span { font-weight: 400; font-size: 12px; color: var(--faint); }
 
 /* MEASUREMENT MIX */
-.narrow { max-width: 920px; }
-.mix { margin: 34px 0; }
+.narrow { max-width: var(--maxw); }
+.mix { margin: 34px 0; max-width: 760px; }
 .mix-bar { display: flex; height: 54px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
 .seg { height: 100%; }
 .seg.verify { background: var(--orange); }

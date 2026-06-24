@@ -33,7 +33,7 @@ Findings from my own corpus:
 - **The recurring lesson never sticks at the system level.** I caught the AI's voice-tells in April, escalated to a process fix, and the same fix slipped in May. Awareness without infrastructure produced no behaviour change.
 - **The headline:** *I catch what's wrong with how the AI writes but coast on whether what it says is true.*
 
-The last bullet is what cognitive surrender looks like in someone who is actively measuring it. I am not the worst case. I am the case who is paying attention. The pattern still compounds.
+The last bullet is what cognitive surrender looks like in someone who built the tool to catch it and ran it on his own work. The awareness was already there. The pattern still compounds anyway.
 
 **Point-of-decision findings — the founding baseline.** In June 2026 I ran a log-only classifier over my full local transcript corpus (192 sessions, 2,668 shell commands, 22 active days), matching against a [tiered taxonomy of irreversible operations](https://github.com/ElliotJLT/crux/blob/main/taxonomy/cutlines.yml) — force-pushes, production migrations, destructive SQL, merges to the default branch. Two results:
 
