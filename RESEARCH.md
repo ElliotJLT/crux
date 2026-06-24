@@ -4,7 +4,7 @@
 
 **Elliot Little · A living research document · last updated June 2026 · v1**
 
-> This is a living research document — a field report, not a product pitch, revised as the data grows. It describes what happened when I built an instrument to measure my own judgment under AI and pointed it at four months of my own work. The headline finding is uncomfortable and specific: across more than two hundred real coding sessions, I checked whether the AI was actually right about **one time in four**. I am the person paying attention. I suspect most people's number is lower.
+> A living research document, revised as the data grows. What happened when I built an instrument to measure my own judgment under AI and pointed it at four months of my own work. The headline is uncomfortable and specific: across more than two hundred real coding sessions, I checked whether the AI was actually right about **one time in four**. I'm the person paying attention. I suspect most people's number is lower.
 
 ---
 
@@ -138,7 +138,7 @@ The constraints below are not modesty. Each one is load-bearing, and removing it
 
 ## 9. Why a personal tool won't save the population
 
-I have to be honest about the ceiling, because pretending otherwise would be exactly the kind of polished overclaim this project is against.
+The ceiling is real, and worth stating plainly.
 
 I commissioned a synthesis of seven historical cases of automating tools and the human capacities they threatened — calculators, GPS, autopilot, ATMs, photography, spell-check, smartphones. The pattern is unambiguous:
 
