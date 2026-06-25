@@ -180,9 +180,19 @@ h2 { font-size: clamp(28px,4vw,46px); line-height: 1.08; letter-spacing: -0.03em
 .doc-sub { font-size: clamp(17px,2vw,21px); color: var(--muted); font-weight: 500; letter-spacing: -0.012em; margin: 0 0 22px; }
 .doc-meta { display: flex; flex-wrap: wrap; gap: 7px 16px; font-family: var(--mono); font-size: 12px; color: var(--faint); }
 .doc-meta span { white-space: nowrap; }
-.doc-abstract { margin: 30px 0 0; padding: 22px 26px; background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--orange); border-radius: 0 14px 14px 0; }
-.doc-abstract p { margin: 0; color: var(--ink); font-size: 15.5px; line-height: 1.62; }
-.doc-abstract strong { font-weight: 600; }
+.doc-abstract { margin: 28px 0 0; padding: 0; background: none; border: none; }
+.doc-abstract p { margin: 0; color: var(--muted); font-size: clamp(17px,1.8vw,19px); line-height: 1.6; font-style: italic; }
+.doc-abstract strong { font-weight: 600; color: var(--ink); font-style: normal; }
+
+/* inline citations + references */
+.cite { color: var(--faint); }
+.doc-refs { margin-top: 16px; }
+.doc-refs .refs-intro { font-style: italic; color: var(--faint); font-size: 14px; margin: 0 0 22px; }
+.doc-refs h3 { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); font-weight: 600; margin: 26px 0 12px; }
+.doc-refs ul { list-style: none; padding: 0; margin: 0 0 6px; }
+.doc-refs li { font-size: 13.5px; line-height: 1.5; color: var(--muted); padding-left: 20px; text-indent: -20px; margin-bottom: 9px; }
+.doc-refs li em { font-style: italic; }
+.doc-refs li .flag { color: var(--faint); }
 
 .doc-sec { margin: 0 0 50px; scroll-margin-top: 88px; }
 .doc-sec .secnum { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--orange); }
