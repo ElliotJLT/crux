@@ -9,6 +9,8 @@
 
 > The crux is the part of the work that's still yours: what you reject, redirect, and refuse to ship. Crux captures it, so you can see whether your judgment is sharpening or quietly eroding while the AI does the typing.
 
+**Start here:** [the research document](https://elliotjlt.github.io/crux/research.html) — a living field study of the human side of AI collaboration, and what I found measuring my own work.
+
 ---
 
 ## The problem no one tracks
@@ -71,7 +73,7 @@ For manual sessions, `/marmite` still works — type it at the start, say "wrap"
   uncertainty, resist the urge to fix what isn't broken.
 ```
 
-Skimmable in 15 seconds. No scores. No self-assessment. Just a record of how someone actually thinks when building with AI.
+Skimmable in 15 seconds. No scores. No self-assessment. Just a record of how someone actually works through a problem with AI.
 
 ### Surfacing patterns over time
 
@@ -101,12 +103,13 @@ Run `/trail` periodically to generate a synthesis:
 
 The synthesis surfaces whether your collaboration instincts are sharpening, plateauing, or eroding. You can't course-correct a disposition you can't see.
 
-## Who This Is For
+## Who this is for
 
 - **Engineers** already building with AI who want a feedback loop for judgment, not just code.
 - **Tech leads** who need to develop their team's AI collaboration instincts, not just their prompt skills.
-- **Hiring managers** looking for a signal beyond code tests — [aptitude assessments are up 54x since 2024](https://gritdaily.com/software-dev-hiring-shifting-from-syntax-to-judgment/) because nothing else exists.
-- **Teams** where [tacit knowledge is disappearing](https://aijourn.com/are-we-automating-professional-services-into-a-knowledge-crisis/) — digests are a knowledge transfer mechanism. Juniors can read how seniors think.
+- **Teams** where [tacit knowledge is disappearing](https://aijourn.com/are-we-automating-professional-services-into-a-knowledge-crisis/) — digests are a knowledge-transfer mechanism: juniors can see how seniors work through a problem.
+
+The primary reader is always the person who runs it. It's a practice log, not a scoreboard and not a hiring signal — there are no scores and no cross-user comparison by design.
 
 ## Where this is heading
 
@@ -196,17 +199,17 @@ Installed from the cloned repo (not yet published to PyPI):
 ```bash
 cd ~/crux && pip install .
 
-# Cognitive engagement dashboard
+# Your collaboration patterns and trend (descriptive, no score)
 crux metrics
 
-# Generate your shareable profile
+# Render your Collaboration Log (markdown + HTML)
 crux profile --format both
 
 # Preview locally
 crux serve
 ```
 
-## The Thesis
+## The thesis
 
 Everyone will be fluent. [Anthropic can measure it](https://www.anthropic.com/research/AI-fluency-index), courses can teach it, and the floor is rising fast enough that it stops being a differentiator. But population-level measurement (how do people use AI on average?) is different from individual measurement (how do *you* use AI, and is it changing?). crux bridges that gap.
 
