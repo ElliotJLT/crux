@@ -115,7 +115,7 @@ The primary reader is always the person who runs it. It's a practice log, not a 
 
 crux today is a Claude Code-only practice tool. The position it occupies is the **human-side reflection layer** for AI collaboration — a parallel to what providers are building on the AI side (Anthropic's [Auto Dream](https://platform.claude.com/docs/en/managed-agents/dreams), persistent memory; OpenAI's chat memory; etc).
 
-The roadmap (see [`ROADMAP.md`](./ROADMAP.md)) covers cross-LLM capture (Cursor, Claude.ai exports, Copilot OTel, ChatGPT exports), persona-specific render modes, and the strategic position doc [`docs/auto-reflection.md`](./docs/auto-reflection.md) — the longer argument for why this layer needs to exist.
+The roadmap (see [`ROADMAP.md`](./ROADMAP.md)) covers cross-LLM capture (Cursor, Claude.ai exports, Copilot OTel, ChatGPT exports) and persona-specific render modes.
 
 ## Setup
 

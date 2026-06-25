@@ -106,7 +106,7 @@ OUTPUT FORMAT — emit exactly this, nothing else:
 ---
 date: ${TODAY}
 session_id: ${TODAY}-session-${NEXT}
-project: [short kebab-case project name e.g. argus, crux, applications, or "general"]
+project: [short kebab-case project name e.g. crux, writing, or "general"]
 duration: [short | medium | long]
 shape: [research | shipping | refinement | planning | debugging | writing | mixed]
 interaction_type: [directive | feedback-loop | task-iteration | validation | learning]
@@ -148,7 +148,7 @@ HARD RULES:
 - No file paths, env vars, API keys, architecture details, internal service names, or company-confidential info anywhere.
 - Real quotes only — never fabricate user words. If you can't find a quote that lands, paraphrase and skip the italics.
 - YAML must be valid. Use [] for empty lists. Lowercase enum values.
-- Project name: pick from {argus, crux, applications, multiverse, boulot, cervo, bungalow-ai, writing, general} — or invent a kebab-case one if none fit.
+- Project name: a short kebab-case project slug (e.g. crux, writing, general) — or invent one if none fit.
 - Concepts are flexible topical tags (e.g. autonomous-agents, claude-skills, mcp, hooks, cv, linkedin-post). Avoid hyper-specific feature names.
 - Patterns MUST be from the vocab above. Empty list is fine if nothing matches.
 - "Trajectory note" only links a prior session if the pattern or project genuinely overlaps.

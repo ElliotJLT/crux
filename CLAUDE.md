@@ -25,7 +25,7 @@ with a one-line embedding-ready punchline, and uses real user quotes where they 
 
 Frontmatter fields:
 - `date`, `session_id` — keys
-- `project` — kebab-case from {argus, crux, applications, multiverse, boulot, cervo, bungalow-ai, writing, general}
+- `project` — kebab-case project slug (e.g. crux, writing, general)
 - `duration` — short | medium | long
 - `shape` — research | shipping | refinement | planning | debugging | writing | mixed
 - `interaction_type` — directive | feedback-loop | task-iteration | validation | learning (Anthropic Economic Index)
