@@ -4,7 +4,7 @@
 
 **Elliot Little · A living research document · last updated June 2026 · v1**
 
-> A living research document, revised as the data grows. What happened when I built an instrument to measure my own judgment under AI and ran it across four months of my own work. The number that started it: across two hundred-plus sessions, I verified the AI was actually right about **one time in four**. But the number isn't the interesting part. I check the AI's *voice* far more than its *facts*. I'll fix a clumsy sentence and wave through a claim I never checked. The riskier the action, the *less* I scrutinised it, because I'd quietly switched the guardrails off. And the one habit I set out to fix came back a month later: awareness, on its own, changed nothing.
+> A living research document, revised as the data grows. What happened when I built an instrument to measure my own judgment under AI and ran it across four months of my own work. The number that started it: on the record, I visibly push back about **one time in four**. But the number isn't the interesting part. The pushback that surfaces is more about the AI's *voice* than its *facts*, and a transcript only sees what I say out loud, not what I read in silence. The visible check was thinnest at exactly the moments that most deserve a second look, and the one habit I set out to fix came back a month later: awareness, on its own, changed nothing.
 
 ---
 
@@ -100,9 +100,9 @@ Nothing in either corpus is reconstructed after the fact for this document; the 
 
 I built the tool half-expecting to come out looking fine. I did not.
 
-**The headline.** Across more than two hundred real coding sessions and the nine hundred-odd messages I sent inside them, four moves account for almost everything I do with the AI's output. I **verify it's actually right about one time in four.** I **steer how it looks** about as often. **A third of the time I'm just handing over the next task.** And roughly **one time in seven I wave it through** without really reading it.
+**The headline.** Across more than two hundred real coding sessions and the nine hundred-odd messages I sent inside them, four moves account for almost everything that shows up in the record. About **one time in four**, I visibly push back on whether it's right. I **steer how it reads** about as often. **A third of the time I'm handing over the next task.** And roughly **one in seven leaves no visible check at all**, with one honest caveat: a transcript only sees what I say out loud, so it can't separate a silent, careful read from a genuine wave-through.
 
-The shape is specific and unflattering: I am good at steering the surface (fixing the voice, redirecting the approach) and weak at checking the substance. *I catch what's wrong with how the AI writes. I coast on whether what it says is true.*
+The shape is specific: the pushback that surfaces is mostly about how the AI writes, the voice and the approach, and less often, on the record, about whether it's true. That visible-judgment gap is the thing worth watching.
 
 **Session level confirms it.** Across the classified corpus, diligence — the fluency dimension that covers verification and follow-through — is weak in roughly 65% of sessions, while every other dimension is strong or medium in most. Diligence is the structural outlier. The pattern "accepts polish uncritically" is among my top three by frequency and shows *no improving trend* across the four months. It is not a phase. And the lesson never stuck at the system level: I caught the AI's voice-tells in one month, escalated to a process fix, and the same fix slipped the next. Awareness without infrastructure produced no behaviour change.
 
