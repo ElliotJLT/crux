@@ -1,14 +1,12 @@
 # crux roadmap
 
-> The bigger argument for why this layer needs to exist: [`docs/auto-reflection.md`](./docs/auto-reflection.md).
-
 crux today captures Claude Code sessions and synthesises collaboration patterns across time. The strategic position it occupies is broader: the **human-side reflection layer for AI collaboration** — the counterpart to what providers are building on the model side (persistent memory, agent monitoring, automated eval).
 
 The roadmap runs on two axes. **Depth** — when in the decision lifecycle capture happens. **Breadth** — how many AI surfaces it covers. Depth currently outranks breadth, for a reason given below.
 
 ## Depth — when capture happens
 
-The original tool had one temporal layer: after the session ends. The [Trail](./research/2026-06-09-the-trail-product-brief.md) (merged Jun 2026) adds the layer the project was missing — and the next one is already visible.
+The original tool had one temporal layer: after the session ends. The Trail (merged Jun 2026) adds the layer the project was missing — and the next one is already visible.
 
 | Layer | Moment | What it captures | Status |
 |---|---|---|---|
@@ -60,7 +58,7 @@ The same capture + taxonomy stack serves different audiences differently. Named 
 
 ## How this evolves
 
-If the strategic positioning ([`docs/auto-reflection.md`](./docs/auto-reflection.md)) survives external review, the next decisions become:
+If the strategic positioning survives external review, the next decisions become:
 
 - Whether to push adoption inside one large org (the curriculum route)
 - Whether to push for provider-level integration (the infrastructure route)

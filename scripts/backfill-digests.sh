@@ -87,7 +87,7 @@ OUTPUT FORMAT — emit exactly this, nothing else:
 ---
 date: ${digest_date}
 session_id: ${digest_name}
-project: [short kebab-case from the original content e.g. argus, crux, applications, multiverse, boulot, cervo, bungalow-ai, writing, general]
+project: [short kebab-case from the original content e.g. crux, writing, general]
 duration: [short | medium | long — infer from original]
 shape: [research | shipping | refinement | planning | debugging | writing | mixed]
 interaction_type: [extract from original Classification section if present]
