@@ -71,13 +71,15 @@ The work has moved from process to outcome. What's left of the human's contact i
 
 ## Method — how I captured it
 
-I built the smallest instrument that could answer the question on real data, and ran it on myself before claiming anyone else has the problem.
+I build AI in education, where accuracy and pedagogy are the product rather than a feature, so this question isn't abstract for me. I built the smallest instrument that could answer it on real data and ran it on myself before claiming anyone else has the problem.
 
 **Capture is local and passive.** A session-end hook reads each session when it ends and writes a structured digest — what I steered, what I checked, what I let go. Nothing identifiable leaves the machine; the measurement can't change the behaviour it measures.
 
 **Classification uses a controlled vocabulary** — a stable, versioned taxonomy of collaboration patterns grouped by fluency dimension (delegation, description, discernment, diligence), so patterns are comparable across months and a *trend* is visible rather than a snapshot.
 
 **Two altitudes.** Session level (per-session digests, classified over four months) and command level (a log-only pass over my full local transcript corpus of 192 sessions, 2,668 shell commands, 22 active days, flagging the rare moments that are hard or impossible to undo). Nothing is reconstructed after the fact: digests were written contemporaneously, the command pass was run log-only, and the full match detail stays local.
+
+One scope note up front. This watches a single channel: my own coding sessions, and only what shows up in the transcript. It does not see the verification real work runs on — code review, automated tests, red-teaming, staged rollout, and domain checks for accuracy before anything reaches a user. A thin in-session signal is a finding about that channel, not a verdict on anyone's total diligence.
 
 ## Results — run on myself
 
@@ -89,7 +91,7 @@ I built the tool half-expecting to come out looking fine. I didn't.
 
 **Command level is worse, where it matters most.** The hard-to-undo moments are rare (under half a percent of commands) and they were the moments I deliberated over *least*. So the highest-stakes actions ran with less deliberation than trivial ones, not more.
 
-I take this seriously: I build with guardrails and care about using AI safely, and I still came out of this with a thinner visible record of judgment than I'd assumed. Call any single number an estimate; measure it a few ways and it shifts a point or two. But the shape doesn't move.
+I take this seriously: I build with guardrails and care about using AI safely, and the substantive checks in my professional work happen off the transcript, in review and testing. Even so, my own in-session record of judgment came out thinner than I'd assumed. Call any single number an estimate; measure it a few ways and it shifts a point or two. But the shape doesn't move.
 
 ## You can't see it from the inside
 
@@ -160,7 +162,7 @@ The answerable ones have moved into the argument above (whether you can self-ass
 
 ## Limitations and honest status
 
-This is one person's data: a small corpus (tens of classified sessions, 192 transcripts, four months, a single tool surface — maybe a fifth of even my own AI use). The headline numbers are estimates that move a point or two. Silent checking is invisible to the method and may flatter or damn me unfairly. Several supporting studies are preprints (Kosmyna; Xu) or vendor/correlational work (GitClear) and are flagged as such; some are real-time-bias rather than proven long-term deskilling (Dratsch); and genuine counter-evidence exists (above). The leading indicator has a real failure mode: if the modal answer at a one-way door is "ship it," the field is noise and the signal flatlines — in which case the artefact is theatre and the right move is to stop. I am holding that kill criterion.
+This is one person's data: a small corpus (tens of classified sessions, 192 transcripts, four months, a single tool surface — maybe a fifth of even my own AI use). The headline numbers are estimates that move a point or two. Silent checking is invisible to the method, as is the structured verification real work runs on (review, tests, red-teaming, staged deployment), so the in-session signal may flatter or damn me unfairly; it is one channel, not the whole of anyone's diligence. Several supporting studies are preprints (Kosmyna; Xu) or vendor/correlational work (GitClear) and are flagged as such; some are real-time-bias rather than proven long-term deskilling (Dratsch); and genuine counter-evidence exists (above). The leading indicator has a real failure mode: if the modal answer at a one-way door is "ship it," the field is noise and the signal flatlines — in which case the artefact is theatre and the right move is to stop. I am holding that kill criterion.
 
 What this is, then, is not a finished result. It is the form of the argument clear enough to attack and improve — with a forty-year evidence base behind the mechanism and real, if undersized, data behind the personal claim. It is a living document; it will be revised as the corpus grows and the open questions close. The repo is public and MIT-licensed; there are no patents, because a measurement instrument for your own judgment only works if it is inspectable. If this is your question too, I'd like to swap notes.
 
