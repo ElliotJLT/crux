@@ -48,6 +48,18 @@ The same capture + taxonomy stack serves different audiences differently. Named 
 | Junior dev whose human-administrative bits got eaten | Repositioning | **Contribution attribution** — where your shaping actually changed the output |
 | Junior dev whose learning is threatened | Friction at the right moment | **Tutor mode** — graduated, opt-in, scoped to learning contexts |
 
+## The team layer — named, not sequenced
+
+The practitioner accounts that surfaced through mid-2026 (Das's craftsman tax and the threads that followed; the ownership account in [`RESEARCH.md`](./RESEARCH.md)) point at two pains the individual instrument doesn't reach. Both are reads of data crux already captures, not new capture surfaces.
+
+**Workflows have no home.** Skills, loops, and prompts accumulate per person — unversioned, unevaluated, unshared. Osmani's loop stack verifies every component of the loop, and nobody versions or owns the loop itself; when a loop rots, it rots silently until it's generating noise. The digest corpus already knows which workflows a person actually runs and how they change. A team-visible catalogue — which loops exist, who owns each, when it last changed, what its sessions look like — is a render mode over existing data. Ownership of a loop is also the honest answer to "what do I own now?" in a team where the AI executes: you own the system that does the work, versioned, evaluated, defensible.
+
+**The retro gap.** Teams rebuilt their delivery process around AI in months and mostly never retro the collaboration itself, because there is no record to hold the retro over. A period of digests, shared by choice for one conversation, is the retro pack: pre-readable in ten minutes, argument-ready, grounded in what actually happened rather than what people remember feeling.
+
+Constraint check, because this brushes against a hard line below: the Retro is voluntary shared reading of self-owned records, for a conversation. Not a dashboard, not a ranking, not visible to anyone the owner didn't hand it to. If it can't be built without becoming a surveillance surface, it doesn't get built.
+
+Sequencing: behind Trail Day 2 and the disclosure hook. Named now because the render-mode table already implies the tech-lead reader, and because the team is where the ownership account says the damage is compounding.
+
 ## What's NOT on this roadmap
 
 - A SaaS hosted product. Local-first, by design.

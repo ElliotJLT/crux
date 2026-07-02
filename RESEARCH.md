@@ -2,7 +2,7 @@
 
 ### A field study of cognitive surrender, run on my own work
 
-**Elliot Little · A living research document · last updated June 2026 · v1 · No patents, public by design**
+**Elliot Little · A living research document · last updated July 2026 · v1.1 · No patents, public by design**
 
 > *What happens to a person's judgment while the AI does the work, and can you even see it changing? This is a field report, revised as the data grows. I built an instrument to measure my own AI collaboration and ran it across four months of my own work; on the record, I visibly push back about one time in four. The number is the hook, not the point. The point is that this is not a new phenomenon — it is a forty-year-old, repeatedly replicated finding from automation research, now arriving in software — and that the person inside it is the last to be able to see it.*
 
@@ -68,6 +68,26 @@ Together they shrink the human's contact with the work to a handful of seams. In
 > "The loop doesn't know if you understand the work or are avoiding it. You do." — Addy Osmani
 
 The work has moved from process to outcome. What's left of the human's contact is three moments: **the brief**, **the mid-flight redirect**, and **the sign-off**. And the loop-engineering stack instruments every part of itself (maker/checker splits, verifier models, adversarial review), *except the human who designs it and signs off*. Osmani's line assumes the human knows the difference between using the loop to go faster and using it to avoid understanding. The evidence below says the human is the last to know.
+
+## The ownership account
+
+The studies above measure capability: comprehension scores, error rates, neural connectivity. Through mid-2026 a second account has been accumulating in practitioner writing — essays, forum threads with thousands of working engineers in them — and it is consistent enough to treat as data. Its subject is not whether the skill is decaying but whether the work still belongs to the person who shipped it. The same account comes up in private, whenever engineers are asked how the year has actually felt.
+
+The reports share a shape, and each element has a study standing behind it:
+
+- **Decisions that don't embed.** Engineers describe finishing AI-heavy projects faster and knowing them less. A decision you make lodges; a decision made mid-flight by the loop and presented for approval afterward does not. This is Kosmyna's 83%-can't-quote finding narrated from the inside — and it is what Shen & Tamkin's debugging gap predicts it should feel like six months on, when the code needs changing and the person who shipped it reads it like a stranger.
+- **The defendability test.** The practitioner version of a comprehension quiz is social: someone asks *why was this done?* and the person who shipped it can narrate the outcome but not the decisions under it. Rozenblit & Keil showed people discover the illusion of explanatory depth only when forced to explain; an AI-heavy workflow arranges for that discovery to happen out loud, in front of whoever asked.
+- **Verification as the residual job — and as tax.** Lee et al. measured the shift from doing to verifying. The practitioner accounts supply the texture: reading confident prose for the buried wrong assumption, task-switching in the minutes while the agent runs, never quite trusting what comes back. Deedy Das (Menlo Ventures, June 2026), on the split inside teams pushed to adopt: "The craftsmen are tired. Very tired. The entire burden of review falls on the craftsman. The burden of understanding." The verification lands hardest on the most expert, because they are the ones still able to do it.
+- **The reward loop, stranded.** An engineering manager, in the 8,000-upvote thread that followed Das's remarks: normal coding cycles through problem-solving and the reward of solving; AI-assisted coding parks you in "the solution validation phase" where you "barely get any reward. It becomes very mechanical and takes away what a lot of devs love about their job." That is loss of felt reward — distinct from loss of skill, and untouched by status or pay.
+- **The inversion, lived.** From the same thread: "I am no developer anymore. I am the Product Owner with the technical skill they wish they had… plus QA engineer." Mollick's patron shift, reported in the past tense from the floor.
+
+Two features of this account matter for the instrument.
+
+**It is bimodal.** The same tool, deployed the same way, lands as liberation for the outcome-oriented and as bereavement for the craft-oriented — the threads carry both voices, and the split doesn't track seniority. Population statistics will average the phenomenon away. The unit that can register it is one person, over months, which is the unit this instrument measures.
+
+**And every report is, mechanically, a missing-record problem.** The decisions existed. They were made in flight — by the person, the model, or the two of them — and left no trace the person can retrieve at the moment of challenge. Organisations are starting to answer the identity half of this with ownership: give people a problem and an outcome, not tickets. Right instinct, and it doesn't touch this. Owning an outcome without a record of the decisions underneath it is stewardship of a black box; you can only defend what you can reconstruct, and the workflow that produced the artefact is exactly the workflow that leaves no reconstruction behind.
+
+That sharpens what the digest in this project is for. Not only a mirror for judgment drift — a **record of title**: the contemporaneous account of what you steered, checked, and let slide, written while it was warm, retrievable at the moment someone asks *why*. The literature's question is whether you're still thinking. The practitioners' question is whether the work is still yours. The same record answers both.
 
 ## Method — how I captured it
 
@@ -148,6 +168,7 @@ Each constraint is load-bearing; removing it breaks the thing.
 The same capture-and-synthesis substrate serves different readers as different things — not separate products, different readings of one record.
 
 - **For individuals — the Mirror.** Patterns over time, the surrender signatures surfaced, at the one moment the loop can't watch itself: sign-off.
+- **For teams — the Retro.** Teams rebuilt how they deliver around AI in months, and mostly never retro the collaboration itself — there is no record to retro over. Workflows live in individual dotfiles and habit; loops rot when nobody owns them; the actual ways-of-working exist nowhere except transcripts nobody reads. A period of digests, shared by choice for one conversation, is the retro pack: which workflows actually ran, what got steered, what got waved through, where ownership sits. Shared reading of self-owned records, never a dashboard of anyone else.
 - **For enterprises — the Trail.** The audit trail you actually need is not the AI's logs of what it did, but the human's record of what they engaged with, challenged, and let through. AI-side-only observability is a one-sided accountability picture.
 - **For professional bodies.** The AI-collaboration audit trail will become part of professional competence within five years. The fields that codify what "competent AI use" means will define it; the rest will have it defined for them.
 - **For providers.** Ship the human-side counterpart to the model-side memory and observability you already build.
@@ -218,6 +239,7 @@ What this is, then, is not a finished result. It is the form of the argument cle
 **Practitioner & contemporary framing**
 - Mollick, E. (2026). *What It Feels Like to Work with Mythos* and *Choosing to Stay Human* (2025). One Useful Thing.
 - Osmani, A. (2026). *Loop Engineering*. Cherny, B. (2026), Head of Claude Code.
+- Das, D. (2026). On the "craftsman tax" in AI-mandated engineering teams. Menlo Ventures commentary, via Business Insider (June 2026) and the ~8,000-upvote r/technology discussion that followed. *(Practitioner reports; selection bias toward the aggrieved, counter-voices noted in text.)*
 - Anthropic. *AI Fluency Index*; *What 81,000 People Want from AI*; *The Anthropic Economic Index*.
 
-*Crux · A living research document · v1 · June 2026 · No patents. Public by design.*
+*Crux · A living research document · v1.1 · July 2026 · No patents. Public by design.*

@@ -40,6 +40,7 @@
       <a href="#not-new">Forty years of automation research</a>
       <a href="#software">The same pattern, in software</a>
       <a href="#why-now">Why now</a>
+      <a href="#ownership">The ownership account</a>
       <a href="#method">Method</a>
       <a href="#results">Results, run on myself</a>
       <a href="#blind">You can't see it from the inside</a>
@@ -60,7 +61,7 @@
         <h1>Measuring the human, not just the model.</h1>
         <p class="doc-sub">A field study of cognitive surrender, run on my own work.</p>
         <div class="doc-meta">
-          <span>Elliot Little</span><span>&middot;</span><span>Last updated June 2026</span><span>&middot;</span><span>v1</span><span>&middot;</span><span>No patents, public by design</span>
+          <span>Elliot Little</span><span>&middot;</span><span>Last updated July 2026</span><span>&middot;</span><span>v1.1</span><span>&middot;</span><span>No patents, public by design</span>
         </div>
         <div class="doc-abstract">
           <p>What happens to a person's judgment while the AI does the work, and can you even see it changing? This is a field report, revised as the data grows. I built an instrument to measure my own AI collaboration and ran it across four months of my own work; on the record, I visibly push back about <strong>one time in four</strong>. The number is the hook, not the point. The point is that this is not a new phenomenon, but a forty-year-old, repeatedly replicated finding from automation research now arriving in software, and that the person inside it is the last to be able to see it.</p>
@@ -123,6 +124,23 @@
           <figure class="doc-quote"><p>"The loop doesn't know if you understand the work or are avoiding it. You do."</p><cite>Addy Osmani</cite></figure>
         </div>
         <p>The work has moved from process to outcome. What's left of the human's contact is three moments: <strong>the brief</strong>, <strong>the mid-flight redirect</strong>, and <strong>the sign-off</strong>. And the loop-engineering stack instruments every part of itself (maker/checker splits, verifier models, adversarial review) except the human who designs it and signs off. Osmani's line assumes the human knows the difference between using the loop to go faster and using it to avoid understanding. The evidence below says the human is the last to know.</p>
+      </section>
+
+      <section class="doc-sec" id="ownership">
+        <h2>The ownership account</h2>
+        <p>The studies above measure capability: comprehension scores, error rates, neural connectivity. Through mid-2026 a second account has been accumulating in practitioner writing — essays, forum threads with thousands of working engineers in them — and it is consistent enough to treat as data. Its subject is not whether the skill is decaying but whether the work still belongs to the person who shipped it. The same account comes up in private, whenever engineers are asked how the year has actually felt.</p>
+        <p>The reports share a shape, and each element has a study standing behind it:</p>
+        <ul class="doc-list">
+          <li><strong>Decisions that don't embed.</strong> Engineers describe finishing AI-heavy projects faster and knowing them less. A decision you make lodges; a decision made mid-flight by the loop and presented for approval afterward does not. This is Kosmyna's 83%-can't-quote finding narrated from the inside — and it is what Shen &amp; Tamkin's debugging gap predicts it should feel like six months on, when the code needs changing and the person who shipped it reads it like a stranger.</li>
+          <li><strong>The defendability test.</strong> The practitioner version of a comprehension quiz is social: someone asks <em>why was this done?</em> and the person who shipped it can narrate the outcome but not the decisions under it. Rozenblit &amp; Keil showed people discover the illusion of explanatory depth only when forced to explain; an AI-heavy workflow arranges for that discovery to happen out loud, in front of whoever asked.</li>
+          <li><strong>Verification as the residual job — and as tax.</strong> Lee et al. measured the shift from doing to verifying. The practitioner accounts supply the texture: reading confident prose for the buried wrong assumption, task-switching in the minutes while the agent runs, never quite trusting what comes back. Deedy Das (Menlo Ventures, June 2026), on the split inside teams pushed to adopt: "The craftsmen are tired. Very tired. The entire burden of review falls on the craftsman. The burden of understanding." The verification lands hardest on the most expert, because they are the ones still able to do it.</li>
+          <li><strong>The reward loop, stranded.</strong> An engineering manager, in the 8,000-upvote thread that followed Das's remarks: normal coding cycles through problem-solving and the reward of solving; AI-assisted coding parks you in "the solution validation phase" where you "barely get any reward. It becomes very mechanical and takes away what a lot of devs love about their job." That is loss of felt reward — distinct from loss of skill, and untouched by status or pay.</li>
+          <li><strong>The inversion, lived.</strong> From the same thread: "I am no developer anymore. I am the Product Owner with the technical skill they wish they had… plus QA engineer." Mollick's patron shift, reported in the past tense from the floor.</li>
+        </ul>
+        <p>Two features of this account matter for the instrument.</p>
+        <p><strong>It is bimodal.</strong> The same tool, deployed the same way, lands as liberation for the outcome-oriented and as bereavement for the craft-oriented — the threads carry both voices, and the split doesn't track seniority. Population statistics will average the phenomenon away. The unit that can register it is one person, over months, which is the unit this instrument measures.</p>
+        <p><strong>And every report is, mechanically, a missing-record problem.</strong> The decisions existed. They were made in flight — by the person, the model, or the two of them — and left no trace the person can retrieve at the moment of challenge. Organisations are starting to answer the identity half of this with ownership: give people a problem and an outcome, not tickets. Right instinct, and it doesn't touch this. Owning an outcome without a record of the decisions underneath it is stewardship of a black box; you can only defend what you can reconstruct, and the workflow that produced the artefact is exactly the workflow that leaves no reconstruction behind.</p>
+        <p>That sharpens what the digest in this project is for. Not only a mirror for judgment drift — a <strong>record of title</strong>: the contemporaneous account of what you steered, checked, and let slide, written while it was warm, retrievable at the moment someone asks <em>why</em>. The literature's question is whether you're still thinking. The practitioners' question is whether the work is still yours. The same record answers both.</p>
       </section>
 
       <section class="doc-sec" id="method">
@@ -215,6 +233,7 @@
         <p>The same capture-and-synthesis substrate serves different readers as different things, not separate products, different readings of one record.</p>
         <ul class="doc-list">
           <li><strong>For individuals — the Mirror.</strong> Patterns over time, the surrender signatures surfaced, at the one moment the loop can't watch itself: sign-off.</li>
+          <li><strong>For teams — the Retro.</strong> Teams rebuilt how they deliver around AI in months, and mostly never retro the collaboration itself — there is no record to retro over. Workflows live in individual dotfiles and habit; loops rot when nobody owns them; the actual ways-of-working exist nowhere except transcripts nobody reads. A period of digests, shared by choice for one conversation, is the retro pack: which workflows actually ran, what got steered, what got waved through, where ownership sits. Shared reading of self-owned records, never a dashboard of anyone else.</li>
           <li><strong>For enterprises — the Trail.</strong> The audit trail you actually need is not the AI's logs of what it did, but the human's record of what they engaged with, challenged, and let through. AI-side-only observability is a one-sided accountability picture.</li>
           <li><strong>For professional bodies.</strong> The AI-collaboration audit trail will become part of professional competence within five years. The fields that codify what "competent AI use" means will define it; the rest will have it defined for them.</li>
           <li><strong>For providers.</strong> Ship the human-side counterpart to the model-side memory and observability you already build.</li>
@@ -298,6 +317,7 @@
         <ul>
           <li>Mollick, E. (2025–2026). <em>Choosing to Stay Human</em>; <em>What It Feels Like to Work with Mythos</em>. One Useful Thing.</li>
           <li>Osmani, A. (2026). <em>Loop Engineering</em>. Cherny, B. (2026), Head of Claude Code.</li>
+          <li>Das, D. (2026). On the "craftsman tax" in AI-mandated engineering teams. Menlo Ventures commentary, via Business Insider (June 2026) and the ~8,000-upvote r/technology discussion that followed. <span class="flag">(Practitioner reports; selection bias toward the aggrieved.)</span></li>
           <li>Anthropic. <em>AI Fluency Index</em>; <em>What 81,000 People Want from AI</em>; <em>The Anthropic Economic Index</em>.</li>
         </ul>
 

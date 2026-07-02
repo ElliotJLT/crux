@@ -107,7 +107,7 @@ The synthesis surfaces whether your collaboration instincts are sharpening, plat
 
 - **Engineers** already building with AI who want a feedback loop for judgment, not just code.
 - **Tech leads** who need to develop their team's AI collaboration instincts, not just their prompt skills.
-- **Teams** where [tacit knowledge is disappearing](https://aijourn.com/are-we-automating-professional-services-into-a-knowledge-crisis/) — digests are a knowledge-transfer mechanism: juniors can see how seniors work through a problem.
+- **Teams** where [tacit knowledge is disappearing](https://aijourn.com/are-we-automating-professional-services-into-a-knowledge-crisis/) — digests are a knowledge-transfer mechanism (juniors can see how seniors work through a problem) and a retro substrate: a way to retro the collaboration, not just the product.
 
 The primary reader is always the person who runs it. It's a practice log, not a scoreboard and not a hiring signal — there are no scores and no cross-user comparison by design.
 
@@ -235,6 +235,7 @@ crux captures that layer automatically — by making it visible to the person wh
 - [Hiring Is Shifting From Syntax to Judgment](https://gritdaily.com/software-dev-hiring-shifting-from-syntax-to-judgment/) — 54x increase in aptitude assessments
 - [Are We Automating Into a Knowledge Crisis?](https://aijourn.com/are-we-automating-professional-services-into-a-knowledge-crisis/) — The tacit knowledge gap
 - [Boris Cherny: What Happens After Coding Is Solved](https://www.lennysnewsletter.com/p/head-of-claude-code-what-happens) — Head of Claude Code on the builder role
+- [Software Engineers Face an Identity Crisis (Business Insider, via Deedy Das)](https://www.businessinsider.com/software-engineers-identity-crisis-depression-ai-coding-menlo-ventures-2026) — The craftsman tax: review burden lands on the most expert; the ownership account in the wild
 - [AI vs Gen Z: The Junior Developer Crisis](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/) — How stepping-stone tasks are disappearing
 
 ## License
