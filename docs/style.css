@@ -252,3 +252,17 @@ h2 { font-size: clamp(28px,4vw,46px); line-height: 1.08; letter-spacing: -0.03em
 .lk .d.d3 { background: #c4beb0; }
 .lk .d.d4 { background: transparent; box-shadow: inset 0 0 0 1.6px #b6b0a1; }
 .ledger-cap { font-size: 12.5px; color: var(--faint); line-height: 1.55; max-width: 46ch; }
+
+/* VOCABULARY STRIP (research) */
+.vocab { margin: 30px 0 4px; padding: 20px 22px 18px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+.vocab-h { display: block; font-family: var(--mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; color: var(--faint); margin-bottom: 14px; }
+.vocab dl { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 30px; }
+.vocab dt { font-weight: 600; font-size: 14.5px; letter-spacing: -0.01em; }
+.vocab dt a { border-bottom: 1px solid var(--blue-deep); transition: border-color .18s; }
+.vocab dt a:hover { border-color: var(--orange); }
+.vocab dd { margin: 2px 0 0; color: var(--muted); font-size: 13.5px; line-height: 1.55; }
+@media (max-width: 640px) { .vocab dl { grid-template-columns: 1fr; } }
+
+/* MEMO HEAD (research) */
+.memo-head { margin: 20px 0 18px; padding: 16px 20px; background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--orange); border-radius: 6px; font-family: var(--mono); font-size: 13.5px; line-height: 2; color: var(--ink); }
+.memo-head span { color: var(--faint); display: inline-block; min-width: 54px; }
