@@ -2,9 +2,9 @@
 
 ### A field study of cognitive surrender, run on my own work
 
-**Elliot Little · A living research document · last updated July 2026 · v1.1 · No patents, public by design**
+**Elliot Little · A living research document · last updated July 2026 · v2 · No patents, public by design**
 
-> *What happens to a person's judgment while the AI does the work, and can you even see it changing? This is a field report, revised as the data grows. I built an instrument to measure my own AI collaboration and ran it across four months of my own work; on the record, I visibly push back about one time in four. The number is the hook, not the point. The point is that this is not a new phenomenon — it is a forty-year-old, repeatedly replicated finding from automation research, now arriving in software — and that the person inside it is the last to be able to see it.*
+> *What happens to a person's judgment while the AI does the work, and can you even see it changing? This is a field report, revised as the data grows. I built an instrument to measure my own AI collaboration and ran it across four months of my own work; on the record, I visibly push back about one time in four. The number is the hook, not the point. The point is that this is not a new phenomenon — it is a forty-year-old, repeatedly replicated finding from automation research, now arriving in software — and that the person inside it is the last to be able to see it. v2 extends the argument from self-knowledge to work itself: the ownership account from the field, the hiring signal that has quietly stopped existing, and a memo to the platform layer that could ship this measurement at scale.*
 
 ---
 
@@ -22,8 +22,8 @@ The reflex is to look at the work. If the output is good, the collaboration must
 
 Two distinct questions fall out of that, and they are not the same:
 
-- **Provenance** — *was this work genuinely human-led, and can that be shown to someone else?* A question of trust and attestation, with an adversary. Worth working on; not the question here.
-- **Judgment** — *is the person directing the AI still exercising the judgment they believe they are?* A question of self-knowledge, with no adversary but yourself.
+- **Provenance** — *was this work genuinely human-led, and can that be shown to someone else?* A question of trust and attestation, with an adversary. Tools are now arriving to answer it — cryptographically sealed process records that can prove how a piece of work was made. That lane matters, and it certifies the past. It cannot tell you whether the person could do the work again tomorrow.
+- **Judgment** — *is the person directing the AI still exercising the judgment they believe they are?* A question of self-knowledge, with no adversary but yourself. This is the question about the future, and no one is instrumenting it.
 
 Crux takes the second. The distinction sets what the instrument can honestly be: a judgment instrument convinces no one but you, so it needs no cryptography and no proof, and falls apart the moment it pretends to be evidence for anyone else. This is measurement, in the plain sense — an honest record of how you actually engaged, read back to you over time.
 
@@ -171,7 +171,37 @@ The same capture-and-synthesis substrate serves different readers as different t
 - **For teams — the Retro.** Teams rebuilt how they deliver around AI in months, and mostly never retro the collaboration itself — there is no record to retro over. Workflows live in individual dotfiles and habit; loops rot when nobody owns them; the actual ways-of-working exist nowhere except transcripts nobody reads. A period of digests, shared by choice for one conversation, is the retro pack: which workflows actually ran, what got steered, what got waved through, where ownership sits. Shared reading of self-owned records, never a dashboard of anyone else.
 - **For enterprises — the Trail.** The audit trail you actually need is not the AI's logs of what it did, but the human's record of what they engaged with, challenged, and let through. AI-side-only observability is a one-sided accountability picture.
 - **For professional bodies.** The AI-collaboration audit trail will become part of professional competence within five years. The fields that codify what "competent AI use" means will define it; the rest will have it defined for them.
-- **For providers.** Ship the human-side counterpart to the model-side memory and observability you already build.
+- **For providers.** Ship the human-side counterpart to the model-side memory and observability you already build. The full case is the memo below.
+
+## The labor question
+
+Everything above frames the missing measurement as self-knowledge. Held at arm's length, it is a labour-market problem, and I think it is the most underpriced one in the current argument about AI and work.
+
+The displacement debate asks whether AI takes jobs. This document is about the quieter scenario that arrives first: people keep the job and lose the capability. Employment continues; the judgment the role depends on erodes inside it, undetected — because every proxy we use to detect capability is an output proxy, and output is now the part the AI supplies.
+
+**Hiring signals break first.** A portfolio, a commit history, a take-home: each now evidences access to tooling, not judgment. The market has noticed — developer hiring is shifting hard toward live aptitude assessment — but an interview samples fluency, and fluency is teachable, table stakes, and rising fast enough to stop differentiating. What differentiates is whether the candidate still contests the machine when it is confidently wrong, and no CV, repo, or interview shows that.
+
+I am inside this one from both sides. I went through the transition as a builder, measured myself doing it, and I now hire for roles whose day-to-day is directing loops. What I actually need to know about a candidate is their contest rate. The honest answer is that I cannot see it — mine included, until I built the instrument.
+
+**Erosion inside employment is a lagged cost.** Ford leaned hard on automated quality systems, took billions in quality failures, and ended up rehiring 350+ veteran engineers to hunt the failure points the automation missed (reported by Bloomberg, 2026; the rehiring coincided with Ford's first J.D. Power initial-quality lead in 16 years). Capability written off in year one gets bought back at year-three prices. Delegation's productivity gains are banked only if the judgment directing the delegation is maintained; otherwise they are borrowed against a balance nobody is watching.
+
+**And the baseline is dissolving.** METR's 2026 follow-up could not cleanly re-run its own productivity experiment because 30–50% of developers refused to do tasks without AI. The control group is disappearing. Whatever unassisted baseline erosion might have been measured against is dissolving while the field argues about whether erosion is real.
+
+The population-scale version of this is a gap in the measurement layer itself. The best public data on AI and work — Anthropic's Economic Index, now longitudinal — is a usage panel: what people do with the model, by occupation and task, automation versus augmentation. It is the right instrument for its question. There is no counterpart for the other half: whether the humans directing all that usage are getting stronger or quietly losing the capacity the whole arrangement depends on. Usage data without capability data is how an economy comes to look more productive right up until it has to do something unassisted.
+
+## The memo to the platform layer
+
+This document has been honest that a personal tool cannot preserve a capacity across a population — that has always taken a curriculum, a professional standard, or a platform. So it should end the way it means: as a memo to whoever holds platform power, published in public because the argument only wins if someone with scale runs it.
+
+A provider that ships the human-side counterpart to its model-side stack gets three things no one else can build:
+
+1. **The instrument, native.** Session-end reflection built into the tool itself: a digest of what the human steered, checked, and let slide, generated where the transcript already lives. The reference implementation exists in this repo — hook, taxonomy, renderer, MIT-licensed. At the platform layer this is a feature, not a product.
+2. **The disclosure moment.** At sign-off of an autonomous run, surface the handful of decisions the human would most plausibly contest, and ask for one genuine contest before acceptance. The checklist evidence says a forcing function works when it changes the cognitive act; the contest rate it produces is the leading indicator this document proposes — appetite, measured before capability shows the damage.
+3. **The panel.** Opt-in and donated: the first longitudinal, individual-level dataset on how human judgment changes with sustained AI use — the missing counterpart to population usage indices. Fluency curricula teach the floor. The panel is how anyone finds out whether the floor holds.
+
+The constraint carries over from everything above and is not negotiable: the record belongs to the user. The moment the same data feeds a manager's dashboard, the instrument measures the performance instead of the person, and the dataset corrupts itself. Whoever builds this at scale has to want the measurement more than the surveillance. That is a cultural test before it is a technical one, which is why the memo is addressed to the platform layer and not to the enterprise-tooling market.
+
+Why a memo and not a pitch: there are no patents here, deliberately. I have carried this as far as one person, one instrument, and four months of data go. The next altitude needs a curriculum, a standard, or a platform. The head start is sitting in this repository.
 
 ## Open questions
 
@@ -180,6 +210,7 @@ The answerable ones have moved into the argument above (whether you can self-ass
 1. **Does the gap compound, or self-correct?** Does the drift worsen over months, or do people correct once they can see it? Answering needs far more longitudinal history than one person over four months.
 2. **Does seeing your own mix change behaviour, or just hand you a number to game?** The intervention literature says forcing functions can change behaviour — but only when they alter the real cognitive process, not when they're performed.
 3. **What's the right altitude — individual, team curriculum, or platform?** And how do you surface it without becoming the tool people switch off on day one?
+4. **What does hiring for judgment look like once output stops evidencing it?** Fluency can be interviewed for; the contest rate can't, yet. Whoever solves assessment for the post-output era sets the labour market's terms.
 
 ## Limitations and honest status
 
@@ -240,6 +271,8 @@ What this is, then, is not a finished result. It is the form of the argument cle
 - Mollick, E. (2026). *What It Feels Like to Work with Mythos* and *Choosing to Stay Human* (2025). One Useful Thing.
 - Osmani, A. (2026). *Loop Engineering*. Cherny, B. (2026), Head of Claude Code.
 - Das, D. (2026). On the "craftsman tax" in AI-mandated engineering teams. Menlo Ventures commentary, via Business Insider (June 2026) and the ~8,000-upvote r/technology discussion that followed. *(Practitioner reports; selection bias toward the aggrieved, counter-voices noted in text.)*
+- Bloomberg (2026). Ford's rehiring of 350+ veteran quality engineers after automated quality systems underdelivered. *(Press reporting; single-company case.)*
+- Anthropic (2026). *Economic Futures Program* — research grants, policy symposia, and the longitudinal scaling of the Economic Index.
 - Anthropic. *AI Fluency Index*; *What 81,000 People Want from AI*; *The Anthropic Economic Index*.
 
-*Crux · A living research document · v1.1 · July 2026 · No patents. Public by design.*
+*Crux · A living research document · v2 · July 2026 · No patents. Public by design.*

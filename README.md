@@ -9,7 +9,7 @@
 
 > The crux is the part of the work that's still yours: what you reject, redirect, and refuse to ship. Crux captures it, so you can see whether your judgment is sharpening or quietly eroding while the AI does the typing.
 
-**Start here:** [the research document](https://elliotjlt.github.io/crux/research.html) — a living field study of the human side of AI collaboration, and what I found measuring my own work.
+**Start here:** [the research document](https://elliotjlt.github.io/crux/research.html) — a living field study of the human side of AI collaboration, and what I found measuring my own work. v2 extends it from self-knowledge to work itself: [the ownership account](https://elliotjlt.github.io/crux/research.html#ownership) from the field, [the labor question](https://elliotjlt.github.io/crux/research.html#labor) (people keep the job and lose the capability, and no hiring signal can see it), and [a memo to the platform layer](https://elliotjlt.github.io/crux/research.html#memo) that could ship this measurement at scale.
 
 ---
 
@@ -115,7 +115,9 @@ The primary reader is always the person who runs it. It's a practice log, not a 
 
 crux today is a Claude Code-only practice tool. The position it occupies is the **human-side reflection layer** for AI collaboration — a parallel to what providers are building on the AI side (Anthropic's [Auto Dream](https://platform.claude.com/docs/en/managed-agents/dreams), persistent memory; OpenAI's chat memory; etc).
 
-The roadmap (see [`ROADMAP.md`](./ROADMAP.md)) covers cross-LLM capture (Cursor, Claude.ai exports, Copilot OTel, ChatGPT exports) and persona-specific render modes.
+The endgame is not a SaaS. The research document closes with [a memo to the platform layer](https://elliotjlt.github.io/crux/research.html#memo): the instrument shipped native to the tool, a disclosure moment at sign-off of autonomous runs, and an opt-in longitudinal panel — the individual-level counterpart to population usage indices like the Economic Index. This repo is the reference implementation and the head start. No patents, on purpose.
+
+The roadmap (see [`ROADMAP.md`](./ROADMAP.md)) covers the depth work (the Trail, delegation sign-off), the team layer (workflow ownership, the Retro), and cross-LLM capture (Cursor, Claude.ai exports, Copilot OTel, ChatGPT exports).
 
 ## Setup
 

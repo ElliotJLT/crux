@@ -2,12 +2,21 @@
 
 ## Framing
 
-This is a practice tool, not a portfolio. The framing is:
+Two layers, and they don't mix.
+
+**The instrument** is a practice tool, not a portfolio:
 
 - **"AI fluency is measurable. AI judgment isn't."** — Anthropic's fluency index covers the floor. Crux captures what sits above it.
 - The artifact paradox is the hook: polished AI output makes people less critical. There's no feedback loop for collaboration quality. Crux is that feedback loop.
 - Practice, not performance. This is a training log (like a runner's log), not a CV or showcase. Primary audience is yourself. Legibility to others is a side effect.
 - Never use "This is how I think" or similar personal branding language. The profile is called "Collaboration Log", not "Decision Profile".
+
+**The public documents** (RESEARCH.md, docs/) carry a research position as of v2 (July 2026), and edits must preserve it:
+
+- The quiet threat to work is capability erosion inside employment, not displacement. Output proxies can't detect it because output is the part the AI supplies.
+- Canonical vocabulary — keep the terms stable, they are the asset: **cognitive surrender** (umbrella), **the ownership account**, **record of title**, **appetite atrophy**, **the contest rate**, **the defendability test**, **the craftsman tax** (Das's term, credited).
+- The endgame is the **memo to the platform layer** (research.html#memo): instrument native, disclosure at sign-off, opt-in longitudinal panel. Not a SaaS — the anti-surveillance constraint is the position, not a limitation.
+- Differentiation from provenance/attestation tools: they certify the past; crux measures whether the person could do it again tomorrow. Never frame crux as proof for an adversary.
 
 ## Architecture
 
