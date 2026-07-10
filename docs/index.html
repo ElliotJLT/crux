@@ -4,16 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crux — measure the human, not just the model.</title>
-  <meta name="description" content="An open inquiry into the human side of AI collaboration. $200M+ has gone into measuring the model; almost nothing into measuring whether the human is still thinking. The gap, the evidence, and the finding: on the record, visible pushback shows up about one time in four." />
+  <meta name="description" content="A research position and a working instrument for the human side of AI collaboration. $200M+ measures the model; nothing measures whether the human is still thinking. The quiet threat to work is not displacement — it is keeping the job and losing the capability. On the record, visible pushback shows up about one time in four." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://elliotjlt.github.io/crux/" />
   <meta property="og:title" content="Crux — measure the human, not just the model." />
-  <meta property="og:description" content="An open inquiry into the human side of AI collaboration. The gap, the evidence, and the finding: across real sessions, visible pushback shows up about one time in four." />
+  <meta property="og:description" content="The quiet threat to work is not displacement — it is keeping the job and losing the capability. A research position and a working instrument for the half of AI collaboration nobody measures." />
+  <meta property="og:image" content="https://elliotjlt.github.io/crux/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://elliotjlt.github.io/crux/og-card.png" />
   <meta name="twitter:title" content="Crux — measure the human, not just the model." />
-  <meta name="twitter:description" content="An open inquiry into the human side of AI collaboration." />
+  <meta name="twitter:description" content="The quiet threat to work is not displacement — it is keeping the job and losing the capability. A research position and a working instrument." />
 
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,14 +38,15 @@
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <span class="kicker reveal">An open inquiry &middot; 2026</span>
+      <span class="kicker reveal">A research position &middot; a working instrument &middot; 2026</span>
       <div class="hero-grid">
         <h1 class="reveal">Measure the human, not just the model.</h1>
         <div class="hero-aside reveal">
           <p class="hero-sub">
-            As AI does more of the work, what happens to the judgment of the person directing it, and can
-            you even see it changing? An open inquiry into the gap, the evidence, and what I found when I
-            measured my own.
+            The quiet threat to work is not displacement. It is keeping the job and losing the capability,
+            invisibly, because every proxy for capability measures output — and output is now the part the
+            AI supplies. I built the instrument, ran it on myself for four months, and wrote up what it
+            implies for the people hiring, managing, and shipping through this transition.
           </p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="research.html">Read the research document</a>
@@ -102,6 +107,30 @@
       </div>
     </section>
 
+    <!-- OWNERSHIP ACCOUNT (dark band) -->
+    <section class="band band-dark">
+      <div class="band-inner" id="ownership">
+        <p class="eyebrow reveal">The ownership account</p>
+        <h2 class="reveal">People keep the job and lose the capability. That is the quiet threat to work.</h2>
+        <p class="lead reveal">
+          Through mid-2026 the practitioner accounts converged: engineers finishing AI-heavy projects faster
+          and knowing them less, unable to defend the decisions when someone asks <em>why was this done?</em>
+          The decisions existed — they just left no trace anyone can retrieve at the moment of challenge.
+        </p>
+        <div class="quote-grid">
+          <figure class="qcard reveal"><blockquote>&ldquo;The craftsmen are tired. Very tired. The entire burden of review falls on the craftsman.&rdquo;</blockquote><figcaption>Deedy Das<span>Menlo Ventures</span></figcaption></figure>
+          <figure class="qcard reveal"><blockquote>&ldquo;It becomes very mechanical and takes away what a lot of devs love about their job.&rdquo;</blockquote><figcaption>Engineering manager<span>r/technology · 8,000-upvote thread</span></figcaption></figure>
+          <figure class="qcard reveal"><blockquote>&ldquo;I am no developer anymore. I am the Product Owner with the technical skill they wish they had… plus QA engineer.&rdquo;</blockquote><figcaption>Working engineer<span>same thread</span></figcaption></figure>
+        </div>
+        <p class="lead reveal">
+          Every one of these reports is a missing-record problem, and it reframes what the digest is: not
+          just a mirror for judgment drift, but a <strong>record of title</strong> — the part of the work
+          that is still yours, written down while it was warm, there when someone asks why.
+          <a href="research.html#ownership">The full account is in the research document.</a>
+        </p>
+      </div>
+    </section>
+
     <!-- I RAN IT ON MYSELF -->
     <section id="finding" class="section narrow">
       <p class="eyebrow reveal">I ran it on myself</p>
@@ -147,8 +176,8 @@
     <!-- APPROACH (blue band) -->
     <section class="band band-blue">
       <div class="band-inner" id="approach">
-        <p class="eyebrow reveal">A potential approach</p>
-        <h2 class="reveal">What a fix could look like: quiet, local, pointed at you.</h2>
+        <p class="eyebrow reveal">The instrument &middot; shipped</p>
+        <h2 class="reveal">Quiet, local, pointed at you. It exists, and it runs today.</h2>
         <p class="lead reveal">Not a dashboard that nags, and not a score. A thin instrument that records the decisions behind your work and shows you the drift, the way a training log shows a runner their pace.</p>
         <div class="steps">
           <div class="step reveal"><span class="step-n">01</span><h3>Capture, locally</h3><p>A hook reads each session on your machine when it ends. Nothing identifiable leaves your device.</p></div>
@@ -175,17 +204,18 @@
         <li class="reveal"><span class="oq-n">03</span><p>Does the gap compound over months, or do people correct once they can see it? Answering that needs far more history.</p></li>
         <li class="reveal"><span class="oq-n">04</span><p>Does showing someone their own mix change how they work, or just hand them a number to game?</p></li>
         <li class="reveal"><span class="oq-n">05</span><p>Is the right altitude the individual, the team's curriculum, or the platform itself? And how do you surface it without becoming the tool people switch off on day one?</p></li>
+        <li class="reveal"><span class="oq-n">06</span><p>What does hiring for judgment look like once output stops evidencing it? Fluency can be interviewed for. The contest rate can't, yet.</p></li>
       </ol>
     </section>
 
     <!-- CTA (dark band) -->
     <section class="band band-dark">
       <div class="band-inner cta" id="contact">
-        <h2 class="reveal">Interested in building in this space?</h2>
-        <p class="cta-sub reveal">Researchers, people working on AI adoption, builders poking at the same problem. If this is your question too, I'd like to swap notes. The full research document, the argument, and the open questions are public.</p>
+        <h2 class="reveal">This belongs at the platform layer. Until then, it lives here.</h2>
+        <p class="cta-sub reveal">A personal tool helps the person who runs it; preserving a capacity across a population has always taken a curriculum, a standard, or a platform. The research document ends with a memo to whoever holds that power — the instrument native, the disclosure moment at sign-off, and the longitudinal panel nobody has. No patents, MIT, reference implementation in the repo. If you work on the measurement layer, on AI adoption, or on the same question from any side, I'd like to swap notes.</p>
         <div class="hero-cta reveal">
-          <a class="btn btn-primary" href="https://www.linkedin.com/in/hireelliot/">Let's swap notes</a>
-          <a class="btn btn-ghost" href="research.html">Read the document</a>
+          <a class="btn btn-primary" href="research.html#memo">Read the memo</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/hireelliot/">Swap notes</a>
         </div>
       </div>
     </section>
@@ -195,7 +225,7 @@
     <div class="footer-inner">
       <div class="foot-brand">
         <a class="brand" href="#top">cru<svg class="cx" viewBox="0 0 28 28" aria-hidden="true"><path class="x-up" d="M5 22 L23 7"/><path class="x-down" d="M5 7 L23 22"/></svg></a>
-        <p>An open inquiry into the human side of AI collaboration.</p>
+        <p>A research position and a working instrument for the human side of AI collaboration.</p>
       </div>
       <div class="foot-cols">
         <div class="foot-col">

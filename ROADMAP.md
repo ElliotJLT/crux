@@ -76,4 +76,6 @@ If the strategic positioning survives external review, the next decisions become
 - Whether to push for provider-level integration (the infrastructure route)
 - Whether to keep it as personal-practice infrastructure (no scale ambition, real for those who use it)
 
-These are different products. The Trail's Day-2 data, the disclosure hook, and v2 are the unblockers for that decision.
+As of research v2 the position is declared: build the personal infrastructure as proof, aim the ambition at the framework and the platform layer. The research document's closing memo (research.html#memo) is the infrastructure route made explicit — instrument native, disclosure at sign-off, opt-in longitudinal panel. Replications are the mechanism that turns vocabulary into standard: the "run it on yourself" path matters more than any feature on this page.
+
+These are different products. The Trail's Day-2 data, the disclosure hook, and cross-LLM v2 are the unblockers for that decision.
