@@ -1,5 +1,8 @@
 # crux roadmap
 
+> **Status (July 2026): crux is ongoing research, not a product in development.** The instrument is the study's method and a reference implementation; feature work below is parked and kept for the record. The document (`RESEARCH.md`) revises as the field moves. Pre-committed sunset: when the platform extends Reflect from the chat surface to the working surface and from usage signals to judgment signals, the instrument's job is done — the document freezes as the record that the map preceded the territory, and the vocabulary stands.
+
+
 crux today captures Claude Code sessions and synthesises collaboration patterns across time. The strategic position it occupies is broader: the **human-side reflection layer for AI collaboration** — the counterpart to what providers are building on the model side (persistent memory, agent monitoring, automated eval).
 
 The roadmap runs on two axes. **Depth** — when in the decision lifecycle capture happens. **Breadth** — how many AI surfaces it covers. Depth currently outranks breadth, for a reason given below.

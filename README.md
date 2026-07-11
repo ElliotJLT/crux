@@ -1,7 +1,7 @@
 # Crux
 
 [![site](https://img.shields.io/badge/site-live-2563eb)](https://elliotjlt.github.io/crux/)
-[![status](https://img.shields.io/badge/status-alpha-e8590c)](https://github.com/ElliotJLT/crux)
+[![status](https://img.shields.io/badge/status-ongoing%20research-e8590c)](https://github.com/ElliotJLT/crux)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-SessionEnd%20hook-6b46c1)](https://code.claude.com/docs/en/hooks.md)
 [![license](https://img.shields.io/badge/license-MIT-444)](./LICENSE)
 
@@ -9,7 +9,9 @@
 
 > The crux is the part of the work that's still yours: what you reject, redirect, and refuse to ship. Crux captures it, so you can see whether your judgment is sharpening or quietly eroding while the AI does the typing.
 
-**Start here:** [the research document](https://elliotjlt.github.io/crux/research.html) — a living field study of the human side of AI collaboration, and what I found measuring my own work. v2 extends it from self-knowledge to work itself: [the ownership account](https://elliotjlt.github.io/crux/research.html#ownership) from the field, [the labor question](https://elliotjlt.github.io/crux/research.html#labor) (people keep the job and lose the capability, and no hiring signal can see it), and [a memo to the platform layer](https://elliotjlt.github.io/crux/research.html#memo) that could ship this measurement at scale.
+**This is ongoing research, not a product.** The instrument in this repo is the study's method and your replication path; the document is the work.
+
+**Start here:** [the research document](https://elliotjlt.github.io/crux/research.html) — a living field study of the human side of AI collaboration, and what I found measuring my own work. v2 extended it from self-knowledge to work itself: [the ownership account](https://elliotjlt.github.io/crux/research.html#ownership) from the field, [the labor question](https://elliotjlt.github.io/crux/research.html#labor) (people keep the job and lose the capability, and no hiring signal can see it), and [a memo to the platform layer](https://elliotjlt.github.io/crux/research.html#memo). v3: the same week that memo went live, [Anthropic shipped Reflect](https://elliotjlt.github.io/crux/research.html#answered) — the first platform instrument for the human side. It measures usage. The judgment half stays open, and this research keeps measuring it.
 
 ---
 
@@ -119,7 +121,9 @@ The endgame is not a SaaS. The research document closes with [a memo to the plat
 
 The roadmap (see [`ROADMAP.md`](./ROADMAP.md)) covers the depth work (the Trail, delegation sign-off), the team layer (workflow ownership, the Retro), and cross-LLM capture (Cursor, Claude.ai exports, Copilot OTel, ChatGPT exports).
 
-## Setup
+## Run the study on yourself
+
+The strongest response to this research is a replication. Install takes a few minutes; after 30 days you'll have your own shape to compare against mine. If you publish yours, tell me — the document cites replications.
 
 ### Auto-capture (recommended)
 

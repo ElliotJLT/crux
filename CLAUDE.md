@@ -15,7 +15,9 @@ Two layers, and they don't mix.
 
 - The quiet threat to work is capability erosion inside employment, not displacement. Output proxies can't detect it because output is the part the AI supplies.
 - Canonical vocabulary — keep the terms stable, they are the asset: **cognitive surrender** (umbrella), **the ownership account**, **record of title**, **appetite atrophy**, **the contest rate**, **the defendability test**, **the craftsman tax** (Das's term, credited).
+- **Crux is ongoing research, not a product.** Never frame it as a tool seeking adoption; frame it as a study with a replication path. Feature work is parked (see ROADMAP status note).
 - The endgame is the **memo to the platform layer** (research.html#memo): instrument native, disclosure at sign-off, opt-in longitudinal panel. Not a SaaS — the anti-surveillance constraint is the position, not a limitation.
+- **Reflect (Anthropic, 9 Jul 2026) shipped tier one** — usage measurement on the chat surface (research.html#answered). Never claim "nobody measures the human" anymore; the claim is "nobody measures judgment." Timeline discipline: Reflect (9 Jul) preceded the v2 memo going live (10 Jul); the doc's ask dates to June. Always "the same week" / convergence — never causation.
 - Differentiation from provenance/attestation tools: they certify the past; crux measures whether the person could do it again tomorrow. Never frame crux as proof for an adversary.
 
 ## Architecture

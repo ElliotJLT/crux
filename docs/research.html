@@ -55,6 +55,7 @@
       <a href="#implies">What this implies</a>
       <a href="#labor">The labor question</a>
       <a href="#memo">The memo</a>
+      <a href="#answered">The platform answered</a>
       <a href="#questions">Open questions</a>
       <a href="#status">Limitations &amp; status</a>
       <a href="#references">References</a>
@@ -63,14 +64,14 @@
     <!-- DOCUMENT -->
     <article class="doc-body">
       <header class="doc-head">
-        <span class="doc-kicker">Living research document &middot; revised as the data grows</span>
+        <span class="doc-kicker">Ongoing research &middot; revised as the field moves</span>
         <h1>Measuring the human, not just the model.</h1>
         <p class="doc-sub">A field study of cognitive surrender, run on my own work.</p>
         <div class="doc-meta">
-          <span>Elliot Little</span><span>&middot;</span><span>Last updated July 2026</span><span>&middot;</span><span>v2</span><span>&middot;</span><span>No patents, public by design</span>
+          <span>Elliot Little</span><span>&middot;</span><span>Last updated July 2026</span><span>&middot;</span><span>v3</span><span>&middot;</span><span>No patents, public by design</span>
         </div>
         <div class="doc-abstract">
-          <p>What happens to a person's judgment while the AI does the work, and can you even see it changing? This is a field report, revised as the data grows. I built an instrument to measure my own AI collaboration and ran it across four months of my own work; on the record, I visibly push back about <strong>one time in four</strong>. The number is the hook, not the point. The point is that this is not a new phenomenon, but a forty-year-old, repeatedly replicated finding from automation research now arriving in software, and that the person inside it is the last to be able to see it. v2 extends the argument from self-knowledge to work itself: the ownership account from the field, the hiring signal that has quietly stopped existing, and a memo to the platform layer that could ship this measurement at scale.</p>
+          <p>What happens to a person's judgment while the AI does the work, and can you even see it changing? This is a field report, revised as the data grows. I built an instrument to measure my own AI collaboration and ran it across four months of my own work; on the record, I visibly push back about <strong>one time in four</strong>. The number is the hook, not the point. The point is that this is not a new phenomenon, but a forty-year-old, repeatedly replicated finding from automation research now arriving in software, and that the person inside it is the last to be able to see it. v2 extended the argument from self-knowledge to work itself: the ownership account from the field, the hiring signal that has quietly stopped existing, and a memo to the platform layer that could ship this measurement at scale. v3 logs the field moving: the same week that memo went live, Anthropic shipped its first human-side instrument. Usage is now measured. Judgment still isn't. The claim narrows accordingly.</p>
         </div>
       </header>
 
@@ -88,7 +89,7 @@
 
       <section class="doc-sec" id="asymmetry">
         <h2>The asymmetry</h2>
-        <p>In the last eighteen months, more than $200M has gone into knowing whether the <em>model</em> is good: evaluation harnesses, observability, hallucination detection, agent memory. Braintrust, Galileo, Patronus, Judgment Labs, Mem0, Humanloop. Every funded company in the category measures the model. I can find none that measures the human sitting next to it.</p>
+        <p>In the last eighteen months, more than $200M has gone into knowing whether the <em>model</em> is good: evaluation harnesses, observability, hallucination detection, agent memory. Braintrust, Galileo, Patronus, Judgment Labs, Mem0, Humanloop. Every funded company in the category measures the model. When the first version of this document was written, I could find nothing that measured the human sitting next to it. In July 2026 the first platform instrument arrived — Anthropic's Reflect, taken up near the end of this document — and it measures usage, not judgment. The asymmetry has not closed. It has narrowed to its sharp core.</p>
         <p>This is a strange thing to leave unmeasured, because the human is the half that can't be re-run. You can audit an agent's every step. You cannot audit your own. The model side has a complete observability stack. The human side has nothing equivalent.</p>
         <p>That gap is the subject of this document. Not whether the AI is good, which is well funded and well studied, but whether the person directing it is still doing the thing they think they're doing.</p>
       </section>
@@ -254,7 +255,7 @@
           <li><strong>For teams — the Retro.</strong> Teams rebuilt how they deliver around AI in months, and mostly never retro the collaboration itself — there is no record to retro over. Workflows live in individual dotfiles and habit; loops rot when nobody owns them; the actual ways-of-working exist nowhere except transcripts nobody reads. A period of digests, shared by choice for one conversation, is the retro pack: which workflows actually ran, what got steered, what got waved through, where ownership sits. Shared reading of self-owned records, never a dashboard of anyone else.</li>
           <li><strong>For enterprises — the Trail.</strong> The audit trail you actually need is not the AI's logs of what it did, but the human's record of what they engaged with, challenged, and let through. AI-side-only observability is a one-sided accountability picture.</li>
           <li><strong>For professional bodies.</strong> The AI-collaboration audit trail will become part of professional competence within five years. The fields that codify what "competent AI use" means will define it; the rest will have it defined for them.</li>
-          <li><strong>For providers.</strong> Ship the human-side counterpart to the model-side memory and observability you already build. The full case is the memo below.</li>
+          <li><strong>For providers.</strong> Ship the human-side counterpart to the model-side memory and observability you already build. The full case is the memo below — tier one of which shipped in July 2026.</li>
         </ul>
       </section>
 
@@ -286,6 +287,20 @@
         </ol>
         <p>The constraint carries over from everything above and is not negotiable: the record belongs to the user. The moment the same data feeds a manager's dashboard, the instrument measures the performance instead of the person, and the dataset corrupts itself. Whoever builds this at scale has to want the measurement more than the surveillance. That is a cultural test before it is a technical one, which is why the memo is addressed to the platform layer and not to the enterprise-tooling market.</p>
         <p>Why a memo and not a pitch: there are no patents here, deliberately. I have carried this as far as one person, one instrument, and four months of data go. The next altitude needs a curriculum, a standard, or a platform. The head start is sitting in this repository.</p>
+        <p><em>Postscript: tier one arrived the same week this memo went live. Next section.</em></p>
+      </section>
+
+      <section class="doc-sec" id="answered">
+        <h2>The platform answered (July 2026)</h2>
+        <p>On 9 July 2026 Anthropic shipped <strong>Reflect</strong>, in beta: a dashboard on Claude web and desktop that summarises how you use Claude — topics, patterns, when and what — organised by the 4D fluency framework, descriptive with no score, individual-only, private by design. It periodically asks the user questions like <em>"What's one thing you want to keep doing yourself, even if Claude could do it faster?"</em>, and it ships wellbeing levers: quiet hours, break nudges, built with the MIT Media Lab's AHA program, the Digital Wellness Lab at Boston Children's Hospital, and the Family Online Safety Institute.</p>
+        <p>This document has argued since June that the provider should ship the human-side counterpart to its model-side stack; the memo above made the ask explicit, and Reflect shipped the same week it went live. That is convergence, not causation — and the convergence is the point. Same framework, same no-score constraint, same privacy precondition, same reflective move. The platform has independently concluded that the human side needs an instrument. Tier one exists.</p>
+        <p>What Reflect measures and what this document is about are still different things, three ways:</p>
+        <ul class="doc-list">
+          <li><strong>The object.</strong> Reflect measures usage: what you did, when, on which topics. The open question is judgment: whether you were still thinking while you did it. The contest rate at sign-off remains measured by no one.</li>
+          <li><strong>The surface.</strong> Reflect watches the chat surface. The stakes in this document live on the working surface — the coding sessions, the agent runs, the one-way doors — where the artefact ships and the capability erodes.</li>
+          <li><strong>The frame.</strong> Reflect is framed as wellbeing; its partners are digital-wellness and child-safety labs, its levers are quiet hours and break reminders. The labor question above is a different genre: professional capability, hiring, the record of title. Wellbeing asks whether you are using it too much. This asks whether the work is still yours.</li>
+        </ul>
+        <p>I expect the gap to close. Extending reflection from the chat surface to the working surface, and from usage signals to judgment signals, is the obvious next tier, and nothing here is a moat against a platform that decides to build it. That is the intended failure mode: this is research, not a product. The instrument in this repository is a reference implementation and a replication path; the document is the map. If the platform ships the territory, the map's job is done — and the record will show the map came first: the ask is dated June, the vocabulary is timestamped, and the study ran before the feature existed. Until then, the judgment half stays open, and this document keeps measuring it.</p>
       </section>
 
       <section class="doc-sec" id="questions">
@@ -375,7 +390,7 @@
         </ul>
 
         <a class="doc-back" href="index.html#top">← Back to the inquiry</a>
-        <p class="sig" style="font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:22px;">Crux · A living research document · v2 · July 2026 · No patents. Public by design.</p>
+        <p class="sig" style="font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:22px;">Crux · Ongoing research · v3 · July 2026 · No patents. Public by design.</p>
       </section>
     </article>
   </div>
