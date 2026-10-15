@@ -1,0 +1,10 @@
+{
+  "name": "crux-panel",
+  "version": "1.0.0",
+  "description": "Opt-in research panel for heavy Claude Code users. Counts one-way-door justifications and sign-offs of autonomous runs, locally. Exports aggregate counts only.",
+  "author": { "name": "Elliot Little" },
+  "homepage": "https://github.com/ElliotJLT/crux",
+  "repository": "https://github.com/ElliotJLT/crux",
+  "license": "MIT",
+  "keywords": ["research", "panel", "judgment", "privacy"]
+}

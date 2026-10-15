@@ -1,0 +1,22 @@
+{
+  "name": "crux",
+  "owner": {
+    "name": "Elliot Little"
+  },
+  "metadata": {
+    "description": "Crux: ongoing research on AI judgment. The panel plugin is the opt-in measurement instrument."
+  },
+  "plugins": [
+    {
+      "name": "crux-panel",
+      "source": "./plugin",
+      "description": "Opt-in research panel. Measures one-way-door justifications and autonomous-run sign-offs locally; exports counts only.",
+      "category": "research",
+      "tags": [
+        "research",
+        "panel",
+        "privacy"
+      ]
+    }
+  ]
+}
