@@ -13,6 +13,8 @@
 
 **Start here:** [the research document](https://elliotjlt.github.io/crux/research.html) — a living field study of the human side of AI collaboration, and what I found measuring my own work. v2 extended it from self-knowledge to work itself: [the ownership account](https://elliotjlt.github.io/crux/research.html#ownership) from the field, [the labor question](https://elliotjlt.github.io/crux/research.html#labor) (people keep the job and lose the capability, and no hiring signal can see it), and [a memo to the platform layer](https://elliotjlt.github.io/crux/research.html#memo). v3: the same week that memo went live, [Anthropic shipped Reflect](https://elliotjlt.github.io/crux/research.html#answered) — the first platform instrument for the human side. It measures usage. The judgment half stays open, and this research keeps measuring it.
 
+**Join the panel:** the study is opening to other heavy Claude Code users. A plugin counts, on your own machine, whether you give a reason before hard-to-undo commands and whether you push back when a long agent run finishes. Only weekly counts ever leave, and only if you send them. Protocol and install: [PANEL.md](./PANEL.md).
+
 ---
 
 ## The problem no one tracks
